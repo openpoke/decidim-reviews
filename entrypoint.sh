@@ -54,7 +54,6 @@ fi
 if [ -n "$SEED" ]; then
 	echo "⚠️ Seeding"
 	bin/rails db:seed
-else
 fi
 
 echo "✅ Migrations are all up"
