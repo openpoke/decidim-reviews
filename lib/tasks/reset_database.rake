@@ -2,8 +2,8 @@
 
 namespace :decidim do
   task reset: :environment do
-    ENV["DISABLE_DATABASE_ENVIRONMENT_CHECK"]=1
-    ENV["SEED"]=1
+    ENV["DISABLE_DATABASE_ENVIRONMENT_CHECK"]="1"
+    ENV["SEED"]="1"
     Rake::Task["db:truncate_all"].invoke
     Rake::Task["db:seed"].invoke
     organization = Decidim::Organization.first
