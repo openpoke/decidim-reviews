@@ -2,7 +2,10 @@
 
 namespace :decidim do
   task reset: :environment do
-    Rake::Task["db:seed:replant"].invoke
+    ENV["DISABLE_DATABASE_ENVIRONMENT_CHECK"]=1
+    ENV["SEED"]=1
+    Rake::Task["db:truncate_all"].invoke
+    Rake::Task["db:seed"].invoke
     organization = Decidim::Organization.first
     organization.update_column(:content_security_policy, {
       "img-src"=>"https://eu2.contabostorage.com",
