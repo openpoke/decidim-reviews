@@ -267,6 +267,22 @@ GEM
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
+    aws-eventstream (1.3.0)
+    aws-partitions (1.887.0)
+    aws-sdk-core (3.191.0)
+      aws-eventstream (~> 1, >= 1.3.0)
+      aws-partitions (~> 1, >= 1.651.0)
+      aws-sigv4 (~> 1.8)
+      jmespath (~> 1, >= 1.6.1)
+    aws-sdk-kms (1.77.0)
+      aws-sdk-core (~> 3, >= 3.191.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-s3 (1.143.0)
+      aws-sdk-core (~> 3, >= 3.191.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.8)
+    aws-sigv4 (1.8.0)
+      aws-eventstream (~> 1, >= 1.0.2)
     base64 (0.2.0)
     batch-loader (1.5.0)
     bcrypt (3.1.20)
@@ -312,6 +328,7 @@ GEM
     cmdparse (3.0.7)
     commonmarker (0.23.10)
     concurrent-ruby (1.2.3)
+    connection_pool (2.4.1)
     crack (1.0.0)
       bigdecimal
       rexml
@@ -358,6 +375,8 @@ GEM
       temple
     erubi (1.12.0)
     escape_utils (1.3.0)
+    et-orbi (1.2.7)
+      tzinfo
     excon (0.110.0)
     extended-markdown-filter (0.7.0)
       html-pipeline (~> 2.9)
@@ -390,6 +409,9 @@ GEM
       activemodel (>= 4.1, < 7.1)
       activesupport (>= 4.1, < 7.1)
       railties (>= 4.1, < 7.1)
+    fugit (1.9.0)
+      et-orbi (~> 1, >= 1.2.7)
+      raabro (~> 1.4)
     gemoji (3.0.1)
     geocoder (1.8.3)
       base64 (>= 0.1.0)
@@ -438,6 +460,7 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     invisible_captcha (0.13.0)
       rails (>= 3.2.0)
+    jmespath (1.6.2)
     json (2.7.2)
     jwt (2.8.1)
       base64
@@ -568,6 +591,7 @@ GEM
     public_suffix (5.0.4)
     puma (6.4.2)
       nio4r (~> 2.0)
+    raabro (1.4.0)
     racc (1.7.3)
     rack (2.2.8.1)
     rack-attack (6.7.0)
@@ -629,6 +653,8 @@ GEM
       ffi (~> 1.0)
     redcarpet (3.6.0)
     redis (4.8.1)
+    redis-client (0.19.1)
+      connection_pool
     regexp_parser (2.9.2)
     request_store (1.5.1)
       rack (>= 1.4)
@@ -723,6 +749,15 @@ GEM
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
       semantic_range (>= 2.3.0)
+    sidekiq (7.2.1)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      rack (>= 2.2.4)
+      redis-client (>= 0.19.0)
+    sidekiq-cron (1.12.0)
+      fugit (~> 1.8)
+      globalid (>= 1.0.1)
+      sidekiq (>= 6)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -798,6 +833,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk-s3
   bootsnap (~> 1.4)
   brakeman (~> 6.1)
   bullet
@@ -815,6 +851,8 @@ DEPENDENCIES
   parallel_tests (~> 4.2)
   puma (>= 6.3.1)
   rack-mini-profiler
+  sidekiq
+  sidekiq-cron
   spring (~> 4.0)
   spring-watcher-listen (~> 2.0)
   stackprof
