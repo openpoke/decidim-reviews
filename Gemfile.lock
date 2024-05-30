@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 7f3f41ec71c6ffbc15bf433a86ebaa7e3c2d60c9
+  revision: 449377fc42532d2196518ce3386cfccba9a4f64d
   branch: feature/add-proposal-grid-mode
   specs:
     decidim (0.29.0.dev)
