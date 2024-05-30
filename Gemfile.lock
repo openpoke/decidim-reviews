@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/decidim/decidim.git
+  remote: https://github.com/openpoke/decidim.git
   revision: ede674a2382d02ae423a13f76973ab1298bc2a68
   branch: temp-decidim-reviews
   specs:
