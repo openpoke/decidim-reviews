@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/openpoke/decidim.git
-  revision: a20d217fd9f1165509436f867d5c46c0aac4916a
+  revision: 13e8094befb6ba09b7c00de6341e2875e7ffabb6
   branch: feature/sticky_header
   specs:
     decidim (0.29.0.dev)
