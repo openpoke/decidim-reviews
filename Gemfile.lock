@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/openpoke/decidim.git
-  revision: f7d9882f4b45273c37f074aa222a27db4b8a3ac2
+  revision: d653521dda19d659fdca979ee9043eccf7ce9192
   branch: feature/sticky_header
   specs:
     decidim (0.29.0.dev)
@@ -725,7 +725,7 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rspec (2.29.2)
+    rubocop-rspec (2.30.0)
       rubocop (~> 1.40)
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
