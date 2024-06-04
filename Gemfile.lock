@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/openpoke/decidim.git
-  revision: a9b1ac95f6352fd92f3bae9452fc15f52cc6fb44
+  revision: 2ad8faab25ee1834b5ec67e8fb74073206580d2e
   branch: feature/sticky_header
   specs:
     decidim (0.29.0.dev)
@@ -269,7 +269,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.3.0)
-    aws-partitions (1.937.0)
+    aws-partitions (1.938.0)
     aws-sdk-core (3.196.1)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
