@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/openpoke/decidim.git
-  revision: 6707ea28deed537f926f1b3c923c329adab7d419
+  revision: fa91965a0244682a6bcc39d9551c0322a3bf2902
   branch: feature/main_ctas_sticky_buttons
   specs:
     decidim (0.29.0.dev)
