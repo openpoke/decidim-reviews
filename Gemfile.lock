@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/openpoke/decidim.git
-  revision: f1706b4c8abaf80a15a61146d8878affac14b567
+  revision: f9cbb0a7a156c03044ad20aa0c7e8adcfe09d5cd
   branch: feature/publish_or_unpublish_conference_speakers
   specs:
     decidim (0.29.0.dev)
