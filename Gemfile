@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "openpoke/decidim", branch: "feature/main_ctas_sticky_buttons" }
+DECIDIM_VERSION = { github: "openpoke/decidim", branch: "feature/publish_or_unpublish_conference_speakers" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
