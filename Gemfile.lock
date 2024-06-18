@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: c9f52b28ab8a2fd5079e0f1034bb340e204ac9a9
+  revision: db2dc60bbf2cbbc5aea95ff3892bdf5a11ced979
   branch: feature/co-authorships-in-proposals
   specs:
     decidim (0.29.0.dev)
