@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: db2dc60bbf2cbbc5aea95ff3892bdf5a11ced979
+  revision: c6482ec1cce5bb605ff5dfaeb74525e5df7243d7
   branch: feature/co-authorships-in-proposals
   specs:
     decidim (0.29.0.dev)
@@ -511,7 +511,7 @@ GEM
     mini_magick (4.13.1)
     mini_mime (1.1.5)
     mini_portile2 (2.8.7)
-    minitest (5.23.1)
+    minitest (5.24.0)
     msgpack (1.7.2)
     multi_xml (0.7.1)
       bigdecimal (~> 3.1)
