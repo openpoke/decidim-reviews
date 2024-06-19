@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/openpoke/decidim.git
-  revision: f9cbb0a7a156c03044ad20aa0c7e8adcfe09d5cd
-  branch: feature/publish_or_unpublish_conference_speakers
+  revision: f41134bb93b37b1f0dd654284d188490c06815ba
+  branch: feature/admin_answers_close_comments
   specs:
     decidim (0.29.0.dev)
       decidim-accountability (= 0.29.0.dev)
@@ -275,7 +275,7 @@ GEM
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.8)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.84.0)
+    aws-sdk-kms (1.85.0)
       aws-sdk-core (~> 3, >= 3.197.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-s3 (1.152.3)
@@ -390,7 +390,7 @@ GEM
       railties (>= 5.0.0)
     faker (3.4.1)
       i18n (>= 1.8.11, < 2)
-    faraday (2.9.1)
+    faraday (2.9.2)
       faraday-net_http (>= 2.0, < 3.2)
     faraday-net_http (3.1.0)
       net-http
@@ -465,7 +465,7 @@ GEM
       rails (>= 3.2.0)
     jmespath (1.6.2)
     json (2.7.2)
-    jwt (2.8.1)
+    jwt (2.8.2)
       base64
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
@@ -511,7 +511,7 @@ GEM
     mini_magick (4.13.1)
     mini_mime (1.1.5)
     mini_portile2 (2.8.7)
-    minitest (5.23.1)
+    minitest (5.24.0)
     msgpack (1.7.2)
     multi_xml (0.7.1)
       bigdecimal (~> 3.1)
