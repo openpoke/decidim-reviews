@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 807294e91b508a1d72a98253174edbd3210be3cd
+  revision: 8ebe743c40f2da4268bd41bd88b5af3c6209b8f6
   branch: feature/update-meta-tags-for-social-previews
   specs:
     decidim (0.29.0.dev)
@@ -265,21 +265,21 @@ GEM
     acts_as_list (1.2.1)
       activerecord (>= 6.1)
       activesupport (>= 6.1)
-    addressable (2.8.6)
-      public_suffix (>= 2.0.2, < 6.0)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
     aws-eventstream (1.3.0)
-    aws-partitions (1.944.0)
-    aws-sdk-core (3.197.0)
+    aws-partitions (1.949.0)
+    aws-sdk-core (3.200.0)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.8)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.85.0)
-      aws-sdk-core (~> 3, >= 3.197.0)
+    aws-sdk-kms (1.87.0)
+      aws-sdk-core (~> 3, >= 3.199.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.152.3)
-      aws-sdk-core (~> 3, >= 3.197.0)
+    aws-sdk-s3 (1.155.0)
+      aws-sdk-core (~> 3, >= 3.199.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.8)
     aws-sigv4 (1.8.0)
@@ -326,7 +326,7 @@ GEM
     cells-rails (0.1.5)
       actionpack (>= 5.0)
       cells (>= 4.1.6, < 5.0.0)
-    charlock_holmes (0.7.7)
+    charlock_holmes (0.7.8)
     childprocess (5.0.0)
     cmdparse (3.0.7)
     commonmarker (0.23.10)
@@ -512,13 +512,13 @@ GEM
     mini_magick (4.13.1)
     mini_mime (1.1.5)
     mini_portile2 (2.8.7)
-    minitest (5.24.0)
+    minitest (5.24.1)
     msgpack (1.7.2)
     multi_xml (0.7.1)
       bigdecimal (~> 3.1)
     net-http (0.4.1)
       uri
-    net-imap (0.4.13)
+    net-imap (0.4.14)
       date
       net-protocol
     net-pop (0.1.2)
@@ -592,7 +592,7 @@ GEM
       premailer (~> 1.7, >= 1.7.9)
     psych (4.0.6)
       stringio
-    public_suffix (5.1.1)
+    public_suffix (6.0.0)
     puma (6.4.2)
       nio4r (~> 2.0)
     raabro (1.4.0)
@@ -665,7 +665,7 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rexml (3.3.0)
+    rexml (3.3.1)
       strscan
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -721,7 +721,7 @@ GEM
     rubocop-performance (1.21.1)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rails (2.25.0)
+    rubocop-rails (2.25.1)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
