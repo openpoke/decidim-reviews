@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 8ebe743c40f2da4268bd41bd88b5af3c6209b8f6
+  revision: 32f737c9e4a525343c66ea510bbb6a3950eab4b7
   branch: feature/update-meta-tags-for-social-previews
   specs:
     decidim (0.29.0.dev)
