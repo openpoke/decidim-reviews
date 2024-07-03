@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: a8094639a46ecfa7e534f10b47ecfe232e1e2f2a
+  revision: 6f76838471304534e7a81d7ada6e8f04740536d9
   branch: feature/opt-in_for_newsletter
   specs:
     decidim (0.29.0.dev)
