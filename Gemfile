@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "openpoke/decidim", branch: "feature/sticky_header" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/opt-in_for_newsletter" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
