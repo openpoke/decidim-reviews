@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 020356a11d2551cae2ac370fe67fa7bf069fb038
-  branch: feature/update-meta-tags-for-social-previews
+  revision: a6340bf12fc7f436ee32771f19911ff6ffd7e3dd
+  branch: feature/bulk-action-template-answers
   specs:
     decidim (0.29.0.dev)
       decidim-accountability (= 0.29.0.dev)

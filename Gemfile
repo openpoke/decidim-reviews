@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/update-meta-tags-for-social-previews" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/bulk-action-template-answers" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
