@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: e55ed87b0b9c37cef2cccf7cba5cf96143b6ce8e
-  branch: feature/bulk-action-template-answers
+  revision: dfeaafaba619bf1a2b45f8aaa37a637779c63be5
+  branch: feature/taxonomies-section-in-settings
   specs:
     decidim (0.29.0.dev)
       decidim-accountability (= 0.29.0.dev)
@@ -262,7 +262,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    acts_as_list (1.2.1)
+    acts_as_list (1.2.2)
       activerecord (>= 6.1)
       activesupport (>= 6.1)
     addressable (2.8.7)
@@ -326,7 +326,7 @@ GEM
     cells-rails (0.1.5)
       actionpack (>= 5.0)
       cells (>= 4.1.6, < 5.0.0)
-    charlock_holmes (0.7.8)
+    charlock_holmes (0.7.9)
     childprocess (5.0.0)
     cmdparse (3.0.7)
     commonmarker (0.23.10)
@@ -439,7 +439,8 @@ GEM
       cmdparse (~> 3.0, >= 3.0.3)
       geom2d (~> 0.3)
       openssl (>= 2.2.1)
-    highline (3.0.1)
+    highline (3.1.0)
+      reline
     html-pipeline (2.14.3)
       activesupport (>= 2)
       nokogiri (>= 1.4)
@@ -464,6 +465,7 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     invisible_captcha (0.13.0)
       rails (>= 3.2.0)
+    io-console (0.7.2)
     jmespath (1.6.2)
     json (2.7.2)
     jwt (2.8.2)
@@ -576,7 +578,7 @@ GEM
     parallel (1.25.1)
     parallel_tests (4.7.1)
       parallel
-    parser (3.3.3.0)
+    parser (3.3.4.0)
       ast (~> 2.4.1)
       racc
     pg (1.4.6)
@@ -661,6 +663,8 @@ GEM
     redis-client (0.22.2)
       connection_pool
     regexp_parser (2.9.2)
+    reline (0.5.9)
+      io-console (~> 0.5)
     request_store (1.5.1)
       rack (>= 1.4)
     responders (3.1.1)
@@ -824,7 +828,7 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    websocket (1.2.10)
+    websocket (1.2.11)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)

@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/bulk-action-template-answers" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/taxonomies-section-in-settings" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
