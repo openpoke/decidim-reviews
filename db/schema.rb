@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_22_111774) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_25_145655) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -170,7 +170,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_22_111774) do
     t.jsonb "target"
     t.jsonb "participatory_scope"
     t.jsonb "participatory_structure"
-    t.boolean "show_statistics", default: false
+    t.boolean "show_statistics", default: true
     t.integer "decidim_scope_id"
     t.boolean "scopes_enabled", default: true, null: false
     t.boolean "private_space", default: false
@@ -272,6 +272,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_22_111774) do
     t.string "attached_to_type", null: false
     t.integer "weight", default: 0, null: false
     t.integer "attachment_collection_id"
+    t.string "link"
     t.index ["attached_to_id", "attached_to_type"], name: "index_decidim_attachments_on_attached_to"
     t.index ["attachment_collection_id"], name: "index_decidim_attachments_on_attachment_collection_id"
   end
@@ -486,6 +487,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_22_111774) do
     t.bigint "decidim_user_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.datetime "published_at"
     t.index ["decidim_conference_id"], name: "index_decidim_conference_speakers_on_decidim_conference_id"
     t.index ["decidim_user_id"], name: "index_decidim_conference_speaker_on_decidim_user_id"
   end
@@ -1634,6 +1636,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_22_111774) do
     t.datetime "created_at", precision: nil
     t.datetime "last_used_at", precision: nil
     t.datetime "expires_at", precision: nil
+    t.boolean "registered_only"
     t.index ["decidim_organization_id"], name: "index_decidim_share_tokens_on_decidim_organization_id"
     t.index ["decidim_user_id"], name: "index_decidim_share_tokens_on_decidim_user_id"
     t.index ["token_for_type", "token_for_id"], name: "decidim_share_tokens_token_for"
@@ -1934,7 +1937,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_22_111774) do
     t.string "whodunnit"
     t.jsonb "object"
     t.datetime "created_at", precision: nil
-    t.text "object_changes"
+    t.jsonb "object_changes"
     t.index ["item_id", "item_type"], name: "index_versions_on_item_id_and_item_type"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end

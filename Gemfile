@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/opt-in_for_newsletter" }
+DECIDIM_VERSION = { github: "openpoke/decidim", branch: "feature/share_unpublish_components_with_tokens" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
