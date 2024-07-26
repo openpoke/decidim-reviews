@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/openpoke/decidim.git
-  revision: 092d4081aea3511464d80323f866146a59ace3f5
+  revision: f0d31ead8f0d7f3e3fb1988913f8a4c0f9afc340
   branch: feature/share_unpublish_components_with_tokens
   specs:
     decidim (0.30.0.dev)
@@ -598,7 +598,7 @@ GEM
       actionmailer (>= 3)
       net-smtp
       premailer (~> 1.7, >= 1.7.9)
-    public_suffix (6.0.0)
+    public_suffix (6.0.1)
     puma (6.4.2)
       nio4r (~> 2.0)
     raabro (1.4.0)
