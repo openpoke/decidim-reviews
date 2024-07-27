@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/openpoke/decidim.git
-  revision: f0d31ead8f0d7f3e3fb1988913f8a4c0f9afc340
+  remote: https://github.com/decidim/decidim.git
+  revision: 8d42f0ebc2f25d74c1b52e9369be48e83d3f77e1
   branch: feature/share_unpublish_components_with_tokens
   specs:
     decidim (0.30.0.dev)
@@ -54,7 +54,7 @@ GIT
       decidim-core (= 0.30.0.dev)
       decidim-meetings (= 0.30.0.dev)
       wicked_pdf (~> 2.7)
-      wkhtmltopdf-binary (~> 0.12)
+      wkhtmltopdf-binary (= 0.12.6.6)
     decidim-core (0.30.0.dev)
       active_link_to (~> 1.0)
       acts_as_list (~> 1.0)
@@ -151,7 +151,7 @@ GIT
     decidim-forms (0.30.0.dev)
       decidim-core (= 0.30.0.dev)
       wicked_pdf (~> 2.1)
-      wkhtmltopdf-binary (~> 0.12)
+      wkhtmltopdf-binary (= 0.12.6.6)
     decidim-generators (0.30.0.dev)
       decidim-core (= 0.30.0.dev)
     decidim-initiatives (0.30.0.dev)
@@ -161,7 +161,7 @@ GIT
       decidim-verifications (= 0.30.0.dev)
       hexapdf (~> 0.32.0)
       wicked_pdf (~> 2.1)
-      wkhtmltopdf-binary (~> 0.12)
+      wkhtmltopdf-binary (= 0.12.6.6)
     decidim-meetings (0.30.0.dev)
       decidim-core (= 0.30.0.dev)
       decidim-forms (= 0.30.0.dev)
@@ -368,7 +368,7 @@ GEM
     doc2text (0.4.7)
       nokogiri (>= 1.13.2, < 1.17.0)
       rubyzip (~> 2.3.0)
-    docile (1.4.0)
+    docile (1.4.1)
     doorkeeper (5.7.1)
       railties (>= 5)
     doorkeeper-i18n (4.0.1)
@@ -393,14 +393,23 @@ GEM
     factory_bot_rails (6.4.3)
       factory_bot (~> 6.4)
       railties (>= 5.0.0)
-    faker (3.4.1)
+    faker (3.4.2)
       i18n (>= 1.8.11, < 2)
     faraday (2.10.0)
       faraday-net_http (>= 2.0, < 3.2)
       logger
     faraday-net_http (3.1.1)
       net-http
-    ffi (1.17.0)
+    ffi (1.17.0-aarch64-linux-gnu)
+    ffi (1.17.0-aarch64-linux-musl)
+    ffi (1.17.0-arm-linux-gnu)
+    ffi (1.17.0-arm-linux-musl)
+    ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86-linux-gnu)
+    ffi (1.17.0-x86-linux-musl)
+    ffi (1.17.0-x86_64-darwin)
+    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.0-x86_64-linux-musl)
     file_validators (3.0.0)
       activemodel (>= 3.2)
       mime-types (>= 1.0)
@@ -519,7 +528,6 @@ GEM
     mime-types-data (3.2024.0702)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.7)
     minitest (5.24.1)
     msgpack (1.7.2)
     multi_xml (0.7.1)
@@ -536,8 +544,17 @@ GEM
     net-smtp (0.3.4)
       net-protocol
     nio4r (2.7.3)
-    nokogiri (1.16.6)
-      mini_portile2 (~> 2.8.2)
+    nokogiri (1.16.6-aarch64-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.6-arm-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.6-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.6-x86-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.6-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.6-x86_64-linux)
       racc (~> 1.4)
     oauth (1.1.0)
       oauth-tty (~> 1.0, >= 1.0.1)
@@ -673,7 +690,7 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rexml (3.3.1)
+    rexml (3.3.2)
       strscan
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -836,13 +853,25 @@ GEM
       activesupport
     wisper (2.0.1)
     wisper-rspec (1.1.0)
-    wkhtmltopdf-binary (0.12.6.7)
+    wkhtmltopdf-binary (0.12.6.6)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.16)
 
 PLATFORMS
-  ruby
+  aarch64-linux
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux
+  arm-linux-gnu
+  arm-linux-musl
+  arm64-darwin
+  x86-linux
+  x86-linux-gnu
+  x86-linux-musl
+  x86_64-darwin
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
 DEPENDENCIES
   aws-sdk-s3 (~> 1.143.0)
@@ -875,4 +904,4 @@ RUBY VERSION
    ruby 3.3.4p94
 
 BUNDLED WITH
-   2.4.6
+   2.5.11

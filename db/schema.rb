@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_25_145655) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_27_143206) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -1445,9 +1445,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_25_145655) do
     t.text "body", null: false
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.bigint "parent_id"
     t.index ["created_at"], name: "index_decidim_proposals_proposal_notes_on_created_at"
     t.index ["decidim_author_id"], name: "decidim_proposals_proposal_note_author"
     t.index ["decidim_proposal_id"], name: "decidim_proposals_proposal_note_proposal"
+    t.index ["parent_id"], name: "decidim_proposals_proposal_notes_on_parent_id"
   end
 
   create_table "decidim_proposals_proposal_states", force: :cascade do |t|
@@ -1847,6 +1849,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_25_145655) do
     t.datetime "officialized_at", precision: nil
     t.jsonb "officialized_as"
     t.datetime "admin_terms_accepted_at", precision: nil
+    t.boolean "email_on_assigned_proposals", default: true
     t.index ["confirmation_token"], name: "index_decidim_users_on_confirmation_token", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_users_on_decidim_organization_id"
     t.index ["email", "decidim_organization_id"], name: "index_decidim_users_on_email_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false) AND ((type)::text = 'Decidim::User'::text))"
