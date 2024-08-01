@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 04ae7efc83a79afe8ee42c5f9856162f27346326
+  revision: 750ee55707e91655a7c03a97509cedc238a967d1
   branch: feature/taxonomies-section-in-settings
   specs:
     decidim (0.30.0.dev)
