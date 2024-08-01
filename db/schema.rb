@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_28_104847) do
+ActiveRecord::Schema[7.0].define(version: 2024_08_01_190713) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -170,7 +170,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_28_104847) do
     t.jsonb "target"
     t.jsonb "participatory_scope"
     t.jsonb "participatory_structure"
-    t.boolean "show_statistics", default: false
+    t.boolean "show_statistics", default: true
     t.integer "decidim_scope_id"
     t.boolean "scopes_enabled", default: true, null: false
     t.boolean "private_space", default: false
@@ -1445,9 +1445,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_28_104847) do
     t.text "body", null: false
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.bigint "parent_id"
     t.index ["created_at"], name: "index_decidim_proposals_proposal_notes_on_created_at"
     t.index ["decidim_author_id"], name: "decidim_proposals_proposal_note_author"
     t.index ["decidim_proposal_id"], name: "decidim_proposals_proposal_note_proposal"
+    t.index ["parent_id"], name: "decidim_proposals_proposal_notes_on_parent_id"
   end
 
   create_table "decidim_proposals_proposal_states", force: :cascade do |t|
@@ -1730,6 +1732,37 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_28_104847) do
     t.index ["reset_password_token"], name: "index_decidim_system_admins_on_reset_password_token", unique: true
   end
 
+  create_table "decidim_taxonomies", force: :cascade do |t|
+    t.jsonb "name", default: {}, null: false
+    t.integer "decidim_organization_id", null: false
+    t.integer "parent_id"
+    t.integer "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_organization_id"], name: "index_decidim_taxonomies_on_decidim_organization_id"
+    t.index ["parent_id"], name: "index_decidim_taxonomies_on_parent_id"
+  end
+
+  create_table "decidim_taxonomizations", force: :cascade do |t|
+    t.integer "taxonomy_id", null: false
+    t.integer "taxonomizable_id", null: false
+    t.string "taxonomizable_type", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["taxonomizable_id", "taxonomizable_type"], name: "index_taxonomizations_on_tid_and_ttype"
+    t.index ["taxonomy_id"], name: "index_decidim_taxonomizations_on_taxonomy_id"
+  end
+
+  create_table "decidim_taxonomy_filters", force: :cascade do |t|
+    t.integer "taxonomy_id", null: false
+    t.integer "filterable_id", null: false
+    t.string "filterable_type", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["filterable_id", "filterable_type"], name: "index_taxonomy_filters_on_fid_and_ftype"
+    t.index ["taxonomy_id"], name: "index_decidim_taxonomy_filters_on_taxonomy_id"
+  end
+
   create_table "decidim_templates_templates", force: :cascade do |t|
     t.integer "decidim_organization_id", null: false
     t.string "templatable_type"
@@ -1846,6 +1879,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_28_104847) do
     t.datetime "officialized_at", precision: nil
     t.jsonb "officialized_as"
     t.datetime "admin_terms_accepted_at", precision: nil
+    t.boolean "email_on_assigned_proposals", default: true
     t.index ["confirmation_token"], name: "index_decidim_users_on_confirmation_token", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_users_on_decidim_organization_id"
     t.index ["email", "decidim_organization_id"], name: "index_decidim_users_on_email_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false) AND ((type)::text = 'Decidim::User'::text))"
@@ -1936,7 +1970,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_28_104847) do
     t.string "whodunnit"
     t.jsonb "object"
     t.datetime "created_at", precision: nil
-    t.text "object_changes"
+    t.jsonb "object_changes"
     t.index ["item_id", "item_type"], name: "index_versions_on_item_id_and_item_type"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
