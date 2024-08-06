@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_08_01_190713) do
+ActiveRecord::Schema[7.0].define(version: 2024_08_06_180857) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -1734,33 +1734,47 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_01_190713) do
 
   create_table "decidim_taxonomies", force: :cascade do |t|
     t.jsonb "name", default: {}, null: false
-    t.integer "decidim_organization_id", null: false
-    t.integer "parent_id"
+    t.bigint "decidim_organization_id", null: false
+    t.bigint "parent_id"
     t.integer "weight"
+    t.integer "children_count", default: 0, null: false
+    t.integer "taxonomizations_count", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "filters_count", default: 0, null: false
+    t.integer "filter_items_count", default: 0, null: false
     t.index ["decidim_organization_id"], name: "index_decidim_taxonomies_on_decidim_organization_id"
     t.index ["parent_id"], name: "index_decidim_taxonomies_on_parent_id"
   end
 
   create_table "decidim_taxonomizations", force: :cascade do |t|
-    t.integer "taxonomy_id", null: false
-    t.integer "taxonomizable_id", null: false
+    t.bigint "taxonomy_id", null: false
     t.string "taxonomizable_type", null: false
+    t.bigint "taxonomizable_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["taxonomizable_id", "taxonomizable_type"], name: "index_taxonomizations_on_tid_and_ttype"
+    t.index ["taxonomizable_type", "taxonomizable_id"], name: "index_taxonomizations_on_taxonomizable"
+    t.index ["taxonomy_id", "taxonomizable_id", "taxonomizable_type"], name: "index_taxonomizations_on_id_tid_and_ttype", unique: true
     t.index ["taxonomy_id"], name: "index_decidim_taxonomizations_on_taxonomy_id"
   end
 
-  create_table "decidim_taxonomy_filters", force: :cascade do |t|
-    t.integer "taxonomy_id", null: false
-    t.integer "filterable_id", null: false
-    t.string "filterable_type", null: false
+  create_table "decidim_taxonomy_filter_items", force: :cascade do |t|
+    t.bigint "taxonomy_filter_id", null: false
+    t.bigint "taxonomy_item_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["filterable_id", "filterable_type"], name: "index_taxonomy_filters_on_fid_and_ftype"
-    t.index ["taxonomy_id"], name: "index_decidim_taxonomy_filters_on_taxonomy_id"
+    t.index ["taxonomy_filter_id", "taxonomy_item_id"], name: "index_taxonomy_filter_items_on_filter_id_and_item_id", unique: true
+    t.index ["taxonomy_filter_id"], name: "index_decidim_taxonomy_filter_items_on_taxonomy_filter_id"
+    t.index ["taxonomy_item_id"], name: "index_decidim_taxonomy_filter_items_on_taxonomy_item_id"
+  end
+
+  create_table "decidim_taxonomy_filters", force: :cascade do |t|
+    t.bigint "root_taxonomy_id", null: false
+    t.integer "filter_items_count", default: 0, null: false
+    t.string "space_manifest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["root_taxonomy_id"], name: "index_decidim_taxonomy_filters_on_root_taxonomy_id"
   end
 
   create_table "decidim_templates_templates", force: :cascade do |t|
@@ -2013,6 +2027,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_01_190713) do
   add_foreign_key "decidim_scopes", "decidim_scope_types", column: "scope_type_id"
   add_foreign_key "decidim_scopes", "decidim_scopes", column: "parent_id"
   add_foreign_key "decidim_static_pages", "decidim_organizations"
+  add_foreign_key "decidim_taxonomy_filter_items", "decidim_taxonomies", column: "taxonomy_item_id"
+  add_foreign_key "decidim_taxonomy_filters", "decidim_taxonomies", column: "root_taxonomy_id"
   add_foreign_key "decidim_user_blocks", "decidim_users"
   add_foreign_key "decidim_user_blocks", "decidim_users", column: "blocking_user_id"
   add_foreign_key "decidim_user_moderations", "decidim_users"
