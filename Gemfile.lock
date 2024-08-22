@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 8d42f0ebc2f25d74c1b52e9369be48e83d3f77e1
-  branch: feature/share_unpublish_components_with_tokens
+  revision: a2f402671772e3dc1a31b81d2062f66565afb256
+  branch: feature/implement_history_for_related_components
   specs:
     decidim (0.30.0.dev)
       decidim-accountability (= 0.30.0.dev)
@@ -22,7 +22,6 @@ GIT
       decidim-sortitions (= 0.30.0.dev)
       decidim-surveys (= 0.30.0.dev)
       decidim-system (= 0.30.0.dev)
-      decidim-templates (= 0.30.0.dev)
       decidim-verifications (= 0.30.0.dev)
     decidim-accountability (0.30.0.dev)
       decidim-comments (= 0.30.0.dev)
@@ -145,6 +144,8 @@ GIT
       selenium-webdriver (~> 4.9)
       simplecov (~> 0.22.0)
       simplecov-cobertura (~> 2.1.0)
+      spring (~> 4.0)
+      spring-watcher-listen (~> 2.0)
       w3c_rspec_validators (~> 0.3.0)
       webmock (~> 3.18)
       wisper-rspec (~> 1.0)
@@ -192,7 +193,6 @@ GIT
     decidim-templates (0.30.0.dev)
       decidim-core (= 0.30.0.dev)
       decidim-forms (= 0.30.0.dev)
-      decidim-proposals (= 0.30.0.dev)
     decidim-verifications (0.30.0.dev)
       decidim-core (= 0.30.0.dev)
 
@@ -395,7 +395,7 @@ GEM
       railties (>= 5.0.0)
     faker (3.4.2)
       i18n (>= 1.8.11, < 2)
-    faraday (2.10.0)
+    faraday (2.10.1)
       faraday-net_http (>= 2.0, < 3.2)
       logger
     faraday-net_http (3.1.1)
@@ -414,7 +414,7 @@ GEM
       activemodel (>= 3.2)
       mime-types (>= 1.0)
     flamegraph (0.9.5)
-    fog-core (2.4.0)
+    fog-core (2.5.0)
       builder
       excon (~> 0.71)
       formatador (>= 0.2, < 2.0)
@@ -447,7 +447,7 @@ GEM
       gemoji (~> 3.0)
       graphql (~> 2.0)
       html-pipeline (~> 2.14, >= 2.14.3)
-    hashdiff (1.1.0)
+    hashdiff (1.1.1)
     hashie (5.0.0)
     hexapdf (0.32.2)
       cmdparse (~> 3.0, >= 3.0.3)
@@ -525,7 +525,7 @@ GEM
     method_source (1.1.0)
     mime-types (3.5.2)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2024.0702)
+    mime-types-data (3.2024.0820)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
     minitest (5.24.1)
@@ -600,14 +600,14 @@ GEM
     parallel (1.25.1)
     parallel_tests (4.7.1)
       parallel
-    parser (3.3.4.0)
+    parser (3.3.4.2)
       ast (~> 2.4.1)
       racc
     pg (1.4.6)
-    pg_search (2.3.6)
-      activerecord (>= 5.2)
-      activesupport (>= 5.2)
-    premailer (1.23.0)
+    pg_search (2.3.7)
+      activerecord (>= 6.1)
+      activesupport (>= 6.1)
+    premailer (1.25.0)
       addressable
       css_parser (>= 1.12.0)
       htmlentities (>= 4.0.0)
@@ -701,7 +701,7 @@ GEM
       rspec-rails (>= 3.0.0, < 6.2.0)
     rspec-core (3.13.0)
       rspec-support (~> 3.13.0)
-    rspec-expectations (3.13.1)
+    rspec-expectations (3.13.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-html-matchers (0.10.0)
@@ -710,7 +710,7 @@ GEM
     rspec-mocks (3.13.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (6.1.3)
+    rspec-rails (6.1.4)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       railties (>= 6.1)
@@ -723,7 +723,7 @@ GEM
     rspec-support (3.13.1)
     rspec_junit_formatter (0.6.0)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rubocop (1.65.0)
+    rubocop (1.65.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -734,7 +734,7 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.31.3)
+    rubocop-ast (1.32.1)
       parser (>= 3.3.1.0)
     rubocop-capybara (2.21.0)
       rubocop (~> 1.41)
@@ -751,7 +751,7 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rspec (3.0.3)
+    rubocop-rspec (3.0.4)
       rubocop (~> 1.61)
     rubocop-rspec_rails (2.30.0)
       rubocop (~> 1.61)
@@ -849,7 +849,7 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    wicked_pdf (2.8.0)
+    wicked_pdf (2.8.1)
       activesupport
     wisper (2.0.1)
     wisper-rspec (1.1.0)
@@ -904,4 +904,4 @@ RUBY VERSION
    ruby 3.3.4p94
 
 BUNDLED WITH
-   2.5.11
+   2.4.6

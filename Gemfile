@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/share_unpublish_components_with_tokens" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/implement_history_for_related_components" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
