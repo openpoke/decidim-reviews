@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: ddb69b9e492769176968fb019bf79323f05a62bb
-  branch: feature/taxonomies-filters-for-spaces
+  revision: ef749867fd44c0335bb2b0f258bd8e7b6f583f15
+  branch: feature/taxonomies-filters-for-components
   specs:
     decidim (0.30.0.dev)
       decidim-accountability (= 0.30.0.dev)
@@ -591,7 +591,7 @@ GEM
     pg_search (2.3.7)
       activerecord (>= 6.1)
       activesupport (>= 6.1)
-    premailer (1.24.0)
+    premailer (1.25.0)
       addressable
       css_parser (>= 1.12.0)
       htmlentities (>= 4.0.0)

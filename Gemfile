@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/taxonomies-filters-for-spaces" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/taxonomies-filters-for-components" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
