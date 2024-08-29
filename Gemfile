@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/proposal-editing-time-hours-days" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/soft-delete-for-spaces-components" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
