@@ -10,7 +10,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates c
     postgresql-client \
     p7zip-full \
     libpq-dev && \
-    gnutls-bin && \
+    openssl && \
     apt-get clean
 
 # throw errors if Gemfile has been modified since Gemfile.lock
