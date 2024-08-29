@@ -25,6 +25,7 @@ COPY ./Gemfile /app/Gemfile
 COPY ./Gemfile.lock /app/Gemfile.lock
 
 RUN git config --global http.version HTTP/1.1 && \
+    git config --global http.sslBackend openssl && \
     gem install bundler:$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | xargs) && \
     bundle config --local without 'development test' && \
     bundle install -j4 --retry 3 && \
