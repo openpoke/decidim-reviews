@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 0ab0c326b7f5969a5330bed5ad76d5e21b4d73b5
+  revision: f96d1be4c176e1e0fac56a866c990eb502a3934c
   branch: feature/implement_history_for_related_components
   specs:
     decidim (0.30.0.dev)
@@ -712,7 +712,7 @@ GEM
     rspec-mocks (3.13.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (6.1.4)
+    rspec-rails (6.1.5)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       railties (>= 6.1)
@@ -736,7 +736,7 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.32.1)
+    rubocop-ast (1.32.2)
       parser (>= 3.3.1.0)
     rubocop-capybara (2.21.0)
       rubocop (~> 1.41)
