@@ -1,17 +1,35 @@
 <div class="content"><h1>
-<a id="amendableentityinterface" class="anchor" href="#amendableentityinterface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>AmendableEntityInterface</h1>
-<p>An interface that can be used in objects with amendments</p>
-<h2>
-<a id="implemented-by" class="anchor" href="#implemented-by" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implemented by</h2>
-<ul>
-   <li><code><a href="/api/docs/object/proposal">Proposal</a></code></li>
-</ul>
+<a id="taxonomy" class="anchor" href="#taxonomy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Taxonomy</h1>
+<p>A taxonomy that can be applied to other resources.</p>
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
   <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
   <div class="description-wrapper">
-   <p>ID of this entity</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="name" class="field-name anchored">name (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The name of this taxonomy.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="isroot" class="field-name anchored">isRoot (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether this taxonomy is a root taxonomy (root taxonomies have no parents).</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="children" class="field-name anchored">children (<code><a href="/api/docs/object/taxonomy">[Taxonomy!]!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The children of this taxonomy.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="parent" class="field-name anchored">parent (<code><a href="/api/docs/object/taxonomy">Taxonomy</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The parent of this taxonomy.</p>
   </div>
 </div></div>
 <div id="sidebar"><ul class="categories">

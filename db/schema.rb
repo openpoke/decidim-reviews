@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_08_06_180857) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_09_133156) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -1743,8 +1743,10 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_06_180857) do
     t.datetime "updated_at", null: false
     t.integer "filters_count", default: 0, null: false
     t.integer "filter_items_count", default: 0, null: false
+    t.integer "part_of", default: [], null: false, array: true
     t.index ["decidim_organization_id"], name: "index_decidim_taxonomies_on_decidim_organization_id"
     t.index ["parent_id"], name: "index_decidim_taxonomies_on_parent_id"
+    t.index ["part_of"], name: "index_decidim_taxonomies_on_part_of", using: :gin
   end
 
   create_table "decidim_taxonomizations", force: :cascade do |t|
