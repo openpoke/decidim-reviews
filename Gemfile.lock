@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 913775279bbe591164b5ac0c9911c16a5601ee13
+  revision: ad95b0308e01face2a9575c9b796ef186abd6d9d
   branch: feature/taxonomies-filters-for-components
   specs:
     decidim (0.30.0.dev)
@@ -517,7 +517,7 @@ GEM
     method_source (1.1.0)
     mime-types (3.5.2)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2024.0820)
+    mime-types-data (3.2024.0903)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
     mini_portile2 (2.8.7)
@@ -527,7 +527,7 @@ GEM
       bigdecimal (~> 3.1)
     net-http (0.4.1)
       uri
-    net-imap (0.4.15)
+    net-imap (0.4.16)
       date
       net-protocol
     net-pop (0.1.2)
@@ -579,7 +579,7 @@ GEM
       rack
     openssl (3.2.0)
     orm_adapter (0.5.0)
-    paper_trail (15.1.0)
+    paper_trail (15.2.0)
       activerecord (>= 6.1)
       request_store (~> 1.4)
     parallel (1.26.3)
