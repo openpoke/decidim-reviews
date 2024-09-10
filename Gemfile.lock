@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 4dbbfc97cb01a928f2ae8d1dfd67c72a62bf1476
+  revision: 289990a4860bea9ae96a2ee0ec45c8b85d406d55
   branch: feature/implement_history_for_related_components
   specs:
     decidim (0.30.0.dev)
