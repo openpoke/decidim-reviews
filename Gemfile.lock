@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: af49178f3e3bf5955885ca8a491ef81680515b5a
-  branch: feature/implement_history_for_related_components
+  revision: 6d7495ec5a0339699bb1bdf2ae957b1b5c45b702
+  branch: feature/proposals_minimum_votes_number
   specs:
     decidim (0.30.0.dev)
       decidim-accountability (= 0.30.0.dev)
@@ -118,7 +118,7 @@ GIT
       decidim-core (= 0.30.0.dev)
       decidim-generators (= 0.30.0.dev)
       decidim-verifications (= 0.30.0.dev)
-      erb_lint (~> 0.4.0)
+      erb_lint (~> 0.6.0)
       factory_bot_rails (~> 6.2)
       faker (~> 3.2)
       i18n-tasks (~> 1.0)
@@ -274,14 +274,14 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
     aws-eventstream (1.3.0)
-    aws-partitions (1.972.0)
-    aws-sdk-core (3.203.0)
+    aws-partitions (1.975.0)
+    aws-sdk-core (3.205.0)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.9)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.89.0)
-      aws-sdk-core (~> 3, >= 3.203.0)
+    aws-sdk-kms (1.91.0)
+      aws-sdk-core (~> 3, >= 3.205.0)
       aws-sigv4 (~> 1.5)
     aws-sdk-s3 (1.143.1)
       aws-sdk-core (~> 3, >= 3.191.0)
@@ -373,12 +373,12 @@ GEM
     doorkeeper (5.7.1)
       railties (>= 5)
     doorkeeper-i18n (4.0.1)
-    erb_lint (0.4.0)
+    erb_lint (0.6.0)
       activesupport
       better_html (>= 2.0.1)
       parser (>= 2.7.1.4)
       rainbow
-      rubocop
+      rubocop (>= 1)
       smart_properties
     erbse (0.1.4)
       temple
@@ -460,7 +460,7 @@ GEM
       activesupport (>= 2)
       nokogiri (>= 1.4)
     htmlentities (4.3.4)
-    i18n (1.14.5)
+    i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     i18n-tasks (1.0.14)
       activesupport (>= 4.0.2)
@@ -483,7 +483,7 @@ GEM
     io-console (0.7.2)
     jmespath (1.6.2)
     json (2.7.2)
-    jwt (2.8.2)
+    jwt (2.9.0)
       base64
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
@@ -576,8 +576,8 @@ GEM
       rack-protection
     omniauth-facebook (5.0.0)
       omniauth-oauth2 (~> 1.2)
-    omniauth-google-oauth2 (1.1.3)
-      jwt (>= 2.0)
+    omniauth-google-oauth2 (1.2.0)
+      jwt (>= 2.9)
       oauth2 (~> 2.0)
       omniauth (~> 2.0)
       omniauth-oauth2 (~> 1.8)
@@ -744,7 +744,7 @@ GEM
     rubocop-faker (1.1.0)
       faker (>= 2.12.0)
       rubocop (>= 0.82.0)
-    rubocop-performance (1.21.1)
+    rubocop-performance (1.22.0)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
     rubocop-rails (2.26.1)
@@ -816,7 +816,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
-    unicode-display_width (2.5.0)
+    unicode-display_width (2.6.0)
     uniform_notifier (1.16.0)
     uri (0.13.1)
     valid_email2 (4.0.6)
