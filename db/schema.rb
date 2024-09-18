@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_08_29_085464) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_18_084816) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -383,8 +383,10 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_29_085464) do
     t.text "address"
     t.float "latitude"
     t.float "longitude"
+    t.datetime "deleted_at"
     t.index ["decidim_budgets_budget_id"], name: "index_decidim_budgets_projects_on_decidim_budgets_budget_id"
     t.index ["decidim_scope_id"], name: "index_decidim_budgets_projects_on_decidim_scope_id"
+    t.index ["deleted_at"], name: "index_decidim_budgets_projects_on_deleted_at"
   end
 
   create_table "decidim_categories", id: :serial, force: :cascade do |t|
@@ -474,6 +476,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_29_085464) do
     t.datetime "updated_at", precision: nil, null: false
     t.string "participatory_space_type", null: false
     t.datetime "deleted_at"
+    t.boolean "visible", default: true
     t.index ["deleted_at"], name: "index_decidim_components_on_deleted_at"
     t.index ["participatory_space_id", "participatory_space_type"], name: "index_decidim_components_on_decidim_participatory_space"
   end
