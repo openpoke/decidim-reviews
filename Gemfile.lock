@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 4417e4687254a5af774e3b49e64fd19a74aca93c
+  revision: c5e5d5fa0c6496f0d072ac59ed0ac07a70134d37
   branch: feature/proposals_minimum_votes_number
   specs:
     decidim (0.30.0.dev)
@@ -613,7 +613,7 @@ GEM
       net-smtp
       premailer (~> 1.7, >= 1.7.9)
     public_suffix (6.0.1)
-    puma (6.4.2)
+    puma (6.4.3)
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
