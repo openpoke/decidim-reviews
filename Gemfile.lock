@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 3f86ac376b9d5556b8eaecf66b8ce7290f6fe223
-  branch: feature/share_unpublish_components_with_tokens
+  revision: 16450e21a1431fc6700d25425e1d1836e897dcd7
+  branch: feature/taxonomies-filters-for-components
   specs:
     decidim (0.30.0.dev)
       decidim-accountability (= 0.30.0.dev)
