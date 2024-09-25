@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 16450e21a1431fc6700d25425e1d1836e897dcd7
+  revision: 7543f92dc71f7bf0ddd4da009e414b9627e294cb
   branch: feature/taxonomies-filters-for-components
   specs:
     decidim (0.30.0.dev)
