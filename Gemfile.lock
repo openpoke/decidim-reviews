@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: fcb898d0955b6349dc6a96d562b9771074fe17bb
+  revision: 5caa3e55ad29b0aa23e1de878ce11b17d26dceb5
   branch: feature/soft-delete-for-spaces-components
   specs:
     decidim (0.30.0.dev)
