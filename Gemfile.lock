@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 3f9cf02d015b9961d7d1e50a7db6d566ef90d1cb
+  revision: 6532029c58e125b23cfeab05ed49c538137a5722
   branch: feature/proposals_minimum_votes_number
   specs:
     decidim (0.30.0.dev)
