@@ -24,4 +24,4 @@ end
 require "rubygems"
 require "bundler/setup"
 
-load Gem.bin_path("wisper-rspec", "console")
+load Gem.bin_path("wisper", "console")
