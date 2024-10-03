@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/soft-delete-for-spaces-components" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/geolocation-proposal-form" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION

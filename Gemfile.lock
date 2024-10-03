@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 5caa3e55ad29b0aa23e1de878ce11b17d26dceb5
-  branch: feature/soft-delete-for-spaces-components
+  revision: 7a924c612bbbcd369873e4894bd7949e81b4721d
+  branch: feature/geolocation-proposal-form
   specs:
     decidim (0.30.0.dev)
       decidim-accountability (= 0.30.0.dev)
