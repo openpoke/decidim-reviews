@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 4663b3c9819aa5951207fddfb25ff6056b107188
+  revision: aa8662c9f6f9d845f15549a1e78a19baa78ebde8
   branch: feature/proposals_minimum_votes_number
   specs:
     decidim (0.30.0.dev)
@@ -273,7 +273,7 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
     aws-eventstream (1.3.0)
-    aws-partitions (1.982.0)
+    aws-partitions (1.984.0)
     aws-sdk-core (3.209.1)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
@@ -479,7 +479,7 @@ GEM
     io-console (0.7.2)
     jmespath (1.6.2)
     json (2.7.2)
-    jwt (2.9.1)
+    jwt (2.9.3)
       base64
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
