@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 7589538c1fbb2479462bf857d8ffbb6aba1f2b98
+  revision: 4f63b7c3104152673a68c5b525c99b4a488765d9
   branch: feature/open-debates-content-block
   specs:
     decidim (0.30.0.dev)
