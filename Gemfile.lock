@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 7a924c612bbbcd369873e4894bd7949e81b4721d
-  branch: feature/geolocation-proposal-form
+  revision: 7589538c1fbb2479462bf857d8ffbb6aba1f2b98
+  branch: feature/open-debates-content-block
   specs:
     decidim (0.30.0.dev)
       decidim-accountability (= 0.30.0.dev)

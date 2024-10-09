@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/geolocation-proposal-form" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/open-debates-content-block" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
