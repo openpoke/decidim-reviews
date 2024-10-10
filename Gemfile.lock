@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 19b39db3b166b2434cdc90e540b1ee9aefb55c32
+  revision: 87603472bd962f5e84a0dd614e1ed9877ad78a46
   branch: feature/create_multiple_surveys
   specs:
     decidim (0.30.0.dev)
@@ -273,7 +273,7 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
     aws-eventstream (1.3.0)
-    aws-partitions (1.984.0)
+    aws-partitions (1.988.0)
     aws-sdk-core (3.209.1)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
@@ -527,7 +527,7 @@ GEM
     mini_magick (4.13.2)
     mini_mime (1.1.5)
     minitest (5.25.1)
-    msgpack (1.7.2)
+    msgpack (1.7.3)
     multi_xml (0.7.1)
       bigdecimal (~> 3.1)
     net-http (0.4.1)
