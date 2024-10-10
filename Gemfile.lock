@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: aa8662c9f6f9d845f15549a1e78a19baa78ebde8
-  branch: feature/proposals_minimum_votes_number
+  revision: 19b39db3b166b2434cdc90e540b1ee9aefb55c32
+  branch: feature/create_multiple_surveys
   specs:
     decidim (0.30.0.dev)
       decidim-accountability (= 0.30.0.dev)
