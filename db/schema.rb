@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_18_084920) do
+ActiveRecord::Schema[7.0].define(version: 2024_10_10_101616) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -1716,6 +1716,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_18_084920) do
     t.integer "decidim_component_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.jsonb "announcement"
+    t.boolean "allow_answers"
+    t.boolean "allow_unregistered"
+    t.boolean "clean_after_publish"
     t.index ["decidim_component_id"], name: "index_decidim_surveys_surveys_on_decidim_component_id"
   end
 
