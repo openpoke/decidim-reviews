@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: b147c71e2254cf8e4f61007efc737b6659fda7fa
+  revision: 84c8040cc2e6831004f6076f058907996d1959e7
   branch: feature/create_multiple_surveys
   specs:
     decidim (0.30.0.dev)
