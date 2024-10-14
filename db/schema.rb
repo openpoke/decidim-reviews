@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_13_102247) do
+ActiveRecord::Schema[7.0].define(version: 2024_10_14_100634) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -1000,6 +1000,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_13_102247) do
     t.datetime "updated_at", precision: nil, null: false
     t.index ["decidim_meeting_id"], name: "index_decidim_meetings_invites_on_decidim_meeting_id"
     t.index ["decidim_user_id"], name: "index_decidim_meetings_invites_on_decidim_user_id"
+  end
+
+  create_table "decidim_meetings_meeting_links", force: :cascade do |t|
+    t.bigint "decidim_component_id", null: false
+    t.bigint "decidim_meeting_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_component_id"], name: "index_decidim_meetings_meeting_links_on_decidim_component_id"
+    t.index ["decidim_meeting_id"], name: "index_decidim_meetings_meeting_links_on_decidim_meeting_id"
   end
 
   create_table "decidim_meetings_meetings", id: :serial, force: :cascade do |t|
