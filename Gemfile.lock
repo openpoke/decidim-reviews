@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 4f63b7c3104152673a68c5b525c99b4a488765d9
-  branch: feature/open-debates-content-block
+  revision: a0b32e8ba1653eaf9661caa096faf59be3e50515
+  branch: change/add-attachments-in-debates
   specs:
     decidim (0.30.0.dev)
       decidim-accountability (= 0.30.0.dev)
