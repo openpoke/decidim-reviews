@@ -1,22 +1,35 @@
 <div class="content"><h1>
-<a id="categorizableinterface" class="anchor" href="#categorizableinterface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CategorizableInterface</h1>
-<p>An interface that can be used in categorizable objects.</p>
-<h2>
-<a id="implemented-by" class="anchor" href="#implemented-by" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implemented by</h2>
-<ul>
-   <li><code><a href="/api/docs/object/debate">Debate</a></code></li>
-   <li><code><a href="/api/docs/object/meeting">Meeting</a></code></li>
-   <li><code><a href="/api/docs/object/project">Project</a></code></li>
-   <li><code><a href="/api/docs/object/proposal">Proposal</a></code></li>
-   <li><code><a href="/api/docs/object/result">Result</a></code></li>
-   <li><code><a href="/api/docs/object/sortition">Sortition</a></code></li>
-</ul>
+<a id="taxonomy" class="anchor" href="#taxonomy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Taxonomy</h1>
+<p>A taxonomy that can be applied to other resources.</p>
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
-  <span id="category" class="field-name anchored">category (<code><a href="/api/docs/object/category">Category</a></code>)</span>
+  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
   <div class="description-wrapper">
-   <p>The object's category</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="name" class="field-name anchored">name (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The name of this taxonomy.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="isroot" class="field-name anchored">isRoot (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether this taxonomy is a root taxonomy (root taxonomies have no parents).</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="children" class="field-name anchored">children (<code><a href="/api/docs/object/taxonomy">[Taxonomy!]!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The children of this taxonomy.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="parent" class="field-name anchored">parent (<code><a href="/api/docs/object/taxonomy">Taxonomy</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The parent of this taxonomy.</p>
   </div>
 </div></div>
 <div id="sidebar"><ul class="categories">
@@ -630,6 +643,13 @@
       
         
       <li>
+        <a href="/api/docs/object/taxonomy/" class="sidebar-link">
+          Taxonomy
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/timelineentry/" class="sidebar-link">
           TimelineEntry
         </a>
@@ -777,13 +797,6 @@
       
         
         <li>
-          <a href="/api/docs/interface/categorizableinterface/" class="sidebar-link">
-            CategorizableInterface
-          </a>
-        </li>
-      
-        
-        <li>
           <a href="/api/docs/interface/coauthorableinterface/" class="sidebar-link">
             CoauthorableInterface
           </a>
@@ -863,6 +876,13 @@
         <li>
           <a href="/api/docs/interface/servicesinterface/" class="sidebar-link">
             ServicesInterface
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/api/docs/interface/taxonomizableinterface/" class="sidebar-link">
+            TaxonomizableInterface
           </a>
         </li>
       

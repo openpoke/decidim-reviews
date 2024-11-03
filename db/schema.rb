@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_26_153106) do
+ActiveRecord::Schema[7.0].define(version: 2024_11_03_105704) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -62,6 +62,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_26_153106) do
     t.string "external_id"
     t.integer "comments_count", default: 0, null: false
     t.datetime "deleted_at"
+    t.text "address"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["decidim_accountability_status_id"], name: "decidim_accountability_results_on_status_id"
     t.index ["decidim_component_id"], name: "index_decidim_accountability_results_on_decidim_component_id"
     t.index ["decidim_scope_id"], name: "index_decidim_accountability_results_on_decidim_scope_id"
@@ -1018,6 +1021,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_26_153106) do
     t.index ["decidim_user_id"], name: "index_decidim_meetings_invites_on_decidim_user_id"
   end
 
+  create_table "decidim_meetings_meeting_links", force: :cascade do |t|
+    t.bigint "decidim_component_id", null: false
+    t.bigint "decidim_meeting_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_component_id"], name: "index_decidim_meetings_meeting_links_on_decidim_component_id"
+    t.index ["decidim_meeting_id"], name: "index_decidim_meetings_meeting_links_on_decidim_meeting_id"
+  end
+
   create_table "decidim_meetings_meetings", id: :serial, force: :cascade do |t|
     t.jsonb "title"
     t.jsonb "description"
@@ -1663,6 +1675,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_26_153106) do
     t.datetime "created_at", precision: nil
     t.datetime "last_used_at", precision: nil
     t.datetime "expires_at", precision: nil
+    t.boolean "registered_only"
     t.index ["decidim_organization_id"], name: "index_decidim_share_tokens_on_decidim_organization_id"
     t.index ["decidim_user_id"], name: "index_decidim_share_tokens_on_decidim_user_id"
     t.index ["token_for_type", "token_for_id"], name: "decidim_share_tokens_token_for"
@@ -1772,8 +1785,10 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_26_153106) do
     t.datetime "updated_at", null: false
     t.integer "filters_count", default: 0, null: false
     t.integer "filter_items_count", default: 0, null: false
+    t.integer "part_of", default: [], null: false, array: true
     t.index ["decidim_organization_id"], name: "index_decidim_taxonomies_on_decidim_organization_id"
     t.index ["parent_id"], name: "index_decidim_taxonomies_on_parent_id"
+    t.index ["part_of"], name: "index_decidim_taxonomies_on_part_of", using: :gin
   end
 
   create_table "decidim_taxonomizations", force: :cascade do |t|
@@ -1803,6 +1818,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_26_153106) do
     t.string "space_manifest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "components_count", default: 0, null: false
     t.index ["root_taxonomy_id"], name: "index_decidim_taxonomy_filters_on_root_taxonomy_id"
   end
 
