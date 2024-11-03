@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: d488914f9035b87b03ab33ad13df988d93e46025
+  revision: 171aded63b47a4414bf536abbbbc2631e0958b99
   branch: change/add-attachments-in-debates
   specs:
     decidim (0.30.0.dev)
