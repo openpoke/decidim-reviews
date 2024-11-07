@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_11_03_105704) do
+ActiveRecord::Schema[7.0].define(version: 2024_11_07_150452) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -685,6 +685,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_03_105704) do
     t.integer "follows_count", default: 0, null: false
     t.boolean "comments_enabled", default: true
     t.datetime "deleted_at"
+    t.string "comments_layout"
     t.index ["closed_at"], name: "index_decidim_debates_debates_on_closed_at"
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_debates_debates_on_decidim_author"
     t.index ["decidim_component_id"], name: "index_decidim_debates_debates_on_decidim_component_id"

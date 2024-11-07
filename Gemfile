@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "change/add-attachments-in-debates" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/two-column-comment-debates" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
