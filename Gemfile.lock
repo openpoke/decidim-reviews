@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 171aded63b47a4414bf536abbbbc2631e0958b99
-  branch: change/add-attachments-in-debates
+  revision: 5674289b4156f8aeb75d3d76579adb21792dca06
+  branch: feature/two-column-comment-debates
   specs:
     decidim (0.30.0.dev)
       decidim-accountability (= 0.30.0.dev)
