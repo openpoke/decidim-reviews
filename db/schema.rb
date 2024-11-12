@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_11_07_150452) do
+ActiveRecord::Schema[7.0].define(version: 2024_11_12_095904) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -175,7 +175,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_07_150452) do
     t.jsonb "target"
     t.jsonb "participatory_scope"
     t.jsonb "participatory_structure"
-    t.boolean "show_statistics", default: true
     t.integer "decidim_scope_id"
     t.boolean "scopes_enabled", default: true, null: false
     t.boolean "private_space", default: false
@@ -1374,7 +1373,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_07_150452) do
     t.jsonb "short_description", null: false
     t.jsonb "description", null: false
     t.string "hero_image"
-    t.string "banner_image"
     t.boolean "promoted", default: false
     t.datetime "published_at", precision: nil
     t.jsonb "developer_group"
@@ -1386,7 +1384,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_07_150452) do
     t.jsonb "participatory_structure"
     t.integer "decidim_scope_id"
     t.integer "decidim_participatory_process_group_id"
-    t.boolean "show_statistics", default: true
     t.jsonb "announcement"
     t.boolean "scopes_enabled", default: true, null: false
     t.date "start_date"
@@ -1394,7 +1391,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_07_150452) do
     t.string "reference"
     t.bigint "decidim_area_id"
     t.bigint "decidim_scope_type_id"
-    t.boolean "show_metrics", default: true
     t.integer "weight", default: 1, null: false
     t.integer "follows_count", default: 0, null: false
     t.bigint "decidim_participatory_process_type_id"
@@ -1429,6 +1425,19 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_07_150452) do
     t.datetime "updated_at", precision: nil, null: false
     t.index ["decidim_user_id"], name: "index_decidim_spaces_users_on_private_user_id"
     t.index ["privatable_to_type", "privatable_to_id"], name: "space_privatable_to_privatable_id"
+  end
+
+  create_table "decidim_private_exports", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "export_type", null: false
+    t.string "attached_to_type"
+    t.integer "attached_to_id"
+    t.string "file"
+    t.string "content_type", null: false
+    t.string "file_size", null: false
+    t.datetime "expires_at"
+    t.jsonb "metadata", default: {}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "decidim_proposals_collaborative_draft_collaborator_requests", force: :cascade do |t|
