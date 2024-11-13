@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_10_14_100634) do
+ActiveRecord::Schema[7.0].define(version: 2024_11_13_173044) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -61,6 +61,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_14_100634) do
     t.float "weight", default: 1.0
     t.string "external_id"
     t.integer "comments_count", default: 0, null: false
+    t.text "address"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["decidim_accountability_status_id"], name: "decidim_accountability_results_on_status_id"
     t.index ["decidim_component_id"], name: "index_decidim_accountability_results_on_decidim_component_id"
     t.index ["decidim_scope_id"], name: "index_decidim_accountability_results_on_decidim_scope_id"
@@ -1405,6 +1408,19 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_14_100634) do
     t.index ["privatable_to_type", "privatable_to_id"], name: "space_privatable_to_privatable_id"
   end
 
+  create_table "decidim_private_exports", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "export_type", null: false
+    t.string "attached_to_type"
+    t.integer "attached_to_id"
+    t.string "file"
+    t.string "content_type", null: false
+    t.string "file_size", null: false
+    t.datetime "expires_at"
+    t.jsonb "metadata", default: {}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "decidim_proposals_collaborative_draft_collaborator_requests", force: :cascade do |t|
     t.bigint "decidim_proposals_collaborative_draft_id", null: false
     t.bigint "decidim_user_id", null: false
@@ -1787,6 +1803,10 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_14_100634) do
     t.string "space_manifest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "components_count", default: 0, null: false
+    t.jsonb "name", default: {}
+    t.jsonb "internal_name", default: {}
+    t.boolean "space_filter", default: false, null: false
     t.index ["root_taxonomy_id"], name: "index_decidim_taxonomy_filters_on_root_taxonomy_id"
   end
 
