@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: ba0eecea7d4199f0d58bc2bff7ef74f61d511251
+  revision: 567ebbb896c6500e31b82ae90b302f222014fb50
   branch: feature/update_comments_textbox_design
   specs:
     decidim (0.30.0.dev)
