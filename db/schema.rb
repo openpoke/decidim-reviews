@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_11_13_173044) do
+ActiveRecord::Schema[7.0].define(version: 2024_11_14_103542) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -173,7 +173,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_13_173044) do
     t.jsonb "target"
     t.jsonb "participatory_scope"
     t.jsonb "participatory_structure"
-    t.boolean "show_statistics", default: true
     t.integer "decidim_scope_id"
     t.boolean "scopes_enabled", default: true, null: false
     t.boolean "private_space", default: false
@@ -1353,7 +1352,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_13_173044) do
     t.jsonb "short_description", null: false
     t.jsonb "description", null: false
     t.string "hero_image"
-    t.string "banner_image"
     t.boolean "promoted", default: false
     t.datetime "published_at", precision: nil
     t.jsonb "developer_group"
@@ -1365,7 +1363,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_13_173044) do
     t.jsonb "participatory_structure"
     t.integer "decidim_scope_id"
     t.integer "decidim_participatory_process_group_id"
-    t.boolean "show_statistics", default: true
     t.jsonb "announcement"
     t.boolean "scopes_enabled", default: true, null: false
     t.date "start_date"
@@ -1373,7 +1370,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_13_173044) do
     t.string "reference"
     t.bigint "decidim_area_id"
     t.bigint "decidim_scope_type_id"
-    t.boolean "show_metrics", default: true
     t.integer "weight", default: 1, null: false
     t.integer "follows_count", default: 0, null: false
     t.bigint "decidim_participatory_process_type_id"

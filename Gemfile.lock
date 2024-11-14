@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 11435f359aab11499fb736b7488f5382380a52a7
+  revision: d149a765488f9c33c240bc08dc06a47b1c779d72
   branch: feature/taxonomies-refinements
   specs:
     decidim (0.30.0.dev)
@@ -797,7 +797,7 @@ GEM
     uber (0.1.0)
     unicode-display_width (2.6.0)
     uniform_notifier (1.16.0)
-    uri (1.0.1)
+    uri (1.0.2)
     valid_email2 (4.0.6)
       activemodel (>= 3.2)
       mail (~> 2.5)
