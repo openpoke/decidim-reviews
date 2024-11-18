@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 2fc81d5ae1db96984f4a054cc2c9e236d476addc
+  revision: d66282d8cce2642d7f06aab7f5f674bb19f71e01
   branch: feature/two-column-comment-debates
   specs:
     decidim (0.30.0.dev)
