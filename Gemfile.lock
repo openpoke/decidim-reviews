@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 8d9e0231201d8af38f44cb2ee3b0665ddc1c1597
-  branch: feature/two-column-comment-debates
+  revision: d30a13bbb2442f7423664240ed403e633e26020d
+  branch: feature/newsletters-recipient-selection
   specs:
     decidim (0.30.0.dev)
       decidim-accountability (= 0.30.0.dev)
