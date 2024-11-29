@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/update_comments_textbox_design" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/implement_bulk_actions_moderations" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
