@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: b62172faa18faab3a9b7b588ce5d9d04f77e1e4f
+  revision: 3089f8354c0d62156637aa4b3a3f98aae3b7079e
   branch: feature/implement_bulk_actions_moderations
   specs:
     decidim (0.30.0.dev)
