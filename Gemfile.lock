@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 3089f8354c0d62156637aa4b3a3f98aae3b7079e
+  revision: 7d20185625f1c0519ddae71172de421cd665b65c
   branch: feature/implement_bulk_actions_moderations
   specs:
     decidim (0.30.0.dev)
@@ -271,7 +271,7 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
     aws-eventstream (1.3.0)
-    aws-partitions (1.1015.0)
+    aws-partitions (1.1017.0)
     aws-sdk-core (3.214.0)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
@@ -477,9 +477,9 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     invisible_captcha (0.13.0)
       rails (>= 3.2.0)
-    io-console (0.7.2)
+    io-console (0.8.0)
     jmespath (1.6.2)
-    json (2.8.2)
+    json (2.9.0)
     jwt (2.9.3)
       base64
     kaminari (1.2.2)
@@ -524,10 +524,10 @@ GEM
     mime-types (3.6.0)
       logger
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2024.1105)
+    mime-types-data (3.2024.1203)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
-    minitest (5.25.2)
+    minitest (5.25.4)
     msgpack (1.7.5)
     multi_xml (0.7.1)
       bigdecimal (~> 3.1)
@@ -543,17 +543,17 @@ GEM
     net-smtp (0.3.4)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.16.7-aarch64-linux)
+    nokogiri (1.16.8-aarch64-linux)
       racc (~> 1.4)
-    nokogiri (1.16.7-arm-linux)
+    nokogiri (1.16.8-arm-linux)
       racc (~> 1.4)
-    nokogiri (1.16.7-arm64-darwin)
+    nokogiri (1.16.8-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.7-x86-linux)
+    nokogiri (1.16.8-x86-linux)
       racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-darwin)
+    nokogiri (1.16.8-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-linux)
+    nokogiri (1.16.8-x86_64-linux)
       racc (~> 1.4)
     oauth (1.1.0)
       oauth-tty (~> 1.0, >= 1.0.1)
@@ -659,9 +659,9 @@ GEM
       activesupport (>= 5.0.0)
       minitest
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.6.0)
+    rails-html-sanitizer (1.6.1)
       loofah (~> 2.21)
-      nokogiri (~> 1.14)
+      nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
     rails-i18n (7.0.10)
       i18n (>= 0.7, < 2)
       railties (>= 6.0.0, < 8)
@@ -722,7 +722,7 @@ GEM
       rspec-support (~> 3.13)
     rspec-retry (0.6.2)
       rspec-core (> 3.3)
-    rspec-support (3.13.1)
+    rspec-support (3.13.2)
     rspec_junit_formatter (0.6.0)
       rspec-core (>= 2, < 4, != 2.12.0)
     rubocop (1.65.1)
