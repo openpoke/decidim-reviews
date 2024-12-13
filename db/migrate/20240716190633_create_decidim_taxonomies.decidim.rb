@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This migration comes from decidim (originally 20240704115429)
 class CreateDecidimTaxonomies < ActiveRecord::Migration[7.0]
   def change
     create_table :decidim_taxonomies do |t|
