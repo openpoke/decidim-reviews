@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: bb635ba9f14c5384b2e9b21037754e62515e099b
+  revision: 5b3075ecea0be08a19fe2dbf9e6961e2c1c18c17
   branch: feature/yet-another-taxonomy-refinement
   specs:
     decidim (0.30.0.dev)
