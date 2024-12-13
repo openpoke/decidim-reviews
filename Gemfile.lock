@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 8ecd5e48dc3684beeec9d6b3639f56e4ad9d1d1e
+  revision: 4f5d13443183004e151b2f16c0e180e6acb7b443
   branch: feature/newsletters-recipient-selection
   specs:
     decidim (0.30.0.dev)
