@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_11_12_095904) do
+ActiveRecord::Schema[7.0].define(version: 2024_12_13_091547) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -1423,6 +1423,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_12_095904) do
     t.string "privatable_to_type"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.jsonb "role"
+    t.boolean "published", default: false
     t.index ["decidim_user_id"], name: "index_decidim_spaces_users_on_private_user_id"
     t.index ["privatable_to_type", "privatable_to_id"], name: "space_privatable_to_privatable_id"
   end
@@ -1829,6 +1831,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_12_095904) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "components_count", default: 0, null: false
+    t.jsonb "name", default: {}
+    t.jsonb "internal_name", default: {}
+    t.boolean "space_filter", default: false, null: false
     t.index ["root_taxonomy_id"], name: "index_decidim_taxonomy_filters_on_root_taxonomy_id"
   end
 
