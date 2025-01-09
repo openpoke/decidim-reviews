@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 18606e8136b1d5c94231496816f508c148b4c5a8
+  revision: 5d102b96c44be069c7df958e7fa5552de9ae0d94
   branch: feature/improve_merge_proposals_functionality
   specs:
     decidim (0.30.0.dev)
@@ -52,7 +52,6 @@ GIT
     decidim-conferences (0.30.0.dev)
       decidim-core (= 0.30.0.dev)
       decidim-meetings (= 0.30.0.dev)
-      wicked_pdf (~> 2.7)
     decidim-core (0.30.0.dev)
       active_link_to (~> 1.0)
       acts_as_list (~> 1.0)
@@ -131,7 +130,7 @@ GIT
       rspec-rails (~> 6.0)
       rspec-retry (~> 0.6.2)
       rspec_junit_formatter (~> 0.6.0)
-      rubocop (~> 1.65.0)
+      rubocop (~> 1.69.0)
       rubocop-capybara (~> 2.21)
       rubocop-factory_bot (~> 2.26)
       rubocop-faker (~> 1.1)
@@ -150,7 +149,6 @@ GIT
       wisper-rspec (~> 1.0)
     decidim-forms (0.30.0.dev)
       decidim-core (= 0.30.0.dev)
-      wicked_pdf (~> 2.1)
     decidim-generators (0.30.0.dev)
       decidim-core (= 0.30.0.dev)
     decidim-initiatives (0.30.0.dev)
@@ -159,7 +157,6 @@ GIT
       decidim-core (= 0.30.0.dev)
       decidim-verifications (= 0.30.0.dev)
       hexapdf (~> 1.0.0)
-      wicked_pdf (~> 2.1)
     decidim-meetings (0.30.0.dev)
       decidim-core (= 0.30.0.dev)
       decidim-forms (= 0.30.0.dev)
@@ -744,17 +741,16 @@ GEM
     rspec-support (3.13.2)
     rspec_junit_formatter (0.6.0)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rubocop (1.65.1)
+    rubocop (1.69.2)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
       parser (>= 3.3.0.2)
       rainbow (>= 2.2.2, < 4.0)
-      regexp_parser (>= 2.4, < 3.0)
-      rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.31.1, < 2.0)
+      regexp_parser (>= 2.9.3, < 3.0)
+      rubocop-ast (>= 1.36.2, < 2.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 2.4.0, < 3.0)
+      unicode-display_width (>= 2.4.0, < 4.0)
     rubocop-ast (1.37.0)
       parser (>= 3.3.1.0)
     rubocop-capybara (2.21.0)
@@ -891,9 +887,6 @@ GEM
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    wicked_pdf (2.8.2)
-      activesupport
-      ostruct
     wisper (2.0.1)
     wisper-rspec (1.1.0)
     xpath (3.2.0)
