@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_12_13_091204) do
+ActiveRecord::Schema[7.0].define(version: 2025_01_14_091553) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -684,6 +684,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_13_091204) do
     t.integer "follows_count", default: 0, null: false
     t.boolean "comments_enabled", default: true
     t.datetime "deleted_at"
+    t.string "comments_layout"
     t.index ["closed_at"], name: "index_decidim_debates_debates_on_closed_at"
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_debates_debates_on_decidim_author"
     t.index ["decidim_component_id"], name: "index_decidim_debates_debates_on_decidim_component_id"
@@ -1426,6 +1427,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_13_091204) do
     t.string "privatable_to_type"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.jsonb "role"
+    t.boolean "published", default: false
     t.index ["decidim_user_id"], name: "index_decidim_spaces_users_on_private_user_id"
     t.index ["privatable_to_type", "privatable_to_id"], name: "space_privatable_to_privatable_id"
   end
@@ -1768,8 +1771,16 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_13_091204) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.datetime "deleted_at"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.jsonb "announcement"
+    t.boolean "allow_answers"
+    t.boolean "allow_unregistered"
+    t.boolean "clean_after_publish"
+    t.datetime "published_at"
     t.index ["decidim_component_id"], name: "index_decidim_surveys_surveys_on_decidim_component_id"
     t.index ["deleted_at"], name: "index_decidim_surveys_surveys_on_deleted_at"
+    t.index ["published_at"], name: "index_decidim_surveys_surveys_on_published_at"
   end
 
   create_table "decidim_system_admins", id: :serial, force: :cascade do |t|
