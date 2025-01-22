@@ -14,6 +14,14 @@ daily_open_data_job:
   args:
     task: decidim:open_data:export
 
+dayly_delete_inactive_users_job:
+  cron: "45 4 * * *"
+  class: "InvokeRakeTaskJob"
+  queue: default
+  status: <%= ENV.fetch("DELETE_INACTIVE_USERS", "enabled") %> # enabled by default
+  args:
+    task: decidim:delete_inactive_participants
+
 daily_clean_data_portability_job:
   cron: "33 3 * * *"
   class: "InvokeRakeTaskJob"
@@ -69,4 +77,3 @@ weekly_notifications_digest_job:
   status: <%= ENV.fetch("WEEKLY_NOTIFICATIONS_DIGEST", "enabled") %> # enabled by default
   args:
     task: decidim:mailers:notifications_digest_weekly
-
