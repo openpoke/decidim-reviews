@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 22cda34372de57a618f4f41cab827d991934e419
+  revision: fb209db07d8653c2dc5e3ca1a42bc9d11adc2f4e
   branch: feature/improve_merge_proposals_functionality
   specs:
     decidim (0.30.0.dev)
