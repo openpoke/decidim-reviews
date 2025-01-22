@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_12_14_160234) do
+ActiveRecord::Schema[7.0].define(version: 2025_01_22_101341) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -1771,8 +1771,16 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_14_160234) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.datetime "deleted_at"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.jsonb "announcement"
+    t.boolean "allow_answers"
+    t.boolean "allow_unregistered"
+    t.boolean "clean_after_publish"
+    t.datetime "published_at"
     t.index ["decidim_component_id"], name: "index_decidim_surveys_surveys_on_decidim_component_id"
     t.index ["deleted_at"], name: "index_decidim_surveys_surveys_on_deleted_at"
+    t.index ["published_at"], name: "index_decidim_surveys_surveys_on_published_at"
   end
 
   create_table "decidim_system_admins", id: :serial, force: :cascade do |t|
@@ -1958,6 +1966,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_14_160234) do
     t.jsonb "officialized_as"
     t.datetime "admin_terms_accepted_at", precision: nil
     t.boolean "email_on_assigned_proposals", default: true
+    t.datetime "last_inactivity_notice_sent_at"
+    t.datetime "removal_date"
     t.index ["confirmation_token"], name: "index_decidim_users_on_confirmation_token", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_users_on_decidim_organization_id"
     t.index ["email", "decidim_organization_id"], name: "index_decidim_users_on_email_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false) AND ((type)::text = 'Decidim::User'::text))"
@@ -1966,9 +1976,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_14_160234) do
     t.index ["invitations_count"], name: "index_decidim_users_on_invitations_count"
     t.index ["invited_by_id", "invited_by_type"], name: "index_decidim_users_on_invited_by_id_and_invited_by_type"
     t.index ["invited_by_id"], name: "index_decidim_users_on_invited_by_id"
+    t.index ["last_inactivity_notice_sent_at"], name: "index_decidim_users_on_last_inactivity_notice_sent_at"
     t.index ["nickname", "decidim_organization_id"], name: "index_decidim_users_on_nickame_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false))"
     t.index ["notifications_sending_frequency"], name: "index_decidim_users_on_notifications_sending_frequency"
     t.index ["officialized_at"], name: "index_decidim_users_on_officialized_at"
+    t.index ["removal_date"], name: "index_decidim_users_on_removal_date"
     t.index ["reset_password_token"], name: "index_decidim_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_decidim_users_on_unlock_token", unique: true
   end

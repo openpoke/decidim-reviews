@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: e8fdae11ee9ccc5f95a63138a5f50d08fa6a9fa3
-  branch: feature/newsletters-recipient-selection
+  revision: 8656c9176a0addd6e294cc1aa56ae34cc8ec0db9
+  branch: feature/automatic-inactive-account-deletion
   specs:
     decidim (0.30.0.dev)
       decidim-accountability (= 0.30.0.dev)
