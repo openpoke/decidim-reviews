@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 5adf8f0fcfb3eab023b88230ea0ef55f0be23cae
+  revision: 22cda34372de57a618f4f41cab827d991934e419
   branch: feature/improve_merge_proposals_functionality
   specs:
     decidim (0.30.0.dev)
@@ -60,6 +60,7 @@ GIT
       cells-erb (~> 0.1.0)
       cells-rails (~> 0.1.3)
       charlock_holmes (~> 0.7)
+      concurrent-ruby (= 1.3.4)
       date_validator (~> 0.12.0)
       devise (~> 4.7)
       devise-i18n (~> 1.2)
@@ -268,7 +269,7 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
     aws-eventstream (1.3.0)
-    aws-partitions (1.1040.0)
+    aws-partitions (1.1041.0)
     aws-sdk-core (3.216.0)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
@@ -330,7 +331,7 @@ GEM
       logger (~> 1.5)
     cmdparse (3.0.7)
     commonmarker (0.23.11)
-    concurrent-ruby (1.3.5)
+    concurrent-ruby (1.3.4)
     connection_pool (2.5.0)
     crack (1.0.0)
       bigdecimal
@@ -805,7 +806,7 @@ GEM
       google-protobuf (~> 4.29)
     sass-embedded (1.83.4-x86_64-linux-musl)
       google-protobuf (~> 4.29)
-    selenium-webdriver (4.27.0)
+    selenium-webdriver (4.28.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
