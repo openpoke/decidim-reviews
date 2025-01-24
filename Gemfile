@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/improve_merge_proposals_functionality" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/manage_upload_census_records" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
