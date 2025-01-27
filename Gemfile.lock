@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 0f539a17d731ccc39d00375922fbf7e310419780
+  revision: cb5d1ff668f5bc96e34e3e2e012ba685c528fe8b
   branch: fix/ajax-component-taxonomy-update
   specs:
     decidim (0.30.0.dev)
