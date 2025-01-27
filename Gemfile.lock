@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 3a538d0c67aaf2b34960abdbfadab2565dbf92f2
-  branch: develop
+  revision: 9675e578ea5d2c1fc6ce508d60b9ddaebfa1d7a8
+  branch: fix/ajax-component-taxonomy-update
   specs:
     decidim (0.30.0.dev)
       decidim-accountability (= 0.30.0.dev)
@@ -489,7 +489,7 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
-    language_server-protocol (3.17.0.3)
+    language_server-protocol (3.17.0.4)
     launchy (3.0.1)
       addressable (~> 2.8)
       childprocess (~> 5.0)
