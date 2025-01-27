@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_01_14_091553) do
+ActiveRecord::Schema[7.0].define(version: 2025_01_27_083127) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -812,6 +812,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_14_091553) do
     t.integer "matrix_rows_count", default: 0, null: false
     t.integer "display_conditions_count", default: 0, null: false
     t.integer "display_conditions_for_other_questions_count", default: 0, null: false
+    t.datetime "survey_answers_published_at"
     t.index ["decidim_questionnaire_id"], name: "index_decidim_forms_questions_on_decidim_questionnaire_id"
     t.index ["position"], name: "index_decidim_forms_questions_on_position"
   end
