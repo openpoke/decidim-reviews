@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 0328ba6ccb13684cb152b7944712e0440ab40c20
+  revision: c8a062b1379eeaf874bf90ce377d8f21d5d2bf07
   branch: feature/manage_upload_census_records
   specs:
     decidim (0.30.0.dev)
