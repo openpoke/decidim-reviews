@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: b47fc251c9dc24d7dca9d7bf3121bb204c840910
+  revision: 225f64a4cc589699d9b44149c3f12d56153f7c2d
   branch: feature/automatic-inactive-account-deletion
   specs:
     decidim (0.30.0.dev)
