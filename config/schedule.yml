@@ -20,7 +20,7 @@ dayly_delete_inactive_users_job:
   queue: default
   status: <%= ENV.fetch("DELETE_INACTIVE_USERS", "enabled") %> # enabled by default
   args:
-    task: decidim:delete_inactive_participants
+    task: decidim:participants:delete_inactive_participants
 
 daily_clean_data_portability_job:
   cron: "33 3 * * *"
