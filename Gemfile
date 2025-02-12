@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "fix/ajax-component-taxonomy-update" }
+DECIDIM_VERSION = { github: "openpoke/decidim", branch: "feature/meeting-reminder-customization" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
