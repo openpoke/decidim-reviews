@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 3fcd8d683536022d3458866b52e17b3a4eb246dc
+  revision: dbeea483fd91f008acf0d42c960967bfc43f14f1
   branch: feature/manage_upload_census_records
   specs:
     decidim (0.30.0.dev)
@@ -271,14 +271,14 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
     aws-eventstream (1.3.1)
-    aws-partitions (1.1051.0)
-    aws-sdk-core (3.218.1)
+    aws-partitions (1.1052.0)
+    aws-sdk-core (3.219.0)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
       aws-sigv4 (~> 1.9)
       base64
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.98.0)
+    aws-sdk-kms (1.99.0)
       aws-sdk-core (~> 3, >= 3.216.0)
       aws-sigv4 (~> 1.5)
     aws-sdk-s3 (1.143.1)
@@ -430,7 +430,7 @@ GEM
     google-protobuf (4.29.3)
       bigdecimal
       rake (>= 13)
-    graphql (2.4.9)
+    graphql (2.4.10)
       base64
       fiber-storage
       logger
