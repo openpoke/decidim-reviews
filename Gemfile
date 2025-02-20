@@ -4,9 +4,10 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "openpoke/decidim", branch: "feature/meeting-reminder-customization" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/create-suggestions-in-collaborative-texts" }
 
 gem "decidim", DECIDIM_VERSION
+gem "decidim-collaborative_texts", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-design", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION

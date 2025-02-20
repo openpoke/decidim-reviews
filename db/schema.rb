@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_02_12_160352) do
+ActiveRecord::Schema[7.0].define(version: 2025_02_20_165606) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -423,6 +423,27 @@ ActiveRecord::Schema[7.0].define(version: 2025_02_12_160352) do
     t.index ["coauthorable_type", "coauthorable_id"], name: "index_coauthorable_on_coauthorship"
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_coauthorships_on_decidim_author"
     t.index ["decidim_user_group_id"], name: "index_user_group_on_coauthorsihp"
+  end
+
+  create_table "decidim_collaborative_texts_documents", force: :cascade do |t|
+    t.integer "decidim_component_id"
+    t.string "title"
+    t.jsonb "announcement"
+    t.boolean "accepting_suggestions", default: false, null: false
+    t.datetime "published_at", precision: nil
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_decidim_collaborative_texts_documents_on_deleted_at"
+    t.index ["published_at"], name: "index_decidim_collaborative_texts_documents_on_published_at"
+  end
+
+  create_table "decidim_collaborative_texts_versions", force: :cascade do |t|
+    t.bigint "document_id", null: false
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["document_id"], name: "index_decidim_collaborative_texts_versions_on_document_id"
   end
 
   create_table "decidim_comments_comment_votes", id: :serial, force: :cascade do |t|
