@@ -28,12 +28,14 @@ group :development, :test do
 end
 
 group :development do
-  gem "listen"
-  gem "web-console"
+  gem "listen", "~> 3.1"
+  gem "spring", "~> 4.0"
+  gem "spring-watcher-listen", "~> 2.0"
+  gem "web-console", "~> 4.2"
 end
 
 group :production do
-  gem "aws-sdk-s3", "~> 1.143.0", require: false
+  gem "aws-sdk-s3", require: false
   gem "sidekiq"
   gem "sidekiq-cron"
 end
