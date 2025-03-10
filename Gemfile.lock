@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: fa6b868f11c07bfdce12b2a9279d5a50746f11f2
+  revision: b4eec665cdaaa5ab7cc3b33650fd0234a37a1d85
   branch: feature/voting_rule_notifications
   specs:
     decidim (0.31.0.dev)
