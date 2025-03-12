@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_02_27_221915) do
+ActiveRecord::Schema[7.0].define(version: 2025_03_12_171317) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -434,6 +434,8 @@ ActiveRecord::Schema[7.0].define(version: 2025_02_27_221915) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "coauthorships_count", default: 0, null: false
+    t.index ["coauthorships_count"], name: "idx_decidim_collaborative_texts_documents_coauthorships_count"
     t.index ["deleted_at"], name: "index_decidim_collaborative_texts_documents_on_deleted_at"
     t.index ["published_at"], name: "index_decidim_collaborative_texts_documents_on_published_at"
   end
