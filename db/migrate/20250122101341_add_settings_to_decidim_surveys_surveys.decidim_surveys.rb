@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_surveys (originally 20240925124312)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-03-24 17:14:23 UTC
 class AddSettingsToDecidimSurveysSurveys < ActiveRecord::Migration[7.0]
   class Survey < ApplicationRecord
     include Decidim::HasComponent
@@ -21,7 +22,7 @@ class AddSettingsToDecidimSurveysSurveys < ActiveRecord::Migration[7.0]
         add_index :decidim_surveys_surveys, :published_at
 
         Survey.where(published_at: nil).find_each do |survey|
-          published_at = survey.component.published_at
+          published_at = survey.component&.published_at
           next if published_at.nil?
 
           survey.update(published_at:)
