@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 2c126c12657a08f845ce90511bf150dc0993a0c9
+  revision: 9eb592b5b2184aca2e0d452129e2ec90bacfc66c
   branch: chore/remove-metrics
   specs:
     decidim (0.31.0.dev)
