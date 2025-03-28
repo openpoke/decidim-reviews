@@ -1,4 +1,4 @@
-FROM ruby:3.2 AS builder
+FROM ruby:3.3.4 AS builder
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates curl gnupg && \
     mkdir -p /etc/apt/keyrings && \
@@ -10,6 +10,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates c
     postgresql-client \
     p7zip-full \
     libpq-dev && \
+    openssl && \
     apt-get clean
 
 # throw errors if Gemfile has been modified since Gemfile.lock
@@ -36,8 +37,6 @@ RUN gem install bundler:$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | xa
     find /usr/local/bundle/ -name ".github" -exec rm -rf {} + && \
     # whkhtmltopdf has binaries for all platforms, we don't need them once uncompressed
     rm -rf /usr/local/bundle/gems/wkhtmltopdf-binary-*/bin/*.gz && \
-    # fix possible 7zip problems by manually adding the 7z.so libray
-    ln -s /usr/lib/p7zip/7z.so /usr/local/bundle/gems/seven_zip_ruby-1.3.0/lib/seven_zip_ruby/7z.so && \
     rm -f /usr/local/bundle/gems/seven_zip_ruby-1.3.0/lib/seven_zip_ruby/*.dll && \
     # Remove additional unneded decidim files
     find /usr/local/bundle/ -name "decidim_app-design" -exec rm -rf {} + && \
@@ -80,7 +79,7 @@ RUN mv config/credentials.bak config/credentials 2>/dev/null || true
 RUN rm -rf node_modules tmp/cache vendor/bundle test spec app/packs .git
 
 # This image is for production env only
-FROM ruby:3.2-slim AS final
+FROM ruby:3.3.4-slim AS final
 
 RUN apt-get update && \
     apt-get install -y postgresql-client \
