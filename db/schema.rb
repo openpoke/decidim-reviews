@@ -2096,6 +2096,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_03_12_171317) do
     t.string "whodunnit"
     t.jsonb "object"
     t.datetime "created_at", precision: nil
+    t.text "old_object_changes"
     t.jsonb "object_changes"
     t.index ["item_id", "item_type"], name: "index_versions_on_item_id_and_item_type"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
