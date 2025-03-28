@@ -470,6 +470,8 @@ GEM
       sass-embedded (~> 1.58)
     hashdiff (1.1.2)
     hashie (5.0.0)
+    health_check (3.1.0)
+      railties (>= 5.0)
     hexapdf (1.1.1)
       cmdparse (~> 3.0, >= 3.0.3)
       geom2d (~> 0.4, >= 0.4.1)
@@ -956,6 +958,7 @@ DEPENDENCIES
   decidim-templates!
   faker (~> 3.2)
   flamegraph
+  health_check
   letter_opener_web
   listen (~> 3.1)
   memory_profiler

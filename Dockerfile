@@ -8,7 +8,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates c
     apt-get update && apt-get install -y nodejs yarn \
     build-essential \
     postgresql-client \
-    p7zip-full \
+    p7zip \
+    openssl \
     libpq-dev && \
     apt-get clean
 
@@ -34,9 +35,9 @@ RUN gem install bundler:$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | xa
     find /usr/local/bundle/ -name "*.o" -delete && \
     find /usr/local/bundle/ -name ".git" -exec rm -rf {} + && \
     find /usr/local/bundle/ -name ".github" -exec rm -rf {} + && \
-    # Remove additional unneded decidim files
-    find /usr/local/bundle/ -name "decidim_app-design" -exec rm -rf {} + && \
-    find /usr/local/bundle/ -name "spec" -exec rm -rf {} +
+    # Remove additional unneeded decidim files
+    find /usr/local/bundle/ -name "spec" -exec rm -rf {} + && \
+    find /usr/local/bundle/ -wholename "*/decidim-dev/lib/decidim/dev/assets/*" -exec rm -rf {} +
 
 RUN npm ci
 
@@ -52,7 +53,7 @@ COPY ./config.ru /app/config.ru
 COPY ./Rakefile /app/Rakefile
 COPY ./postcss.config.js /app/postcss.config.js
 
-# Compile assets with Webpacker or Sprockets
+# Compile assets with Shakapacker
 #
 # Notes:
 #   1. Executing "assets:precompile" runs "webpacker:compile", too
@@ -82,11 +83,15 @@ RUN apt-get update && \
     imagemagick \
     curl \
     p7zip \
+    wkhtmltopdf \
     openssl \
     supervisor && \
     apt-get clean
 
 EXPOSE 3000
+
+ARG CAPROVER_GIT_COMMIT_SHA=${CAPROVER_GIT_COMMIT_SHA}
+ENV APP_REVISION=${CAPROVER_GIT_COMMIT_SHA}
 
 ENV RAILS_LOG_TO_STDOUT true
 ENV RAILS_SERVE_STATIC_FILES true
@@ -94,13 +99,6 @@ ENV RAILS_ENV production
 
 ARG RUN_RAILS
 ARG RUN_SIDEKIQ
-ARG COMMIT_SHA
-ARG COMMIT_TIME
-ARG COMMIT_VERSION
-
-ENV COMMIT_SHA ${COMMIT_SHA}
-ENV COMMIT_TIME ${COMMIT_TIME}
-ENV COMMIT_VERSION ${COMMIT_VERSION}
 
 # Add user
 RUN addgroup --system --gid 1000 app && \
@@ -114,8 +112,7 @@ COPY --from=builder --chown=app:app /app /app
 
 USER app
 HEALTHCHECK --interval=1m --timeout=5s --start-period=30s \
-    CMD (curl -sSH "Content-Type: application/json" -d '{"query": "{ decidim { version } }"}' http://localhost:3000/api) || exit 1
-
+    CMD (curl -sS http://localhost:3000/health_check | grep success) || exit 1
 
 ENTRYPOINT ["/app/entrypoint.sh"]
 CMD ["/usr/bin/supervisord"]

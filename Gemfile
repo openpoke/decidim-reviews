@@ -14,9 +14,10 @@ gem "decidim-templates", DECIDIM_VERSION
 
 gem "bootsnap", "~> 1.4"
 
-gem "puma", ">= 6.3.1"
-gem "letter_opener_web"
 gem "faker", "~> 3.2"
+gem "health_check"
+gem "letter_opener_web"
+gem "puma", ">= 6.3.1"
 gem "rails_semantic_logger"
 gem "sentry-rails"
 gem "sentry-ruby"
@@ -38,9 +39,9 @@ group :development do
 end
 
 group :production do
-  gem 'aws-sdk-s3', require: false
-  gem 'sidekiq'
-  gem 'sidekiq-cron'
+  gem "aws-sdk-s3", require: false
+  gem "sidekiq"
+  gem "sidekiq-cron"
 end
 
 group :development do
