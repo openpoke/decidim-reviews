@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/add-proposal-grid-mode" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "develop" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
@@ -15,8 +15,11 @@ gem "decidim-templates", DECIDIM_VERSION
 gem "bootsnap", "~> 1.4"
 
 gem "puma", ">= 6.3.1"
-gem "letter_opener_web", "~> 2.0"
+gem "letter_opener_web"
 gem "faker", "~> 3.2"
+gem "rails_semantic_logger"
+gem "sentry-rails"
+gem "sentry-ruby"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri

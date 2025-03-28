@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_proposals (originally 20240110203500)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-03-28 09:30:04 UTC
 class AddWithdrawnAtFieldToProposals < ActiveRecord::Migration[6.1]
   class CustomProposal < Decidim::Proposals::ApplicationRecord
     self.table_name = "decidim_proposals_proposals"
@@ -13,6 +14,7 @@ class AddWithdrawnAtFieldToProposals < ActiveRecord::Migration[6.1]
 
     CustomProposal.withdrawn.find_each do |proposal|
       proposal.withdrawn_at = proposal.updated_at
+      proposal.state = :not_answered
       proposal.save!
     end
   end
