@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_surveys (originally 20240925124312)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-03-25 09:29:58 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-03-28 08:20:18 UTC
 class AddSettingsToDecidimSurveysSurveys < ActiveRecord::Migration[7.0]
   class Survey < ApplicationRecord
     include Decidim::HasComponent

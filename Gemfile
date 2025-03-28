@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "chore/remove-metrics" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/allow-unset-meeting-address" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION

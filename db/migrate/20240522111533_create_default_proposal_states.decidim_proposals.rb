@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_proposals (originally 20240110203504)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-03-25 09:29:58 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-03-28 08:20:18 UTC
 class CreateDefaultProposalStates < ActiveRecord::Migration[6.1]
   class CustomProposal < ApplicationRecord
     belongs_to :proposal_state,
