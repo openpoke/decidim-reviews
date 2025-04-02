@@ -1,44 +1,20 @@
 <div class="content"><h1>
-<a id="assembliestype" class="anchor" href="#assembliestype" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>assembliesType</h1>
-<p>Finds an assemblies type group</p>
+<a id="attachablecollectioninterface" class="anchor" href="#attachablecollectioninterface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>AttachableCollectionInterface</h1>
+<p>An interface that can be used in objects with attachments</p>
 <h2>
-<a id="arguments" class="anchor" href="#arguments" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Arguments</h2>
-<div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The ID of the Assemblies type</p>
-  </div>
-</div>
+<a id="implemented-by" class="anchor" href="#implemented-by" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implemented by</h2>
+<ul>
+   <li><code><a href="/api/docs/object/assembly">Assembly</a></code></li>
+   <li><code><a href="/api/docs/object/conference">Conference</a></code></li>
+   <li><code><a href="/api/docs/object/project">Project</a></code></li>
+   <li><code><a href="/api/docs/object/result">Result</a></code></li>
+</ul>
 <h2>
-<a id="return-fields" class="anchor" href="#return-fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Return fields</h2>
+<a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
-  <span id="assemblies" class="field-name anchored">assemblies (<code><a href="/api/docs/object/assembly">[Assembly]!</a></code>)</span>
+  <span id="attachmentcollections" class="field-name anchored">attachmentCollections (<code><a href="/api/docs/object/attachmentcollection">[AttachmentCollection]!</a></code>)</span>
   <div class="description-wrapper">
-   <p>Assemblies with this assemblies type</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this assemblies type was created</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The assemblies type's unique ID</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The title of this assemblies type.</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this assemblies type was updated</p>
+   <p>This object's attachment collections</p>
   </div>
 </div></div>
 <div id="sidebar"><div id="search">
@@ -77,20 +53,6 @@
       <li>
         <a href="/api/docs/query/assemblies/" class="sidebar-link">
           assemblies
-        </a>
-      </li>
-      
-      
-      <li>
-        <a href="/api/docs/query/assembliestype/" class="sidebar-link">
-          assembliesType
-        </a>
-      </li>
-      
-      
-      <li>
-        <a href="/api/docs/query/assembliestypes/" class="sidebar-link">
-          assembliesTypes
         </a>
       </li>
       
@@ -168,13 +130,6 @@
       <li>
         <a href="/api/docs/query/initiativestypes/" class="sidebar-link">
           initiativesTypes
-        </a>
-      </li>
-      
-      
-      <li>
-        <a href="/api/docs/query/metrics/" class="sidebar-link">
-          metrics
         </a>
       </li>
       
@@ -292,34 +247,6 @@
       
         
       <li>
-        <a href="/api/docs/object/answeroption/" class="sidebar-link">
-          AnswerOption
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/area/" class="sidebar-link">
-          Area
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/areatype/" class="sidebar-link">
-          AreaType
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/assembliestype/" class="sidebar-link">
-          AssembliesType
-        </a>
-      </li>
-      
-        
-      <li>
         <a href="/api/docs/object/assembly/" class="sidebar-link">
           Assembly
         </a>
@@ -329,6 +256,13 @@
       <li>
         <a href="/api/docs/object/attachment/" class="sidebar-link">
           Attachment
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/attachmentcollection/" class="sidebar-link">
+          AttachmentCollection
         </a>
       </li>
       
@@ -413,6 +347,13 @@
       <li>
         <a href="/api/docs/object/conferencepartner/" class="sidebar-link">
           ConferencePartner
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/conferenceregistrationtype/" class="sidebar-link">
+          ConferenceRegistrationType
         </a>
       </li>
       
@@ -553,20 +494,6 @@
       <li>
         <a href="/api/docs/object/meetings/" class="sidebar-link">
           Meetings
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/metric/" class="sidebar-link">
-          Metric
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/metrichistory/" class="sidebar-link">
-          MetricHistory
         </a>
       </li>
       
@@ -735,6 +662,13 @@
       <li>
         <a href="/api/docs/object/questionnaire/" class="sidebar-link">
           Questionnaire
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/responseoption/" class="sidebar-link">
+          ResponseOption
         </a>
       </li>
       
@@ -943,6 +877,13 @@
       
         
         <li>
+          <a href="/api/docs/interface/attachablecollectioninterface/" class="sidebar-link">
+            AttachableCollectionInterface
+          </a>
+        </li>
+      
+        
+        <li>
           <a href="/api/docs/interface/attachableinterface/" class="sidebar-link">
             AttachableInterface
           </a>
@@ -1006,8 +947,22 @@
       
         
         <li>
+          <a href="/api/docs/interface/followableinterface/" class="sidebar-link">
+            FollowableInterface
+          </a>
+        </li>
+      
+        
+        <li>
           <a href="/api/docs/interface/initiativetypeinterface/" class="sidebar-link">
             InitiativeTypeInterface
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/api/docs/interface/localizableinterface/" class="sidebar-link">
+            LocalizableInterface
           </a>
         </li>
       
@@ -1036,6 +991,13 @@
         <li>
           <a href="/api/docs/interface/questionnaireentityinterface/" class="sidebar-link">
             QuestionnaireEntityInterface
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/api/docs/interface/referableinterface/" class="sidebar-link">
+            ReferableInterface
           </a>
         </li>
       
