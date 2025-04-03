@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 0261038887d30ced30eb896f2aa410481ab203f4
+  revision: d66bafa67a05fa7217b11124cc5521b1a7f73a4e
   branch: feature/standarized_statistics
   specs:
     decidim (0.31.0.dev)
@@ -970,8 +970,6 @@ DEPENDENCIES
   sentry-ruby
   sidekiq
   sidekiq-cron
-  spring (~> 4.0)
-  spring-watcher-listen (~> 2.0)
   stackprof
   web-console (~> 4.2)
 
