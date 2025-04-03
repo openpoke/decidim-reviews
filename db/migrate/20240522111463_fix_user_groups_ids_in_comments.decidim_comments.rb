@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_comments (originally 20181003080320)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-04-02 12:54:20 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-04-03 09:10:30 UTC
 class FixUserGroupsIdsInComments < ActiveRecord::Migration[5.2]
   class UserGroup < ApplicationRecord
     self.table_name = :decidim_users
