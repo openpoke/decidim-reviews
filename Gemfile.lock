@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 2e4ba61361d971313defbf10ce21689d76ade889
+  revision: b4a446b768d805e00893d2651bd2f800102a538b
   branch: feature/create-suggestions-in-collaborative-texts
   specs:
     decidim (0.31.0.dev)
@@ -404,7 +404,7 @@ GEM
       railties (>= 5.0.0)
     faker (3.5.1)
       i18n (>= 1.8.11, < 2)
-    faraday (2.12.2)
+    faraday (2.12.3)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
