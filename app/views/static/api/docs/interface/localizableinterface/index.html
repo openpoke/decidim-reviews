@@ -1,41 +1,24 @@
 <div class="content"><h1>
-<a id="area" class="anchor" href="#area" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Area</h1>
-<p>An area.</p>
+<a id="localizableinterface" class="anchor" href="#localizableinterface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LocalizableInterface</h1>
+<p>An interface that can be used in localizable objects.</p>
 <h2>
-<a id="implements" class="anchor" href="#implements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implements</h2>
+<a id="implemented-by" class="anchor" href="#implemented-by" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implemented by</h2>
 <ul>
-   <li><code><a href="/api/docs/interface/timestampsinterface">TimestampsInterface</a></code></li>
+   <li><code><a href="/api/docs/object/project">Project</a></code></li>
+   <li><code><a href="/api/docs/object/result">Result</a></code></li>
 </ul>
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
-  <span id="areatype" class="field-name anchored">areaType (<code><a href="/api/docs/object/areatype">AreaType</a></code>)</span>
+  <span id="address" class="field-name anchored">address (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>The area type of this area</p>
+   <p>The physical address (location) of this result</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
+  <span id="coordinates" class="field-name anchored">coordinates (<code><a href="/api/docs/object/coordinates">Coordinates</a></code>)</span>
   <div class="description-wrapper">
-   <p>Internal ID for this area</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="name" class="field-name anchored">name (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The graphql_name of this area.</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The date and time this object was created</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The date and time this object was updated</p>
+   <p>Physical coordinates for this result</p>
   </div>
 </div></div>
 <div id="sidebar"><div id="search">
@@ -74,20 +57,6 @@
       <li>
         <a href="/api/docs/query/assemblies/" class="sidebar-link">
           assemblies
-        </a>
-      </li>
-      
-      
-      <li>
-        <a href="/api/docs/query/assembliestype/" class="sidebar-link">
-          assembliesType
-        </a>
-      </li>
-      
-      
-      <li>
-        <a href="/api/docs/query/assembliestypes/" class="sidebar-link">
-          assembliesTypes
         </a>
       </li>
       
@@ -165,13 +134,6 @@
       <li>
         <a href="/api/docs/query/initiativestypes/" class="sidebar-link">
           initiativesTypes
-        </a>
-      </li>
-      
-      
-      <li>
-        <a href="/api/docs/query/metrics/" class="sidebar-link">
-          metrics
         </a>
       </li>
       
@@ -289,34 +251,6 @@
       
         
       <li>
-        <a href="/api/docs/object/answeroption/" class="sidebar-link">
-          AnswerOption
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/area/" class="sidebar-link">
-          Area
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/areatype/" class="sidebar-link">
-          AreaType
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/assembliestype/" class="sidebar-link">
-          AssembliesType
-        </a>
-      </li>
-      
-        
-      <li>
         <a href="/api/docs/object/assembly/" class="sidebar-link">
           Assembly
         </a>
@@ -326,6 +260,13 @@
       <li>
         <a href="/api/docs/object/attachment/" class="sidebar-link">
           Attachment
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/attachmentcollection/" class="sidebar-link">
+          AttachmentCollection
         </a>
       </li>
       
@@ -417,6 +358,13 @@
       <li>
         <a href="/api/docs/object/conferencepartner/" class="sidebar-link">
           ConferencePartner
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/conferenceregistrationtype/" class="sidebar-link">
+          ConferenceRegistrationType
         </a>
       </li>
       
@@ -557,20 +505,6 @@
       <li>
         <a href="/api/docs/object/meetings/" class="sidebar-link">
           Meetings
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/metric/" class="sidebar-link">
-          Metric
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/metrichistory/" class="sidebar-link">
-          MetricHistory
         </a>
       </li>
       
@@ -744,6 +678,13 @@
       
         
       <li>
+        <a href="/api/docs/object/responseoption/" class="sidebar-link">
+          ResponseOption
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/result/" class="sidebar-link">
           Result
         </a>
@@ -884,13 +825,6 @@
       
         
       <li>
-        <a href="/api/docs/object/usergroup/" class="sidebar-link">
-          UserGroup
-        </a>
-      </li>
-      
-        
-      <li>
         <a href="/api/docs/object/__directive/" class="sidebar-link">
           __Directive
         </a>
@@ -949,6 +883,13 @@
         <li>
           <a href="/api/docs/interface/amendableinterface/" class="sidebar-link">
             AmendableInterface
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/api/docs/interface/attachablecollectioninterface/" class="sidebar-link">
+            AttachableCollectionInterface
           </a>
         </li>
       
@@ -1017,8 +958,22 @@
       
         
         <li>
+          <a href="/api/docs/interface/followableinterface/" class="sidebar-link">
+            FollowableInterface
+          </a>
+        </li>
+      
+        
+        <li>
           <a href="/api/docs/interface/initiativetypeinterface/" class="sidebar-link">
             InitiativeTypeInterface
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/api/docs/interface/localizableinterface/" class="sidebar-link">
+            LocalizableInterface
           </a>
         </li>
       
@@ -1047,6 +1002,13 @@
         <li>
           <a href="/api/docs/interface/questionnaireentityinterface/" class="sidebar-link">
             QuestionnaireEntityInterface
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/api/docs/interface/referableinterface/" class="sidebar-link">
+            ReferableInterface
           </a>
         </li>
       

@@ -1,43 +1,21 @@
 <div class="content"><h1>
-<a id="metrics" class="anchor" href="#metrics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>metrics</h1>
+<a id="referableinterface" class="anchor" href="#referableinterface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ReferableInterface</h1>
+<p>An interface that can be used in display reference methods</p>
 <h2>
-<a id="arguments" class="anchor" href="#arguments" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Arguments</h2>
-<div class="field-entry ">
-  <span id="names" class="field-name anchored">names (<code><a href="/api/docs/scalar/string">[String!]</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The names of the metrics you want to retrieve</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="space_type" class="field-name anchored">space_type (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The type of ParticipatorySpace you want to filter with</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="space_id" class="field-name anchored">space_id (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The ID of ParticipatorySpace you want to filter with</p>
-  </div>
-</div>
+<a id="implemented-by" class="anchor" href="#implemented-by" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implemented by</h2>
+<ul>
+   <li><code><a href="/api/docs/object/assembly">Assembly</a></code></li>
+   <li><code><a href="/api/docs/object/conference">Conference</a></code></li>
+   <li><code><a href="/api/docs/object/debate">Debate</a></code></li>
+   <li><code><a href="/api/docs/object/project">Project</a></code></li>
+   <li><code><a href="/api/docs/object/result">Result</a></code></li>
+</ul>
 <h2>
-<a id="return-fields" class="anchor" href="#return-fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Return fields</h2>
+<a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
-  <span id="count" class="field-name anchored">count (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
+  <span id="reference" class="field-name anchored">reference (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>The last value of the metric</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="history" class="field-name anchored">history (<code><a href="/api/docs/object/metrichistory">[MetricHistory]!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The historic values for this metric</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="name" class="field-name anchored">name (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The graphql_name of the metric</p>
+   <p>The reference for this record</p>
   </div>
 </div></div>
 <div id="sidebar"><div id="search">
@@ -76,20 +54,6 @@
       <li>
         <a href="/api/docs/query/assemblies/" class="sidebar-link">
           assemblies
-        </a>
-      </li>
-      
-      
-      <li>
-        <a href="/api/docs/query/assembliestype/" class="sidebar-link">
-          assembliesType
-        </a>
-      </li>
-      
-      
-      <li>
-        <a href="/api/docs/query/assembliestypes/" class="sidebar-link">
-          assembliesTypes
         </a>
       </li>
       
@@ -167,13 +131,6 @@
       <li>
         <a href="/api/docs/query/initiativestypes/" class="sidebar-link">
           initiativesTypes
-        </a>
-      </li>
-      
-      
-      <li>
-        <a href="/api/docs/query/metrics/" class="sidebar-link">
-          metrics
         </a>
       </li>
       
@@ -291,34 +248,6 @@
       
         
       <li>
-        <a href="/api/docs/object/answeroption/" class="sidebar-link">
-          AnswerOption
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/area/" class="sidebar-link">
-          Area
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/areatype/" class="sidebar-link">
-          AreaType
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/assembliestype/" class="sidebar-link">
-          AssembliesType
-        </a>
-      </li>
-      
-        
-      <li>
         <a href="/api/docs/object/assembly/" class="sidebar-link">
           Assembly
         </a>
@@ -328,6 +257,13 @@
       <li>
         <a href="/api/docs/object/attachment/" class="sidebar-link">
           Attachment
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/attachmentcollection/" class="sidebar-link">
+          AttachmentCollection
         </a>
       </li>
       
@@ -419,6 +355,13 @@
       <li>
         <a href="/api/docs/object/conferencepartner/" class="sidebar-link">
           ConferencePartner
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/conferenceregistrationtype/" class="sidebar-link">
+          ConferenceRegistrationType
         </a>
       </li>
       
@@ -559,20 +502,6 @@
       <li>
         <a href="/api/docs/object/meetings/" class="sidebar-link">
           Meetings
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/metric/" class="sidebar-link">
-          Metric
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/metrichistory/" class="sidebar-link">
-          MetricHistory
         </a>
       </li>
       
@@ -746,6 +675,13 @@
       
         
       <li>
+        <a href="/api/docs/object/responseoption/" class="sidebar-link">
+          ResponseOption
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/result/" class="sidebar-link">
           Result
         </a>
@@ -886,13 +822,6 @@
       
         
       <li>
-        <a href="/api/docs/object/usergroup/" class="sidebar-link">
-          UserGroup
-        </a>
-      </li>
-      
-        
-      <li>
         <a href="/api/docs/object/__directive/" class="sidebar-link">
           __Directive
         </a>
@@ -951,6 +880,13 @@
         <li>
           <a href="/api/docs/interface/amendableinterface/" class="sidebar-link">
             AmendableInterface
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/api/docs/interface/attachablecollectioninterface/" class="sidebar-link">
+            AttachableCollectionInterface
           </a>
         </li>
       
@@ -1019,8 +955,22 @@
       
         
         <li>
+          <a href="/api/docs/interface/followableinterface/" class="sidebar-link">
+            FollowableInterface
+          </a>
+        </li>
+      
+        
+        <li>
           <a href="/api/docs/interface/initiativetypeinterface/" class="sidebar-link">
             InitiativeTypeInterface
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/api/docs/interface/localizableinterface/" class="sidebar-link">
+            LocalizableInterface
           </a>
         </li>
       
@@ -1049,6 +999,13 @@
         <li>
           <a href="/api/docs/interface/questionnaireentityinterface/" class="sidebar-link">
             QuestionnaireEntityInterface
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/api/docs/interface/referableinterface/" class="sidebar-link">
+            ReferableInterface
           </a>
         </li>
       
