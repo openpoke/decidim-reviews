@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/custom-meeting-reminder" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/waiting_list_for_meetings" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
