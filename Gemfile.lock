@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: e99d37aafa581cd15bb7f9bbfb8a9e5c9bdb49c1
+  revision: ee908c11febae03c1d0632b79e72b8f3c557c5a2
   branch: feature/waiting_list_for_meetings
   specs:
     decidim (0.31.0.dev)
