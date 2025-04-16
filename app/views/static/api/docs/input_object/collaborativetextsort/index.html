@@ -1,35 +1,24 @@
 <div class="content"><h1>
-<a id="component" class="anchor" href="#component" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Component</h1>
-<p>A base component with no particular specificities.</p>
+<a id="collaborativetextsort" class="anchor" href="#collaborativetextsort" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CollaborativeTextSort</h1>
+<p>A type used for sorting blog collaborative texts</p>
 <h2>
-<a id="implements" class="anchor" href="#implements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implements</h2>
-<ul>
-   <li><code><a href="/api/docs/interface/componentinterface">ComponentInterface</a></code></li>
-</ul>
-<h2>
-<a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
+<a id="input-fields" class="anchor" href="#input-fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Input Fields</h2>
 <div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
+  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>The Component's unique ID</p>
+   <p>Sort by date of creation, valid values are ASC or DESC</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="name" class="field-name anchored">name (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
+  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>The name of this component.</p>
+   <p>Sort by date of last modification, valid values are ASC or DESC</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="weight" class="field-name anchored">weight (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
+  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>The weight of the component</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="participatoryspace" class="field-name anchored">participatorySpace (<code><a href="/api/docs/object/participatoryspace">ParticipatorySpace!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The participatory space in which this component belongs to.</p>
+   <p>Sort by ID, valid values are ASC or DESC</p>
   </div>
 </div></div>
 <div id="sidebar"><div id="search">
@@ -325,6 +314,34 @@
       
         
       <li>
+        <a href="/api/docs/object/collaborativetext/" class="sidebar-link">
+          CollaborativeText
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/collaborativetextconnection/" class="sidebar-link">
+          CollaborativeTextConnection
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/collaborativetextedge/" class="sidebar-link">
+          CollaborativeTextEdge
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/collaborativetexts/" class="sidebar-link">
+          CollaborativeTexts
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/comment/" class="sidebar-link">
           Comment
         </a>
@@ -341,13 +358,6 @@
       <li>
         <a href="/api/docs/object/commentablemutation/" class="sidebar-link">
           CommentableMutation
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/component/" class="sidebar-link">
-          Component
         </a>
       </li>
       
@@ -425,6 +435,13 @@
       <li>
         <a href="/api/docs/object/decidim/" class="sidebar-link">
           Decidim
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/documentversion/" class="sidebar-link">
+          DocumentVersion
         </a>
       </li>
       
@@ -773,6 +790,13 @@
       
         
       <li>
+        <a href="/api/docs/object/suggestion/" class="sidebar-link">
+          Suggestion
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/survey/" class="sidebar-link">
           Survey
         </a>
@@ -1097,6 +1121,20 @@
       <li>
         <a href="/api/docs/input_object/categoryfilter/" class="sidebar-link">
           CategoryFilter
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/api/docs/input_object/collaborativetextfilter/" class="sidebar-link">
+          CollaborativeTextFilter
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/api/docs/input_object/collaborativetextsort/" class="sidebar-link">
+          CollaborativeTextSort
         </a>
       </li>
       
