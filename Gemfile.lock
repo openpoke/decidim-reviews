@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 3a0f5672af22ae709b9bf12cab0ece5e412192a1
+  revision: 3aae25e307104dad5776f4965746e680a154d7ad
   branch: feature/create-suggestions-in-collaborative-texts
   specs:
     decidim (0.31.0.dev)
