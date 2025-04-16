@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_04_08_102828) do
+ActiveRecord::Schema[7.0].define(version: 2025_04_16_081354) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -435,9 +435,13 @@ ActiveRecord::Schema[7.0].define(version: 2025_04_08_102828) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "coauthorships_count", default: 0, null: false
+    t.integer "suggestions_count", default: 0, null: false
+    t.integer "document_versions_count", default: 0, null: false
     t.index ["coauthorships_count"], name: "idx_decidim_collaborative_texts_documents_coauthorships_count"
     t.index ["deleted_at"], name: "index_decidim_collaborative_texts_documents_on_deleted_at"
+    t.index ["document_versions_count"], name: "idx_decidim_collaborative_texts_documents_versions_count"
     t.index ["published_at"], name: "index_decidim_collaborative_texts_documents_on_published_at"
+    t.index ["suggestions_count"], name: "idx_decidim_collaborative_texts_documents_suggestions_count"
   end
 
   create_table "decidim_collaborative_texts_suggestions", force: :cascade do |t|
@@ -458,7 +462,9 @@ ActiveRecord::Schema[7.0].define(version: 2025_04_08_102828) do
     t.boolean "draft", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "suggestions_count", default: 0, null: false
     t.index ["document_id"], name: "index_decidim_collaborative_texts_versions_on_document_id"
+    t.index ["suggestions_count"], name: "idx_decidim_collaborative_texts_versions_suggestions_count"
   end
 
   create_table "decidim_comments_comment_votes", id: :serial, force: :cascade do |t|
