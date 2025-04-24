@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: e409169e5a1824016e1dcdaac23288f31c72f219
+  revision: 613bbd8608edb0a9d0375c250922196483345048
   branch: feature/fix_history_bug
   specs:
     decidim (0.31.0.dev)
@@ -509,7 +509,7 @@ GEM
       rails (>= 3.2.0)
     io-console (0.8.0)
     jmespath (1.6.2)
-    json (2.11.0)
+    json (2.11.1)
     jwt (2.10.1)
       base64
     kaminari (1.2.2)
