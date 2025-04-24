@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/standarized_statistics" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/fix_history_bug" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
