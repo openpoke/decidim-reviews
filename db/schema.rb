@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_04_09_080727) do
+ActiveRecord::Schema[7.0].define(version: 2025_04_30_111548) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -701,6 +701,25 @@ ActiveRecord::Schema[7.0].define(version: 2025_04_09_080727) do
     t.datetime "updated_at", null: false
     t.index ["decidim_author_id"], name: "decidim_editor_images_author"
     t.index ["decidim_organization_id"], name: "decidim_editor_images_constraint_organization"
+  end
+
+  create_table "decidim_elections_elections", force: :cascade do |t|
+    t.integer "decidim_component_id"
+    t.jsonb "title"
+    t.jsonb "description"
+    t.jsonb "announcement"
+    t.datetime "start_at", precision: nil
+    t.datetime "end_at", precision: nil
+    t.string "results_availability", default: "after_end", null: false
+    t.integer "census_type", default: 0, null: false
+    t.datetime "published_at", precision: nil
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_decidim_elections_elections_on_deleted_at"
+    t.index ["end_at"], name: "index_decidim_elections_elections_on_end_at"
+    t.index ["published_at"], name: "index_decidim_elections_elections_on_published_at"
+    t.index ["start_at"], name: "index_decidim_elections_elections_on_start_at"
   end
 
   create_table "decidim_endorsements", force: :cascade do |t|
