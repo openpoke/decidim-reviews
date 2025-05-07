@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 55f3aed7bf3a863cc7133f11ae43524ec6b59392
+  revision: b8154cbb1f55317800e71e36306cee1fa5c6972d
   branch: feature/add-elections-model
   specs:
     decidim (0.31.0.dev)
