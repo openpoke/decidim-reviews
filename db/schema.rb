@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_04_30_111548) do
+ActiveRecord::Schema[7.0].define(version: 2025_05_20_094657) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -720,6 +720,34 @@ ActiveRecord::Schema[7.0].define(version: 2025_04_30_111548) do
     t.index ["end_at"], name: "index_decidim_elections_elections_on_end_at"
     t.index ["published_at"], name: "index_decidim_elections_elections_on_published_at"
     t.index ["start_at"], name: "index_decidim_elections_elections_on_start_at"
+  end
+
+  create_table "decidim_elections_questionnaires", force: :cascade do |t|
+    t.string "questionnaire_for_type"
+    t.bigint "questionnaire_for_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["questionnaire_for_type", "questionnaire_for_id"], name: "index_elections_questionnaires_on_for_type_and_id"
+  end
+
+  create_table "decidim_elections_questions", force: :cascade do |t|
+    t.bigint "decidim_questionnaire_id", null: false
+    t.jsonb "body", default: {}, null: false
+    t.jsonb "description", default: {}
+    t.boolean "mandatory", default: false, null: false
+    t.string "question_type", default: "multiple_option", null: false
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_questionnaire_id"], name: "index_questions_on_questionnaire_id"
+  end
+
+  create_table "decidim_elections_response_options", force: :cascade do |t|
+    t.bigint "decidim_question_id", null: false
+    t.jsonb "body", default: {}, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_question_id"], name: "index_elections_response_options_on_question_id"
   end
 
   create_table "decidim_endorsements", force: :cascade do |t|
@@ -2089,6 +2117,8 @@ ActiveRecord::Schema[7.0].define(version: 2025_04_30_111548) do
   add_foreign_key "decidim_debates_debates", "decidim_scopes"
   add_foreign_key "decidim_editor_images", "decidim_organizations"
   add_foreign_key "decidim_editor_images", "decidim_users", column: "decidim_author_id"
+  add_foreign_key "decidim_elections_questions", "decidim_elections_questionnaires", column: "decidim_questionnaire_id"
+  add_foreign_key "decidim_elections_response_options", "decidim_elections_questions", column: "decidim_question_id"
   add_foreign_key "decidim_identities", "decidim_organizations"
   add_foreign_key "decidim_initiatives_settings", "decidim_organizations"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
