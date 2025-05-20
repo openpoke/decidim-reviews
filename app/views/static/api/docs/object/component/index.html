@@ -1,18 +1,41 @@
 <div class="content"><h1>
-<a id="participatoryspaceresourceableinterface" class="anchor" href="#participatoryspaceresourceableinterface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ParticipatorySpaceResourceableInterface</h1>
-<p>An interface that can be used in objects with participatorySpaceResourceable</p>
+<a id="component" class="anchor" href="#component" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Component</h1>
+<p>A base component with no particular specificities.</p>
 <h2>
-<a id="implemented-by" class="anchor" href="#implemented-by" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implemented by</h2>
+<a id="implements" class="anchor" href="#implements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implements</h2>
 <ul>
-   <li><code><a href="/api/docs/object/assembly">Assembly</a></code></li>
-   <li><code><a href="/api/docs/object/participatoryprocess">ParticipatoryProcess</a></code></li>
+   <li><code><a href="/api/docs/interface/componentinterface">ComponentInterface</a></code></li>
 </ul>
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
-  <span id="linkedparticipatoryspaces" class="field-name anchored">linkedParticipatorySpaces (<code><a href="/api/docs/object/participatoryspacelink">[ParticipatorySpaceLink!]!</a></code>)</span>
+  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
   <div class="description-wrapper">
-   <p>Lists all linked participatory spaces in a polymorphic way</p>
+   <p>The Component's unique ID</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="name" class="field-name anchored">name (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The name of this component.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="weight" class="field-name anchored">weight (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The weight of the component</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="participatoryspace" class="field-name anchored">participatorySpace (<code><a href="/api/docs/object/participatoryspace">ParticipatorySpace!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The participatory space in which this component belongs to.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="url" class="field-name anchored">url (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The URL of this component.</p>
   </div>
 </div></div>
 <div id="sidebar"><div id="search">
