@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: d9e474fa6ca693c7d3f300b68498551fbd599985
+  revision: 9d5e200055bbc5712b8be75fbc33167e31b77d23
   branch: feature/elections-questions-answers
   specs:
     decidim (0.31.0.dev)
