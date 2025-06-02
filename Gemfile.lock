@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: a591294871fbe2d884cf88e974455c67853ba6b8
+  revision: 629d7cbf9dbf9811b632b241e00dce5e0d3deb6d
   branch: feature/add-elections-census
   specs:
     decidim (0.31.0.dev)
