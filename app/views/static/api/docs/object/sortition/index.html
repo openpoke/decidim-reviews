@@ -6,6 +6,7 @@
 <ul>
    <li><code><a href="/api/docs/interface/authorableinterface">AuthorableInterface</a></code></li>
    <li><code><a href="/api/docs/interface/commentableinterface">CommentableInterface</a></code></li>
+   <li><code><a href="/api/docs/interface/referableinterface">ReferableInterface</a></code></li>
    <li><code><a href="/api/docs/interface/taxonomizableinterface">TaxonomizableInterface</a></code></li>
    <li><code><a href="/api/docs/interface/timestampsinterface">TimestampsInterface</a></code></li>
 </ul>
@@ -54,9 +55,9 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="reference" class="field-name anchored">reference (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
+  <span id="proposals" class="field-name anchored">proposals (<code><a href="/api/docs/object/proposal">[Proposal]</a></code>)</span>
   <div class="description-wrapper">
-   <p>The reference for this sortition</p>
+   <p>The selected proposal for this sortition</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -68,7 +69,7 @@
 <div class="field-entry ">
   <span id="selectedproposals" class="field-name anchored">selectedProposals (<code><a href="/api/docs/scalar/int">[Int]</a></code>)</span>
   <div class="description-wrapper">
-   <p>The selected proposals for this sortition</p>
+   <p>The selected proposal ids for this sortition</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -93,6 +94,12 @@
   <span id="witnesses" class="field-name anchored">witnesses (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
    <p>The witnesses for this sortition</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="reference" class="field-name anchored">reference (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The reference for this record</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -825,6 +832,13 @@
       
         
       <li>
+        <a href="/api/docs/object/proposalstate/" class="sidebar-link">
+          ProposalState
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/proposals/" class="sidebar-link">
           Proposals
         </a>
@@ -841,6 +855,13 @@
       <li>
         <a href="/api/docs/object/question/" class="sidebar-link">
           Question
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/questionmatrixrow/" class="sidebar-link">
+          QuestionMatrixRow
         </a>
       </li>
       

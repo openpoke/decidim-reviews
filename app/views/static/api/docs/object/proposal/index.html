@@ -10,19 +10,16 @@
    <li><code><a href="/api/docs/interface/coauthorableinterface">CoauthorableInterface</a></code></li>
    <li><code><a href="/api/docs/interface/commentableinterface">CommentableInterface</a></code></li>
    <li><code><a href="/api/docs/interface/fingerprintinterface">FingerprintInterface</a></code></li>
+   <li><code><a href="/api/docs/interface/followableinterface">FollowableInterface</a></code></li>
    <li><code><a href="/api/docs/interface/likeableinterface">LikeableInterface</a></code></li>
+   <li><code><a href="/api/docs/interface/localizableinterface">LocalizableInterface</a></code></li>
+   <li><code><a href="/api/docs/interface/referableinterface">ReferableInterface</a></code></li>
    <li><code><a href="/api/docs/interface/taxonomizableinterface">TaxonomizableInterface</a></code></li>
    <li><code><a href="/api/docs/interface/timestampsinterface">TimestampsInterface</a></code></li>
    <li><code><a href="/api/docs/interface/traceableinterface">TraceableInterface</a></code></li>
 </ul>
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
-<div class="field-entry ">
-  <span id="address" class="field-name anchored">address (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The physical address (location) of this proposal</p>
-  </div>
-</div>
 <div class="field-entry ">
   <span id="answer" class="field-name anchored">answer (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
@@ -42,15 +39,27 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="coordinates" class="field-name anchored">coordinates (<code><a href="/api/docs/object/coordinates">Coordinates</a></code>)</span>
+  <span id="cost" class="field-name anchored">cost (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>Physical coordinates for this proposal</p>
+   <p>The proposal cost</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="costreport" class="field-name anchored">costReport (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The cost report for this proposal</p>
   </div>
 </div>
 <div class="field-entry ">
   <span id="createdinmeeting" class="field-name anchored">createdInMeeting (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
   <div class="description-wrapper">
    <p>Whether this proposal comes from a meeting or not</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="executionperiod" class="field-name anchored">executionPeriod (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The execution period for this proposal</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -84,15 +93,15 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="publishedat" class="field-name anchored">publishedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <span id="proposalstate" class="field-name anchored">proposalState (<code><a href="/api/docs/object/proposalstate">ProposalState</a></code>)</span>
   <div class="description-wrapper">
-   <p>The date and time this proposal was published</p>
+   <p>The proposal state for this proposal</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="reference" class="field-name anchored">reference (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
+  <span id="publishedat" class="field-name anchored">publishedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
   <div class="description-wrapper">
-   <p>This proposal's unique reference</p>
+   <p>The date and time this proposal was published</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -104,7 +113,7 @@
 <div class="field-entry ">
   <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
-   <p>The title for this title</p>
+   <p>The title for this proposal</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -129,6 +138,30 @@
   <span id="url" class="field-name anchored">url (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
   <div class="description-wrapper">
    <p>The URL for this proposal</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="followscount" class="field-name anchored">followsCount (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The number of followers of the resource</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="address" class="field-name anchored">address (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The physical address (location) of this result</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="coordinates" class="field-name anchored">coordinates (<code><a href="/api/docs/object/coordinates">Coordinates</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Physical coordinates for this result</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="reference" class="field-name anchored">reference (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The reference for this record</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -915,6 +948,13 @@
       
         
       <li>
+        <a href="/api/docs/object/proposalstate/" class="sidebar-link">
+          ProposalState
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/proposals/" class="sidebar-link">
           Proposals
         </a>
@@ -931,6 +971,13 @@
       <li>
         <a href="/api/docs/object/question/" class="sidebar-link">
           Question
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/questionmatrixrow/" class="sidebar-link">
+          QuestionMatrixRow
         </a>
       </li>
       

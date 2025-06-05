@@ -9,15 +9,57 @@
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
+  <span id="alloweditingresponses" class="field-name anchored">allowEditingResponses (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether this survey accepts editing responses or not.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="allowresponses" class="field-name anchored">allowResponses (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether this survey accepts responses or not.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="allowunregistered" class="field-name anchored">allowUnregistered (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether this survey accepts answers or not.</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="announcement" class="field-name anchored">announcement (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The announcement info for this survey</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="endsat" class="field-name anchored">endsAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The time this survey ends accepting answers</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
   <div class="description-wrapper">
    <p>The internal ID for this survey</p>
   </div>
 </div>
 <div class="field-entry ">
+  <span id="publishedat" class="field-name anchored">publishedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The date and time this survey was published</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="questionnaire" class="field-name anchored">questionnaire (<code><a href="/api/docs/object/questionnaire">Questionnaire</a></code>)</span>
   <div class="description-wrapper">
    <p>The questionnaire for this survey</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="startsat" class="field-name anchored">startsAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The time this survey starts accepting answers</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -667,6 +709,13 @@
       
         
       <li>
+        <a href="/api/docs/object/proposalstate/" class="sidebar-link">
+          ProposalState
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/proposals/" class="sidebar-link">
           Proposals
         </a>
@@ -683,6 +732,13 @@
       <li>
         <a href="/api/docs/object/question/" class="sidebar-link">
           Question
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/questionmatrixrow/" class="sidebar-link">
+          QuestionMatrixRow
         </a>
       </li>
       
