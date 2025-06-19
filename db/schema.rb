@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_06_02_092925) do
+ActiveRecord::Schema[7.2].define(version: 2025_06_19_094544) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_02_092925) do
     t.string "content_type"
     t.text "metadata"
     t.bigint "byte_size", null: false
-    t.string "checksum", null: false
+    t.string "checksum"
     t.datetime "created_at", precision: nil, null: false
     t.string "service_name", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
@@ -717,6 +717,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_02_092925) do
     t.datetime "updated_at", null: false
     t.string "census_manifest"
     t.jsonb "census_settings", default: {}, null: false
+    t.datetime "published_results_at"
     t.index ["census_manifest"], name: "index_decidim_elections_elections_on_census_manifest"
     t.index ["deleted_at"], name: "index_decidim_elections_elections_on_deleted_at"
     t.index ["end_at"], name: "index_decidim_elections_elections_on_end_at"
@@ -733,6 +734,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_02_092925) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "published_results_at"
     t.index ["election_id"], name: "index_questions_on_election_id"
   end
 
@@ -1298,13 +1300,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_02_092925) do
     t.jsonb "omnipresent_banner_title"
     t.jsonb "omnipresent_banner_short_description"
     t.string "omnipresent_banner_url"
-    t.boolean "highlighted_content_banner_enabled", default: false, null: false
-    t.jsonb "highlighted_content_banner_title"
-    t.jsonb "highlighted_content_banner_short_description"
-    t.jsonb "highlighted_content_banner_action_title"
-    t.jsonb "highlighted_content_banner_action_subtitle"
-    t.string "highlighted_content_banner_action_url"
-    t.string "highlighted_content_banner_image"
     t.datetime "tos_version", precision: nil
     t.boolean "badges_enabled", default: false, null: false
     t.boolean "send_welcome_notification", default: false, null: false
@@ -1768,7 +1763,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_02_092925) do
     t.datetime "deleted_at"
     t.index ["cancelled_by_user_id"], name: "index_decidim_sortitions_sortitions_on_cancelled_by_user_id"
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_sortitions_sortitions_on_decidim_author"
-    t.index ["decidim_author_id"], name: "index_decidim_sortitions_sortitions_on_decidim_author_id"
+    t.index ["decidim_author_id"], name: "idx_on_decidim_author_id_c14fe8c981"
     t.index ["decidim_component_id"], name: "index_sortitions__on_feature"
     t.index ["decidim_proposals_component_id"], name: "index_sortitions__on_proposals_feature"
     t.index ["deleted_at"], name: "index_decidim_sortitions_sortitions_on_deleted_at"
