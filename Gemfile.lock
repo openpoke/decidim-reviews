@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 662d4e6997943d574fd7395f823590853fffea16
+  revision: 2452ecc63bb14cdcf52becd7d5d831d4a88423a8
   branch: feature/add-election-dashboard
   specs:
     decidim (0.31.0.dev)
