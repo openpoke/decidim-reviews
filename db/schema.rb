@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_06_26_100424) do
+ActiveRecord::Schema[7.2].define(version: 2025_06_26_110133) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -733,6 +733,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_26_100424) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "published_results_at"
+    t.datetime "voting_enabled_at"
     t.index ["election_id"], name: "index_questions_on_election_id"
   end
 
