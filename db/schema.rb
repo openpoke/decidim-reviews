@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_06_19_094544) do
+ActiveRecord::Schema[7.2].define(version: 2025_06_26_100424) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -157,7 +157,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_19_094544) do
 
   create_table "decidim_assemblies", id: :serial, force: :cascade do |t|
     t.string "slug", null: false
-    t.string "hashtag"
     t.integer "decidim_organization_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
@@ -520,7 +519,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_19_094544) do
     t.jsonb "title", null: false
     t.jsonb "slogan", null: false
     t.string "slug", null: false
-    t.string "hashtag"
     t.string "reference"
     t.string "location"
     t.integer "decidim_organization_id"
@@ -911,7 +909,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_19_094544) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.integer "decidim_user_group_id"
-    t.string "hashtag"
     t.integer "scoped_type_id"
     t.datetime "first_progress_notification_at", precision: nil
     t.datetime "second_progress_notification_at", precision: nil
@@ -1344,7 +1341,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_19_094544) do
     t.integer "decidim_organization_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.string "hashtag"
     t.string "group_url"
     t.jsonb "developer_group"
     t.jsonb "local_area"
@@ -1394,7 +1390,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_19_094544) do
 
   create_table "decidim_participatory_processes", id: :serial, force: :cascade do |t|
     t.string "slug", null: false
-    t.string "hashtag"
     t.integer "decidim_organization_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
