@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_06_26_110133) do
+ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -42,6 +42,17 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_26_110133) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "decidim_accountability_milestones", id: :serial, force: :cascade do |t|
+    t.date "entry_date"
+    t.jsonb "description"
+    t.integer "decidim_accountability_result_id"
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.jsonb "title"
+    t.index ["decidim_accountability_result_id"], name: "index_decidim_accountability_milestones_on_results_id"
+    t.index ["entry_date"], name: "index_decidim_accountability_milestones_on_entry_date"
   end
 
   create_table "decidim_accountability_results", id: :serial, force: :cascade do |t|
@@ -82,17 +93,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_26_110133) do
     t.jsonb "description"
     t.integer "progress"
     t.index ["decidim_component_id"], name: "index_decidim_accountability_statuses_on_decidim_component_id"
-  end
-
-  create_table "decidim_accountability_timeline_entries", id: :serial, force: :cascade do |t|
-    t.date "entry_date"
-    t.jsonb "description"
-    t.integer "decidim_accountability_result_id"
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
-    t.jsonb "title"
-    t.index ["decidim_accountability_result_id"], name: "index_decidim_accountability_timeline_entries_on_results_id"
-    t.index ["entry_date"], name: "index_decidim_accountability_timeline_entries_on_entry_date"
   end
 
   create_table "decidim_action_logs", force: :cascade do |t|
@@ -858,15 +858,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_26_110133) do
     t.string "badge_name", null: false
     t.integer "value", default: 0, null: false
     t.index ["user_id"], name: "index_decidim_gamification_badge_scores_on_user_id"
-  end
-
-  create_table "decidim_hashtags", force: :cascade do |t|
-    t.bigint "decidim_organization_id"
-    t.string "name"
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
-    t.index ["decidim_organization_id"], name: "index_decidim_hashtags_on_decidim_organization_id"
-    t.index ["name"], name: "index_decidim_hashtags_on_name"
   end
 
   create_table "decidim_identities", id: :serial, force: :cascade do |t|
