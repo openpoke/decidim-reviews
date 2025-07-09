@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: edd298f7a8b381d3f6b4b86536544205213e8d0a
+  revision: a310a0efcc0721bb49771691d9b695e1a71c9309
   branch: feature/add-election-dashboard
   specs:
     decidim (0.31.0.dev)
@@ -551,7 +551,7 @@ GEM
     mime-types (3.7.0)
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2025.0701)
+    mime-types-data (3.2025.0708)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
