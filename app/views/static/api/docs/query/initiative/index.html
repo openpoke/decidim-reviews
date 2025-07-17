@@ -134,51 +134,9 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The commentable's ID</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The commentable's class name. i.e. <code>Decidim::ParticipatoryProcess</code></p>
-  </div>
-</div>
-<div class="field-entry ">
   <span id="acceptsnewcomments" class="field-name anchored">acceptsNewComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
   <div class="description-wrapper">
    <p>Whether the object can have new comments or not</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="commentshavealignment" class="field-name anchored">commentsHaveAlignment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Whether the object comments have alignment or not</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="commentshavevotes" class="field-name anchored">commentsHaveVotes (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Whether the object comments have votes or not</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="totalcommentscount" class="field-name anchored">totalCommentsCount (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The number of comments in all levels this resource holds</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="hascomments" class="field-name anchored">hasComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Check if the commentable has comments</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="userallowedtocomment" class="field-name anchored">userAllowedToComment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Check if the current user can comment</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -214,6 +172,48 @@
   </tr>
   </tbody>
 </table>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="commentshavealignment" class="field-name anchored">commentsHaveAlignment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether the object comments have alignment or not</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="commentshavevotes" class="field-name anchored">commentsHaveVotes (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether the object comments have votes or not</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="hascomments" class="field-name anchored">hasComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Check if the commentable has comments</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The commentable's ID</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="totalcommentscount" class="field-name anchored">totalCommentsCount (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The number of comments in all levels this resource holds</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The commentable's class name. i.e. <code>Decidim::ParticipatoryProcess</code></p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="userallowedtocomment" class="field-name anchored">userAllowedToComment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Check if the current user can comment</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -259,6 +259,12 @@
   </div>
 </div>
 <div class="field-entry ">
+  <span id="allowssteps" class="field-name anchored">allowsSteps (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The participatory space allows steps</p>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="components" class="field-name anchored">components (<code><a href="/api/docs/interface/componentinterface">[ComponentInterface]</a></code>)</span>
   <div class="description-wrapper">
    <p>Lists the components this space contains.</p>
@@ -294,15 +300,9 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="stats" class="field-name anchored">stats (<code><a href="/api/docs/object/statistic">[Statistic]</a></code>)</span>
+  <span id="hassteps" class="field-name anchored">hasSteps (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
   <div class="description-wrapper">
-   <p>The statistics collection of this participatory space</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The graphql_name of this participatory space.</p>
+   <p>The participatory space allows steps</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -312,15 +312,15 @@
   </div>
 </div>
 <div class="field-entry ">
-  <span id="allowssteps" class="field-name anchored">allowsSteps (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <span id="stats" class="field-name anchored">stats (<code><a href="/api/docs/object/statistic">[Statistic]</a></code>)</span>
   <div class="description-wrapper">
-   <p>The participatory space allows steps</p>
+   <p>The statistics collection of this participatory space</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="hassteps" class="field-name anchored">hasSteps (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
   <div class="description-wrapper">
-   <p>The participatory space allows steps</p>
+   <p>The graphql_name of this participatory space.</p>
   </div>
 </div></div>
 <div id="sidebar"><div id="search">

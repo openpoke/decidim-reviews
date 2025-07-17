@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
+ActiveRecord::Schema[7.2].define(version: 2025_07_17_193012) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -97,7 +97,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
 
   create_table "decidim_action_logs", force: :cascade do |t|
     t.bigint "decidim_organization_id", null: false
-    t.bigint "decidim_user_id", null: false
+    t.bigint "user_id", null: false
     t.bigint "decidim_component_id"
     t.string "resource_type", null: false
     t.bigint "resource_id", null: false
@@ -111,14 +111,16 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
     t.string "visibility", default: "admin-only"
     t.integer "decidim_scope_id"
     t.integer "decidim_area_id"
+    t.string "user_type", default: "Decidim::User", null: false
     t.index ["created_at"], name: "index_decidim_action_logs_on_created_at"
     t.index ["decidim_area_id"], name: "index_decidim_action_logs_on_decidim_area_id"
     t.index ["decidim_component_id"], name: "index_action_logs_on_component_id"
     t.index ["decidim_organization_id"], name: "index_action_logs_on_organization_id"
     t.index ["decidim_scope_id"], name: "index_decidim_action_logs_on_decidim_scope_id"
-    t.index ["decidim_user_id"], name: "index_action_logs_on_user_id"
     t.index ["participatory_space_type", "participatory_space_id"], name: "index_action_logs_on_space_type_and_id"
     t.index ["resource_type", "resource_id"], name: "index_action_logs_on_resource_type_and_id"
+    t.index ["user_id", "user_type"], name: "index_decidim_action_log_on_users"
+    t.index ["user_id"], name: "index_action_logs_on_user_id"
     t.index ["version_id"], name: "index_decidim_action_logs_on_version_id"
     t.index ["visibility"], name: "index_decidim_action_logs_on_visibility"
   end
@@ -136,6 +138,12 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
     t.index ["decidim_emendation_id"], name: "index_decidim_amendments_on_decidim_emendation_id"
     t.index ["decidim_user_id", "decidim_amendable_id", "decidim_amendable_type"], name: "index_on_amender_and_amendable"
     t.index ["decidim_user_id"], name: "index_decidim_amendments_on_decidim_user_id"
+  end
+
+  create_table "decidim_api_jwt_denylists", force: :cascade do |t|
+    t.string "jti", null: false
+    t.datetime "exp", null: false
+    t.index ["jti"], name: "index_decidim_api_jwt_denylists_on_jti"
   end
 
   create_table "decidim_area_types", force: :cascade do |t|
@@ -716,6 +724,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
     t.string "census_manifest"
     t.jsonb "census_settings", default: {}, null: false
     t.datetime "published_results_at"
+    t.integer "votes_count", default: 0, null: false
     t.index ["census_manifest"], name: "index_decidim_elections_elections_on_census_manifest"
     t.index ["deleted_at"], name: "index_decidim_elections_elections_on_deleted_at"
     t.index ["end_at"], name: "index_decidim_elections_elections_on_end_at"
@@ -734,6 +743,8 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
     t.datetime "updated_at", null: false
     t.datetime "published_results_at"
     t.datetime "voting_enabled_at"
+    t.integer "votes_count", default: 0, null: false
+    t.integer "response_options_count", default: 0, null: false
     t.index ["election_id"], name: "index_questions_on_election_id"
   end
 
@@ -742,6 +753,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
     t.jsonb "body", default: {}, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "votes_count", default: 0, null: false
     t.index ["question_id"], name: "index_response_options_on_question_id"
   end
 
@@ -751,6 +763,18 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["election_id"], name: "index_decidim_elections_voters_on_election_id"
+  end
+
+  create_table "decidim_elections_votes", force: :cascade do |t|
+    t.bigint "question_id", null: false
+    t.bigint "response_option_id", null: false
+    t.string "voter_uid", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id", "voter_uid", "response_option_id"], name: "index_elections_votes_on__voter_uid_and_response", unique: true
+    t.index ["question_id"], name: "index_decidim_elections_votes_on_question_id"
+    t.index ["response_option_id"], name: "index_decidim_elections_votes_on_response_option_id"
+    t.index ["voter_uid"], name: "index_decidim_elections_votes_on_voter_uid"
   end
 
   create_table "decidim_follows", force: :cascade do |t|
@@ -1981,6 +2005,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
     t.boolean "email_on_assigned_proposals", default: true
     t.datetime "last_inactivity_notice_sent_at"
     t.datetime "removal_date"
+    t.string "api_key"
     t.index ["confirmation_token"], name: "index_decidim_users_on_confirmation_token", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_users_on_decidim_organization_id"
     t.index ["email", "decidim_organization_id"], name: "index_decidim_users_on_email_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false) AND ((type)::text = 'Decidim::User'::text))"
@@ -2027,6 +2052,8 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "revoked_at", precision: nil
     t.string "scopes"
+    t.string "code_challenge"
+    t.string "code_challenge_method"
     t.index ["application_id"], name: "index_oauth_access_grants_on_application_id"
     t.index ["resource_owner_id"], name: "index_oauth_access_grants_on_resource_owner_id"
     t.index ["token"], name: "index_oauth_access_grants_on_token", unique: true
@@ -2062,6 +2089,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
     t.datetime "updated_at", precision: nil, null: false
     t.string "type"
     t.boolean "confidential", default: true, null: false
+    t.boolean "refresh_tokens_enabled", default: false
     t.index ["decidim_organization_id"], name: "index_oauth_applications_on_decidim_organization_id"
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
   end
@@ -2102,6 +2130,8 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_07_101131) do
   add_foreign_key "decidim_elections_questions", "decidim_elections_elections", column: "election_id"
   add_foreign_key "decidim_elections_response_options", "decidim_elections_questions", column: "question_id"
   add_foreign_key "decidim_elections_voters", "decidim_elections_elections", column: "election_id"
+  add_foreign_key "decidim_elections_votes", "decidim_elections_questions", column: "question_id"
+  add_foreign_key "decidim_elections_votes", "decidim_elections_response_options", column: "response_option_id"
   add_foreign_key "decidim_identities", "decidim_organizations"
   add_foreign_key "decidim_initiatives_settings", "decidim_organizations"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
