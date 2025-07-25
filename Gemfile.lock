@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 3df710996cfb1717509787885eccb39f1a72fb9e
+  revision: 0f0289f95b76f36bf3bfece17180edc267360924
   branch: feature/add-election-voting-booth
   specs:
     decidim (0.31.0.dev)
