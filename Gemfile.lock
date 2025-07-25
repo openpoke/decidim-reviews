@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 254b17b6f15f2e0c34a080fea42a360560e61f1d
+  revision: 3df710996cfb1717509787885eccb39f1a72fb9e
   branch: feature/add-election-voting-booth
   specs:
     decidim (0.31.0.dev)
@@ -429,7 +429,7 @@ GEM
       railties (>= 6.1.0)
     faker (3.5.2)
       i18n (>= 1.8.11, < 2)
-    faraday (2.13.3)
+    faraday (2.13.4)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
