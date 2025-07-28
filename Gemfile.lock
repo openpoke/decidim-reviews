@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: ad6a2a06e5e6efc23a8d04c9fd9788d5390b76dd
+  revision: 0decca638cc4795925d37508a2fcf36f26ef814e
   branch: feature/add-election-voting-booth
   specs:
     decidim (0.31.0.dev)
@@ -291,7 +291,7 @@ GEM
       base64
       jmespath (~> 1, >= 1.6.1)
       logger
-    aws-sdk-kms (1.107.0)
+    aws-sdk-kms (1.108.0)
       aws-sdk-core (~> 3, >= 3.227.0)
       aws-sigv4 (~> 1.5)
     aws-sdk-s3 (1.194.0)
@@ -521,7 +521,7 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     jmespath (1.6.2)
-    json (2.13.1)
+    json (2.13.2)
     jwt (2.10.2)
       base64
     kaminari (1.2.2)
@@ -713,7 +713,7 @@ GEM
     rails-i18n (7.0.10)
       i18n (>= 0.7, < 2)
       railties (>= 6.0.0, < 8)
-    rails_semantic_logger (4.17.0)
+    rails_semantic_logger (4.18.0)
       rack
       railties (>= 5.1)
       semantic_logger (~> 4.16)
@@ -850,7 +850,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    semantic_logger (4.16.1)
+    semantic_logger (4.17.0)
       concurrent-ruby (~> 1.0)
     semantic_range (3.1.0)
     sentry-rails (5.26.0)
