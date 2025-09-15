@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_07_17_193012) do
+ActiveRecord::Schema[7.2].define(version: 2025_09_15_130335) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -93,6 +93,52 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_17_193012) do
     t.jsonb "description"
     t.integer "progress"
     t.index ["decidim_component_id"], name: "index_decidim_accountability_statuses_on_decidim_component_id"
+  end
+
+  create_table "decidim_action_delegator_delegations", force: :cascade do |t|
+    t.bigint "granter_id", null: false
+    t.bigint "grantee_id", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.bigint "decidim_action_delegator_setting_id", null: false
+    t.index ["decidim_action_delegator_setting_id", "granter_id"], name: "index_unique_decidim_delegations_on_setting_id_granter_id", unique: true
+    t.index ["grantee_id"], name: "index_decidim_action_delegator_delegations_on_grantee_id"
+    t.index ["granter_id"], name: "index_decidim_action_delegator_delegations_on_granter_id"
+  end
+
+  create_table "decidim_action_delegator_participants", force: :cascade do |t|
+    t.bigint "decidim_action_delegator_setting_id", null: false
+    t.bigint "decidim_action_delegator_ponderation_id"
+    t.string "email", null: false
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "decidim_user_id"
+    t.index ["decidim_action_delegator_ponderation_id"], name: "index_decidim_action_delegator_participants_on_ponderation_id"
+    t.index ["decidim_action_delegator_setting_id"], name: "index_decidim_action_delegator_participants_on_setting_id"
+    t.index ["decidim_user_id"], name: "index_decidim_action_delegator_participants_on_decidim_user_id"
+  end
+
+  create_table "decidim_action_delegator_ponderations", force: :cascade do |t|
+    t.bigint "decidim_action_delegator_setting_id", null: false
+    t.string "name", null: false
+    t.decimal "weight", precision: 5, scale: 2, default: "1.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_action_delegator_setting_id"], name: "index_decidim_action_delegator_ponderations_on_setting_id"
+  end
+
+  create_table "decidim_action_delegator_settings", force: :cascade do |t|
+    t.integer "max_grants", limit: 2, default: 0, null: false
+    t.bigint "decidim_consultation_id"
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.integer "authorization_method", default: 0, null: false
+    t.jsonb "title"
+    t.jsonb "description"
+    t.boolean "active", default: false, null: false
+    t.bigint "decidim_organization_id", null: false
+    t.index ["decidim_organization_id"], name: "idx_on_decidim_organization_id_865f0ac0e3"
   end
 
   create_table "decidim_action_logs", force: :cascade do |t|
@@ -2103,12 +2149,17 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_17_193012) do
     t.datetime "created_at", precision: nil
     t.text "old_object_changes"
     t.jsonb "object_changes"
+    t.integer "decidim_action_delegator_delegation_id"
+    t.index ["decidim_action_delegator_delegation_id"], name: "index_versions_on_decidim_action_delegator_delegation_id"
     t.index ["item_id", "item_type"], name: "index_versions_on_item_id_and_item_type"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "decidim_action_delegator_delegations", "decidim_action_delegator_settings"
+  add_foreign_key "decidim_action_delegator_participants", "decidim_users"
+  add_foreign_key "decidim_action_delegator_settings", "decidim_organizations"
   add_foreign_key "decidim_area_types", "decidim_organizations"
   add_foreign_key "decidim_areas", "decidim_area_types", column: "area_type_id"
   add_foreign_key "decidim_areas", "decidim_organizations"

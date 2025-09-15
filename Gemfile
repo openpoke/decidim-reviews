@@ -4,9 +4,10 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/add-election-voting-booth" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "develop" }
 
 gem "decidim", DECIDIM_VERSION
+gem "decidim-action_delegator", { github: "openpoke/decidim-module-action_delegator", branch: "add-voting-results" }
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-design", DECIDIM_VERSION
 gem "decidim-elections", DECIDIM_VERSION
