@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 748324a732225d0f53798a82bb2a2ef50787b9ee
+  revision: 59727d5d26124403728e3e95f25db711ff6f54e0
   branch: develop
   specs:
     decidim (0.31.0.dev)
@@ -201,7 +201,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-action_delegator.git
-  revision: 16b89cb6b569754fe4ab35fcf485803e736f9a76
+  revision: 912645e9de8025e90615c46d1646ca52330f491f
   branch: add-voting-results
   specs:
     decidim-action_delegator (0.9.0)
