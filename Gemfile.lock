@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 59727d5d26124403728e3e95f25db711ff6f54e0
+  revision: d34216b290882f0d9d84215c45481d01481f0798
   branch: develop
   specs:
     decidim (0.31.0.dev)
@@ -201,7 +201,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-action_delegator.git
-  revision: 912645e9de8025e90615c46d1646ca52330f491f
+  revision: 7984309c41d24ece6224a1093cf973eba2c240ae
   branch: add-voting-results
   specs:
     decidim-action_delegator (0.9.0)
@@ -367,7 +367,7 @@ GEM
       logger (~> 1.5)
     chunky_png (1.4.0)
     cmdparse (3.0.7)
-    commonmarker (0.23.11)
+    commonmarker (0.23.12)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.4)
     crack (1.0.0)
@@ -472,7 +472,7 @@ GEM
       mime-types
     fog-local (0.9.0)
       fog-core (>= 1.27, < 3.0)
-    formatador (1.2.0)
+    formatador (1.2.1)
       reline
     fugit (1.11.2)
       et-orbi (~> 1, >= 1.2.11)
@@ -554,8 +554,8 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     jmespath (1.6.2)
-    json (2.13.2)
-    jwt (2.10.2)
+    json (2.14.1)
+    jwt (3.1.2)
       base64
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
@@ -951,9 +951,9 @@ GEM
     tilt (2.6.1)
     timeout (0.4.3)
     trailblazer-option (0.1.2)
-    twilio-ruby (7.8.0)
+    twilio-ruby (7.8.1)
       faraday (>= 0.9, < 3.0)
-      jwt (>= 1.5, < 3.0)
+      jwt (>= 1.5, < 4.0)
       nokogiri (>= 1.6, < 2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -993,8 +993,8 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    web-push (3.0.1)
-      jwt (~> 2.0)
+    web-push (3.0.2)
+      jwt (~> 3.0)
       openssl (~> 3.0)
     webmock (3.25.1)
       addressable (>= 2.8.0)
