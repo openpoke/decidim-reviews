@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20250217192438)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-10-09 08:35:36 UTC
 class ConvertUserGroupsIntoUsers < ActiveRecord::Migration[7.0]
   class User < ApplicationRecord
     self.table_name = "decidim_users"
     self.inheritance_column = nil
 
-    scope :new_group, -> { where("extended_data @> ?", Arel.sql({ group: true }.to_json)) }
+    scope :new_group, -> { where("extended_data @> ?", { group: true }.to_json) }
     scope :old_group, -> { where(type: "Decidim::UserGroup") }
 
     def verified_at
