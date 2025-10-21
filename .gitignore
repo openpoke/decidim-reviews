@@ -38,6 +38,8 @@
 .env
 .envrc
 .rbenv-vars
+.byebug*
+*.sql
 
 # Ignore the files and folders generated through Webpack
 /public/decidim-packs

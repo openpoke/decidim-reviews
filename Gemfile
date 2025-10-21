@@ -4,10 +4,10 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.31-stable" }
+DECIDIM_VERSION = { github: "openpoke/decidim", branch: "0.31-backports" }
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-action_delegator", { github: "openpoke/decidim-module-action_delegator", branch: "develop" }
+gem "decidim-action_delegator", { github: "openpoke/decidim-module-action_delegator", branch: "main" }
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-design", DECIDIM_VERSION
 gem "decidim-elections", DECIDIM_VERSION
