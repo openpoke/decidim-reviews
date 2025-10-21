@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_participatory_processes (originally 20250403110052)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-10-06 16:55:43 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-10-21 10:34:17 UTC
 class AddDemocraticQualityStaticPage < ActiveRecord::Migration[7.0]
   class Organization < ApplicationRecord
     self.table_name = :decidim_organizations
@@ -13,7 +13,7 @@ class AddDemocraticQualityStaticPage < ActiveRecord::Migration[7.0]
 
   def up
     Organization.find_each do |organization|
-      Decidim::ParticipatoryProcesses::CreateDemocraticQualityIndicatorsPage.call(organization)
+      Decidim::ParticipatoryProcesses::CreateDemocraticQualityIndicatorsPage.call(organization.id)
     end
   end
 end

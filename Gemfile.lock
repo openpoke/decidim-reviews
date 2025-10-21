@@ -13,7 +13,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim.git
-  revision: 8fb0b246cbdbceb835b46dd47aa9e5570690f1e0
+  revision: 58815f1a7e615a5ece7577405bc655e7b9e5be9c
   branch: 0.31-backports
   specs:
     decidim (0.31.0.rc1)
@@ -289,7 +289,7 @@ GEM
       minitest (>= 5.1)
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
-    acts_as_list (1.2.5)
+    acts_as_list (1.2.6)
       activerecord (>= 6.1)
       activesupport (>= 6.1)
     addressable (2.8.7)
@@ -795,7 +795,7 @@ GEM
       chunky_png (~> 1.0)
       rqrcode_core (~> 1.0)
     rqrcode_core (1.2.0)
-    rspec (3.13.1)
+    rspec (3.13.2)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
       rspec-mocks (~> 3.13.0)
