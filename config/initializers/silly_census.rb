@@ -5,7 +5,7 @@ Decidim::Elections.census_registry.register(:silly_census) do |manifest|
   manifest.admin_form_partial = "censuses/admin_silly_census_form"
 
   manifest.user_query do |election|
-    election.votes
+    Decidim::Elections::Voter.where(election: election)
   end
   manifest.census_ready_validator do |_election|
     true

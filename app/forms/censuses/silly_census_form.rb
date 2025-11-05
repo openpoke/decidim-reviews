@@ -5,9 +5,14 @@ module Censuses
   class SillyCensusForm < Decidim::Form
     attribute :code, String
     validate :code_unique
+    validates :code, presence: true
 
     def voter_uid
-      code
+      @voter_uid ||= census_user&.to_global_id&.to_s
+    end
+
+    def census_user
+      election.census.users(election).where("data->>'code' = ?", code&.strip&.downcase)&.first
     end
 
     def election
@@ -17,9 +22,13 @@ module Censuses
     private
 
     def code_unique
-      return unless election.votes.where(voter_uid: code&.strip).exists?
-
-      errors.add(:base, "Code is already taken! Please choose another movie!")
+      if code&.strip&.present?
+        voter = Decidim::Elections::Voter.find_or_create_by(
+          election: election,
+          data: { code: code.strip.downcase }
+        )
+        errors.add(:code, "Something went wrong") if voter.blank?
+      end
     end
   end
 end
