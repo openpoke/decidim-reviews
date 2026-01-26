@@ -8,13 +8,13 @@ DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.31-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-action_delegator", { github: "openpoke/decidim-module-action_delegator", branch: "main" }
+gem "decidim-chatbot", { github: "openpoke/decidim-module-chatbot", branch: "main" }
+gem "decidim-collaborative_texts", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-design", DECIDIM_VERSION
 gem "decidim-elections", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
-gem "decidim-collaborative_texts", DECIDIM_VERSION
-gem "decidim-chatbot", { github: "openpoke/decidim-module-chatbot", branch: "feature/chatbot-configuration" }
 
 gem "bootsnap", "~> 1.4"
 
