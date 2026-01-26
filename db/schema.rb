@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_10_30_142256) do
+ActiveRecord::Schema[7.2].define(version: 2026_01_26_115940) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -463,6 +463,48 @@ ActiveRecord::Schema[7.2].define(version: 2025_10_30_142256) do
     t.datetime "updated_at", precision: nil, null: false
     t.index ["categorizable_type", "categorizable_id"], name: "decidim_categorizations_categorizable_id_and_type"
     t.index ["decidim_category_id"], name: "index_decidim_categorizations_on_decidim_category_id"
+  end
+
+  create_table "decidim_chatbot_messages", force: :cascade do |t|
+    t.bigint "setting_id", null: false
+    t.bigint "sender_id"
+    t.string "chat_id", null: false
+    t.string "message_id", null: false
+    t.string "message_type", null: false
+    t.jsonb "content", default: {}, null: false
+    t.datetime "read_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chat_id"], name: "index_decidim_chatbot_messages_on_chat_id"
+    t.index ["sender_id"], name: "index_decidim_chatbot_messages_on_sender_id"
+    t.index ["setting_id", "message_id"], name: "index_decidim_chatbot_messages_on_setting_and_message_id", unique: true
+    t.index ["setting_id"], name: "index_decidim_chatbot_messages_on_setting_id"
+  end
+
+  create_table "decidim_chatbot_senders", force: :cascade do |t|
+    t.bigint "setting_id", null: false
+    t.bigint "decidim_user_id"
+    t.string "from", null: false
+    t.string "name"
+    t.jsonb "metadata", default: {}, null: false
+    t.string "current_workflow_class"
+    t.string "parent_workflow_class"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_user_id"], name: "index_decidim_chatbot_senders_on_decidim_user_id"
+    t.index ["setting_id", "from"], name: "index_decidim_chatbot_senders_on_setting_and_from", unique: true
+    t.index ["setting_id"], name: "index_decidim_chatbot_senders_on_setting_id"
+  end
+
+  create_table "decidim_chatbot_settings", force: :cascade do |t|
+    t.bigint "decidim_organization_id", null: false
+    t.string "provider", null: false
+    t.string "start_workflow", null: false
+    t.jsonb "config", default: {}, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_organization_id", "provider", "start_workflow"], name: "index_decidim_chatbot_settings_on_org_and_provider", unique: true
+    t.index ["decidim_organization_id"], name: "index_decidim_chatbot_settings_on_decidim_organization_id"
   end
 
   create_table "decidim_coauthorships", force: :cascade do |t|
@@ -1429,6 +1471,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_10_30_142256) do
     t.boolean "enable_participatory_space_filters", default: true
     t.jsonb "content_security_policy", default: {}
     t.jsonb "name", default: {}, null: false
+    t.jsonb "short_name", default: {}, null: false
     t.index ["host"], name: "index_decidim_organizations_on_host", unique: true
   end
 
@@ -1562,7 +1605,8 @@ ActiveRecord::Schema[7.2].define(version: 2025_10_30_142256) do
     t.index ["privatable_to_type", "privatable_to_id"], name: "space_privatable_to_privatable_id"
   end
 
-  create_table "decidim_private_exports", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "decidim_private_exports", force: :cascade do |t|
+    t.uuid "uuid", null: false
     t.string "export_type", null: false
     t.string "attached_to_type"
     t.integer "attached_to_id"
@@ -1573,6 +1617,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_10_30_142256) do
     t.jsonb "metadata", default: {}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["uuid"], name: "index_decidim_private_exports_on_uuid", unique: true
   end
 
   create_table "decidim_proposals_collaborative_draft_collaborator_requests", force: :cascade do |t|
@@ -2221,6 +2266,11 @@ ActiveRecord::Schema[7.2].define(version: 2025_10_30_142256) do
   add_foreign_key "decidim_budgets_orders", "decidim_budgets_budgets"
   add_foreign_key "decidim_budgets_projects", "decidim_budgets_budgets"
   add_foreign_key "decidim_categorizations", "decidim_categories"
+  add_foreign_key "decidim_chatbot_messages", "decidim_chatbot_senders", column: "sender_id"
+  add_foreign_key "decidim_chatbot_messages", "decidim_chatbot_settings", column: "setting_id"
+  add_foreign_key "decidim_chatbot_senders", "decidim_chatbot_settings", column: "setting_id"
+  add_foreign_key "decidim_chatbot_senders", "decidim_users"
+  add_foreign_key "decidim_chatbot_settings", "decidim_organizations"
   add_foreign_key "decidim_debates_debates", "decidim_scopes"
   add_foreign_key "decidim_editor_images", "decidim_organizations"
   add_foreign_key "decidim_editor_images", "decidim_users", column: "decidim_author_id"
