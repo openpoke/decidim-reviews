@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 1e91031d16a84bcffd802f56ac557d39b158c784
+  revision: ce9f0e42bab4ed98385e0bcb54275a7a0666b66b
   branch: release/0.31-stable
   specs:
     decidim (0.31.1)
@@ -218,7 +218,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-chatbot.git
-  revision: 46e530b005a0e12ddeb99e1116d995a4cbd28179
+  revision: 90b4713293e83a23b0a38bd90dc02efbe9955cd7
   branch: add-comments
   specs:
     decidim-chatbot (0.1.0)
