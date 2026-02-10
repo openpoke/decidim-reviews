@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# This migration comes from decidim_chatbot (originally 20260109161655)
 class CreateDecidimChatbotMessages < ActiveRecord::Migration[7.2]
   def change
     create_table :decidim_chatbot_messages do |t|

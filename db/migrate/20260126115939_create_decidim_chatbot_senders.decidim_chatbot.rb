@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# This migration comes from decidim_chatbot (originally 20260109161654)
 class CreateDecidimChatbotSenders < ActiveRecord::Migration[7.2]
   def change
     create_table :decidim_chatbot_senders do |t|
@@ -9,8 +8,7 @@ class CreateDecidimChatbotSenders < ActiveRecord::Migration[7.2]
       t.string :from, null: false
       t.string :name, null: true
       t.jsonb :metadata, null: false, default: {}
-      t.string :current_workflow_class, null: true
-      t.string :parent_workflow_class, null: true
+      t.jsonb :workflow_stack, null: false, default: []
       t.timestamps
 
       t.index [:setting_id, :from], unique: true, name: "index_decidim_chatbot_senders_on_setting_and_from"
