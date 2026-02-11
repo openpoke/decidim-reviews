@@ -47,6 +47,8 @@ GIT
     decidim-budgets (0.31.1)
       decidim-comments (= 0.31.1)
       decidim-core (= 0.31.1)
+    decidim-collaborative_texts (0.31.1)
+      decidim-core (= 0.31.1)
     decidim-comments (0.31.1)
       decidim-core (= 0.31.1)
       redcarpet (~> 3.5, >= 3.5.1)
@@ -1112,6 +1114,7 @@ DEPENDENCIES
   decidim!
   decidim-action_delegator!
   decidim-chatbot!
+  decidim-collaborative_texts!
   decidim-conferences!
   decidim-design!
   decidim-dev!
@@ -1203,6 +1206,7 @@ CHECKSUMS
   decidim-blogs (0.31.1)
   decidim-budgets (0.31.1)
   decidim-chatbot (0.1.0)
+  decidim-collaborative_texts (0.31.1)
   decidim-comments (0.31.1)
   decidim-conferences (0.31.1)
   decidim-core (0.31.1)
