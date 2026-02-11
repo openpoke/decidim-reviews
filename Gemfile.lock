@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: ce9f0e42bab4ed98385e0bcb54275a7a0666b66b
+  revision: cc8b8f6a9a8d2c9134e97a52486515d210852cab
   branch: release/0.31-stable
   specs:
     decidim (0.31.1)
@@ -46,8 +46,6 @@ GIT
       decidim-core (= 0.31.1)
     decidim-budgets (0.31.1)
       decidim-comments (= 0.31.1)
-      decidim-core (= 0.31.1)
-    decidim-collaborative_texts (0.31.1)
       decidim-core (= 0.31.1)
     decidim-comments (0.31.1)
       decidim-core (= 0.31.1)
@@ -1114,7 +1112,6 @@ DEPENDENCIES
   decidim!
   decidim-action_delegator!
   decidim-chatbot!
-  decidim-collaborative_texts!
   decidim-conferences!
   decidim-design!
   decidim-dev!
@@ -1206,7 +1203,6 @@ CHECKSUMS
   decidim-blogs (0.31.1)
   decidim-budgets (0.31.1)
   decidim-chatbot (0.1.0)
-  decidim-collaborative_texts (0.31.1)
   decidim-comments (0.31.1)
   decidim-conferences (0.31.1)
   decidim-core (0.31.1)
