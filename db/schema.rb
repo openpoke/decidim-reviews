@@ -487,8 +487,7 @@ ActiveRecord::Schema[7.2].define(version: 2026_02_10_195731) do
     t.string "from", null: false
     t.string "name"
     t.jsonb "metadata", default: {}, null: false
-    t.string "current_workflow_class"
-    t.string "parent_workflow_class"
+    t.jsonb "workflow_stack", default: [], null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["decidim_user_id"], name: "index_decidim_chatbot_senders_on_decidim_user_id"
@@ -501,6 +500,7 @@ ActiveRecord::Schema[7.2].define(version: 2026_02_10_195731) do
     t.string "provider", null: false
     t.string "start_workflow", null: false
     t.jsonb "config", default: {}, null: false
+    t.boolean "enabled", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["decidim_organization_id", "provider", "start_workflow"], name: "index_decidim_chatbot_settings_on_org_and_provider", unique: true
