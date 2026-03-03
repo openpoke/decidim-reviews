@@ -5,7 +5,12 @@
     "@decidim/browserslist-config": "file:packages/browserslist-config",
     "@decidim/core": "file:packages/core",
     "@decidim/webpacker": "file:packages/webpacker",
-    "formBuilder": "^3.22.0"
+    "form-storage": "^1.3.5",
+    "formBuilder": "^3.22.0",
+    "formbuilder-languages": "^1.2.0",
+    "inline-attacher": "^0.0.8",
+    "jsrender": "^1.0.16",
+    "leaflet.featuregroup.subgroup": "^1.0.2"
   },
   "version": "0.1.0",
   "devDependencies": {
