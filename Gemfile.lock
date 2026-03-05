@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
-  revision: 90b6c5a18c0ac1ba0cba277f0463d9d82a6855f6
+  revision: 6ee9a9e61ad6dabe59d1777e574a3d204fdabf17
   branch: feature/add_new_cookie_policy
   specs:
     decidim-decidim_awesome (0.14.1)
