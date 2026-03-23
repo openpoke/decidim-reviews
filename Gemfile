@@ -4,17 +4,20 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", "0.29.7"
-# gem "decidim-conferences", "0.29.7"
-# gem "decidim-design", "0.29.7"
-# gem "decidim-initiatives", "0.29.7"
-# gem "decidim-templates", "0.29.7"
+
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.29-stable" }.freeze
+gem "decidim", DECIDIM_VERSION
+gem 'decidim-reporting_proposals', git: "https://github.com/openpoke/decidim-module-reporting_proposals"
 
 gem "bootsnap", "~> 1.3"
 
 gem "puma", ">= 6.3.1"
 
+gem "health_check"
 gem "wicked_pdf", "~> 2.1"
+gem "sidekiq"
+
+
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
@@ -31,7 +34,6 @@ group :development do
   gem "listen", "~> 3.1"
   gem "web-console", "~> 4.2"
 end
-gem "sidekiq"
 
 group :production do
   gem "aws-sdk-s3", require: false
