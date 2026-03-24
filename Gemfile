@@ -17,7 +17,7 @@ gem "health_check"
 gem "wicked_pdf", "~> 2.1"
 gem "sidekiq"
 
-
+gem "letter_opener_web", "~> 2.0"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
@@ -30,7 +30,6 @@ group :development, :test do
 end
 
 group :development do
-  gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.1"
   gem "web-console", "~> 4.2"
 end
