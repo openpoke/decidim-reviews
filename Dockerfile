@@ -1,4 +1,5 @@
-FROM ruby:3.3.4 AS builder
+FROM ruby:3.3.10 AS builder
+LABEL maintainer="ivan@pokecode.net"
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates curl gnupg && \
     mkdir -p /etc/apt/keyrings && \

@@ -13,15 +13,9 @@ gem "decidim-design", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
-gem "bootsnap", "~> 1.4"
+gem "bootsnap"
+gem "puma"
 
-gem "faker", "~> 3.2"
-gem "health_check"
-gem "letter_opener_web"
-gem "puma", ">= 6.3.1"
-gem "rails_semantic_logger"
-gem "sentry-rails"
-gem "sentry-ruby"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
@@ -33,21 +27,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "listen", "~> 3.1"
-  gem "web-console", "~> 4.2"
-end
-
-group :production do
-  gem "aws-sdk-s3", require: false
-  gem "sidekiq"
-  gem "sidekiq-cron"
-end
-
-group :development do
-  # Profiling gems
-  gem "bullet"
-  gem "flamegraph"
-  gem "memory_profiler"
-  gem "rack-mini-profiler", require: false
-  gem "stackprof"
+  gem "letter_opener_web"
+  gem "listen"
+  gem "web-console"
 end
