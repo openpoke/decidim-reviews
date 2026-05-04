@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_budgets (originally 20170612101846)
+<<<<<<< HEAD:db/migrate/20240522111600_migrate_projects_category.decidim_budgets.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160968_migrate_projects_category.decidim_budgets.rb
 class MigrateProjectsCategory < ActiveRecord::Migration[5.1]
   def change
     # Create categorizations ensuring database integrity

@@ -1,7 +1,11 @@
 {
   "name": "@decidim/stylelint-config",
   "description": "The stylelint configuration for Decidim",
+<<<<<<< HEAD
   "version": "0.31.2",
+=======
+  "version": "0.31.4",
+>>>>>>> 2ae0386 (update files)
   "repository": {
     "url": "git@github.com:decidim/decidim.git",
     "type": "git",

@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20180215104821)
+<<<<<<< HEAD:db/migrate/20240522111224_create_decidim_area_types.decidim.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160619_create_decidim_area_types.decidim.rb
 class CreateDecidimAreaTypes < ActiveRecord::Migration[5.1]
   def change
     create_table :decidim_area_types do |t|

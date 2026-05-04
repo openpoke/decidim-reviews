@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_surveys (originally 20200609090533)
+<<<<<<< HEAD:db/migrate/20240522111630_check_legacy_tables.decidim_surveys.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160998_check_legacy_tables.decidim_surveys.rb
 # rubocop:disable Rails/Output
 # rubocop:disable Style/GuardClause
 class CheckLegacyTables < ActiveRecord::Migration[5.2]

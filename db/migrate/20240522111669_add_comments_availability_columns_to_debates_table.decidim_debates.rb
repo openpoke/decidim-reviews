@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_debates (originally 20210519201932)
+<<<<<<< HEAD:db/migrate/20240522111669_add_comments_availability_columns_to_debates_table.decidim_debates.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208161037_add_comments_availability_columns_to_debates_table.decidim_debates.rb
 class AddCommentsAvailabilityColumnsToDebatesTable < ActiveRecord::Migration[6.0]
   def change
     add_column :decidim_debates_debates, :comments_enabled, :boolean, default: true

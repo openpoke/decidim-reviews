@@ -1,4 +1,5 @@
 GIT
+<<<<<<< HEAD
   remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
   revision: 2538ba42d50d4e1c3ef68df3fac4c327bc5ddf04
   branch: feature/add_new_cookie_policy
@@ -46,10 +47,65 @@ GIT
       devise_invitable (~> 2.0, >= 2.0.9)
     decidim-api (0.31.2)
       decidim-core (= 0.31.2)
+=======
+  remote: https://github.com/openpoke/decidim-module-pokecode.git
+  revision: 99367209c69b958038ee83ff3008c4b0bc672efd
+  branch: main
+  specs:
+    decidim-pokecode (0.3.1)
+      aws-sdk-s3
+      decidim-core (>= 0.31.2, < 0.32)
+      deface (>= 1.5)
+      health_check
+      rails_semantic_logger
+      sentry-rails
+      sentry-ruby
+      sentry-sidekiq
+      sidekiq
+      sidekiq-cron
+
+GIT
+  remote: https://github.com/openpoke/decidim.git
+  revision: 3ebcf5e16e7009642bdc8ee4baa60be13af2ec7b
+  branch: 0.31-backports
+  specs:
+    decidim (0.31.4)
+      decidim-accountability (= 0.31.4)
+      decidim-admin (= 0.31.4)
+      decidim-api (= 0.31.4)
+      decidim-assemblies (= 0.31.4)
+      decidim-blogs (= 0.31.4)
+      decidim-budgets (= 0.31.4)
+      decidim-comments (= 0.31.4)
+      decidim-core (= 0.31.4)
+      decidim-debates (= 0.31.4)
+      decidim-forms (= 0.31.4)
+      decidim-generators (= 0.31.4)
+      decidim-meetings (= 0.31.4)
+      decidim-pages (= 0.31.4)
+      decidim-participatory_processes (= 0.31.4)
+      decidim-proposals (= 0.31.4)
+      decidim-sortitions (= 0.31.4)
+      decidim-surveys (= 0.31.4)
+      decidim-system (= 0.31.4)
+      decidim-verifications (= 0.31.4)
+    decidim-accountability (0.31.4)
+      decidim-comments (= 0.31.4)
+      decidim-core (= 0.31.4)
+    decidim-admin (0.31.4)
+      active_link_to (~> 1.0)
+      decidim-core (= 0.31.4)
+      devise (~> 4.7)
+      devise-i18n (~> 1.2)
+      devise_invitable (~> 2.0, >= 2.0.9)
+    decidim-api (0.31.4)
+      decidim-core (= 0.31.4)
+>>>>>>> 2ae0386 (update files)
       devise-jwt (~> 0.12.1)
       graphql (~> 2.4.0, >= 2.4.17)
       graphql-docs (~> 5.0)
       rack-cors (~> 1.0)
+<<<<<<< HEAD
     decidim-assemblies (0.31.2)
       decidim-core (= 0.31.2)
     decidim-blogs (0.31.2)
@@ -66,6 +122,21 @@ GIT
       decidim-core (= 0.31.2)
       decidim-meetings (= 0.31.2)
     decidim-core (0.31.2)
+=======
+    decidim-assemblies (0.31.4)
+      decidim-core (= 0.31.4)
+    decidim-blogs (0.31.4)
+      decidim-admin (= 0.31.4)
+      decidim-comments (= 0.31.4)
+      decidim-core (= 0.31.4)
+    decidim-budgets (0.31.4)
+      decidim-comments (= 0.31.4)
+      decidim-core (= 0.31.4)
+    decidim-comments (0.31.4)
+      decidim-core (= 0.31.4)
+      redcarpet (~> 3.5, >= 3.5.1)
+    decidim-core (0.31.4)
+>>>>>>> 2ae0386 (update files)
       active_link_to (~> 1.0)
       acts_as_list (~> 1.0)
       batch-loader (~> 2.0)
@@ -120,6 +191,7 @@ GIT
       valid_email2 (~> 7.0)
       web-push (~> 3.0)
       wisper (~> 3.0)
+<<<<<<< HEAD
     decidim-debates (0.31.2)
       decidim-comments (= 0.31.2)
       decidim-core (= 0.31.2)
@@ -135,6 +207,21 @@ GIT
       decidim-core (= 0.31.2)
       decidim-generators (= 0.31.2)
       decidim-verifications (= 0.31.2)
+=======
+    decidim-debates (0.31.4)
+      decidim-comments (= 0.31.4)
+      decidim-core (= 0.31.4)
+    decidim-dev (0.31.4)
+      bullet (~> 8.0.0)
+      byebug (~> 11.0)
+      capybara (~> 3.39)
+      decidim-admin (= 0.31.4)
+      decidim-api (= 0.31.4)
+      decidim-comments (= 0.31.4)
+      decidim-core (= 0.31.4)
+      decidim-generators (= 0.31.4)
+      decidim-verifications (= 0.31.4)
+>>>>>>> 2ae0386 (update files)
       erb_lint (~> 0.8.0)
       factory_bot_rails (~> 6.2)
       faker (~> 3.2)
@@ -167,6 +254,7 @@ GIT
       w3c_rspec_validators (~> 0.3.0)
       webmock (~> 3.18)
       wisper-rspec (~> 1.0)
+<<<<<<< HEAD
     decidim-forms (0.31.2)
       decidim-core (= 0.31.2)
     decidim-generators (0.31.2)
@@ -208,10 +296,46 @@ GIT
       decidim-forms (= 0.31.2)
     decidim-verifications (0.31.2)
       decidim-core (= 0.31.2)
+=======
+    decidim-forms (0.31.4)
+      decidim-core (= 0.31.4)
+    decidim-generators (0.31.4)
+      decidim-core (= 0.31.4)
+    decidim-meetings (0.31.4)
+      decidim-core (= 0.31.4)
+      decidim-forms (= 0.31.4)
+      icalendar (~> 2.5)
+    decidim-pages (0.31.4)
+      decidim-core (= 0.31.4)
+    decidim-participatory_processes (0.31.4)
+      decidim-core (= 0.31.4)
+    decidim-proposals (0.31.4)
+      decidim-comments (= 0.31.4)
+      decidim-core (= 0.31.4)
+      doc2text (~> 0.4.0, >= 0.4.8)
+      redcarpet (~> 3.5, >= 3.5.1)
+    decidim-sortitions (0.31.4)
+      decidim-admin (= 0.31.4)
+      decidim-comments (= 0.31.4)
+      decidim-core (= 0.31.4)
+      decidim-proposals (= 0.31.4)
+    decidim-surveys (0.31.4)
+      decidim-core (= 0.31.4)
+      decidim-forms (= 0.31.4)
+    decidim-system (0.31.4)
+      active_link_to (~> 1.0)
+      decidim-core (= 0.31.4)
+      devise (~> 4.7)
+      devise-i18n (~> 1.2)
+      devise_invitable (~> 2.0, >= 2.0.9)
+    decidim-verifications (0.31.4)
+      decidim-core (= 0.31.4)
+>>>>>>> 2ae0386 (update files)
 
 GEM
   remote: https://rubygems.org/
   specs:
+<<<<<<< HEAD
     actioncable (7.2.3)
       actionpack (= 7.2.3)
       activesupport (= 7.2.3)
@@ -235,6 +359,31 @@ GEM
     actionpack (7.2.3)
       actionview (= 7.2.3)
       activesupport (= 7.2.3)
+=======
+    actioncable (7.2.3.1)
+      actionpack (= 7.2.3.1)
+      activesupport (= 7.2.3.1)
+      nio4r (~> 2.0)
+      websocket-driver (>= 0.6.1)
+      zeitwerk (~> 2.6)
+    actionmailbox (7.2.3.1)
+      actionpack (= 7.2.3.1)
+      activejob (= 7.2.3.1)
+      activerecord (= 7.2.3.1)
+      activestorage (= 7.2.3.1)
+      activesupport (= 7.2.3.1)
+      mail (>= 2.8.0)
+    actionmailer (7.2.3.1)
+      actionpack (= 7.2.3.1)
+      actionview (= 7.2.3.1)
+      activejob (= 7.2.3.1)
+      activesupport (= 7.2.3.1)
+      mail (>= 2.8.0)
+      rails-dom-testing (~> 2.2)
+    actionpack (7.2.3.1)
+      actionview (= 7.2.3.1)
+      activesupport (= 7.2.3.1)
+>>>>>>> 2ae0386 (update files)
       cgi
       nokogiri (>= 1.8.5)
       racc
@@ -244,6 +393,7 @@ GEM
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
       useragent (~> 0.16)
+<<<<<<< HEAD
     actiontext (7.2.3)
       actionpack (= 7.2.3)
       activerecord (= 7.2.3)
@@ -253,11 +403,23 @@ GEM
       nokogiri (>= 1.8.5)
     actionview (7.2.3)
       activesupport (= 7.2.3)
+=======
+    actiontext (7.2.3.1)
+      actionpack (= 7.2.3.1)
+      activerecord (= 7.2.3.1)
+      activestorage (= 7.2.3.1)
+      activesupport (= 7.2.3.1)
+      globalid (>= 0.6.0)
+      nokogiri (>= 1.8.5)
+    actionview (7.2.3.1)
+      activesupport (= 7.2.3.1)
+>>>>>>> 2ae0386 (update files)
       builder (~> 3.1)
       cgi
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
+<<<<<<< HEAD
     active_hashcash (0.4.0)
       rails (>= 5.2.0)
     active_link_to (1.0.5)
@@ -279,6 +441,27 @@ GEM
       activesupport (= 7.2.3)
       marcel (~> 1.0)
     activesupport (7.2.3)
+=======
+    active_link_to (1.0.5)
+      actionpack
+      addressable
+    activejob (7.2.3.1)
+      activesupport (= 7.2.3.1)
+      globalid (>= 0.3.6)
+    activemodel (7.2.3.1)
+      activesupport (= 7.2.3.1)
+    activerecord (7.2.3.1)
+      activemodel (= 7.2.3.1)
+      activesupport (= 7.2.3.1)
+      timeout (>= 0.4.0)
+    activestorage (7.2.3.1)
+      actionpack (= 7.2.3.1)
+      activejob (= 7.2.3.1)
+      activerecord (= 7.2.3.1)
+      activesupport (= 7.2.3.1)
+      marcel (~> 1.0)
+    activesupport (7.2.3.1)
+>>>>>>> 2ae0386 (update files)
       base64
       benchmark (>= 0.3)
       bigdecimal
@@ -287,22 +470,36 @@ GEM
       drb
       i18n (>= 1.6, < 2)
       logger (>= 1.4.2)
+<<<<<<< HEAD
       minitest (>= 5.1)
+=======
+      minitest (>= 5.1, < 6)
+>>>>>>> 2ae0386 (update files)
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
     acts_as_list (1.2.6)
       activerecord (>= 6.1)
       activesupport (>= 6.1)
+<<<<<<< HEAD
     addressable (2.8.9)
       public_suffix (>= 2.0.2, < 8.0)
     ast (2.4.3)
     aws-eventstream (1.3.2)
     aws-partitions (1.1100.0)
     aws-sdk-core (3.223.0)
+=======
+    addressable (2.9.0)
+      public_suffix (>= 2.0.2, < 8.0)
+    ast (2.4.3)
+    aws-eventstream (1.4.0)
+    aws-partitions (1.1244.0)
+    aws-sdk-core (3.246.0)
+>>>>>>> 2ae0386 (update files)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
       aws-sigv4 (~> 1.9)
       base64
+<<<<<<< HEAD
       jmespath (~> 1, >= 1.6.1)
       logger
     aws-sdk-kms (1.100.0)
@@ -321,19 +518,51 @@ GEM
     better_html (2.1.1)
       actionview (>= 6.0)
       activesupport (>= 6.0)
+=======
+      bigdecimal
+      jmespath (~> 1, >= 1.6.1)
+      logger
+    aws-sdk-kms (1.124.0)
+      aws-sdk-core (~> 3, >= 3.244.0)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-s3 (1.220.0)
+      aws-sdk-core (~> 3, >= 3.244.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.5)
+    aws-sigv4 (1.12.1)
+      aws-eventstream (~> 1, >= 1.0.2)
+    base64 (0.3.0)
+    batch-loader (2.0.6)
+    bcrypt (3.1.22)
+    benchmark (0.5.0)
+    better_html (2.2.0)
+      actionview (>= 7.0)
+      activesupport (>= 7.0)
+>>>>>>> 2ae0386 (update files)
       ast (~> 2.0)
       erubi (~> 1.4)
       parser (>= 2.4)
       smart_properties
+<<<<<<< HEAD
     bigdecimal (4.0.1)
+=======
+    bigdecimal (4.1.2)
+>>>>>>> 2ae0386 (update files)
     bindex (0.8.1)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
+<<<<<<< HEAD
     brakeman (6.2.2)
       racc
     browser (6.2.0)
     builder (3.3.0)
     bullet (8.0.6)
+=======
+    brakeman (5.4.0)
+    browser (6.2.0)
+    builder (3.3.0)
+    bullet (8.0.8)
+>>>>>>> 2ae0386 (update files)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
     byebug (11.1.3)
@@ -360,21 +589,32 @@ GEM
     cgi (0.5.1)
     charlock_holmes (0.7.9)
     chartkick (5.1.5)
+<<<<<<< HEAD
     childprocess (5.1.0)
       logger (~> 1.5)
+=======
+>>>>>>> 2ae0386 (update files)
     chunky_png (1.4.0)
     cmdparse (3.0.7)
     commonmarker (0.23.12)
     concurrent-ruby (1.3.6)
     connection_pool (2.5.5)
+<<<<<<< HEAD
     crack (1.0.0)
+=======
+    crack (1.0.1)
+>>>>>>> 2ae0386 (update files)
       bigdecimal
       rexml
     crass (1.0.6)
     cronex (0.15.0)
       tzinfo
       unicode (>= 0.4.4.5)
+<<<<<<< HEAD
     css_parser (2.0.0)
+=======
+    css_parser (2.1.0)
+>>>>>>> 2ae0386 (update files)
       addressable
     csv (3.3.5)
     data_migrate (11.3.1)
@@ -408,13 +648,21 @@ GEM
     devise_invitable (2.0.11)
       actionmailer (>= 5.0)
       devise (>= 4.6)
+<<<<<<< HEAD
     diff-lcs (1.6.1)
+=======
+    diff-lcs (1.6.2)
+>>>>>>> 2ae0386 (update files)
     diffy (3.4.4)
     doc2text (0.4.8)
       nokogiri (>= 1.18.2)
       rubyzip (~> 2.3.0)
     docile (1.4.1)
+<<<<<<< HEAD
     doorkeeper (5.8.2)
+=======
+    doorkeeper (5.9.0)
+>>>>>>> 2ae0386 (update files)
       railties (>= 5)
     doorkeeper-i18n (4.0.1)
     drb (2.2.3)
@@ -428,7 +676,11 @@ GEM
       concurrent-ruby (~> 1.0)
       logger
       zeitwerk (~> 2.6)
+<<<<<<< HEAD
     erb (6.0.2)
+=======
+    erb (6.0.4)
+>>>>>>> 2ae0386 (update files)
     erb_lint (0.8.0)
       activesupport
       better_html (>= 2.0.1)
@@ -440,6 +692,7 @@ GEM
       temple
     erubi (1.13.1)
     escape_utils (1.3.0)
+<<<<<<< HEAD
     et-orbi (1.2.11)
       tzinfo
     excon (1.4.0)
@@ -452,6 +705,20 @@ GEM
       factory_bot (~> 6.5)
       railties (>= 5.0.0)
     faker (3.5.1)
+=======
+    et-orbi (1.4.0)
+      tzinfo
+    excon (1.4.2)
+      logger
+    extended-markdown-filter (0.7.0)
+      html-pipeline (~> 2.9)
+    factory_bot (6.5.6)
+      activesupport (>= 6.1.0)
+    factory_bot_rails (6.5.1)
+      factory_bot (~> 6.5)
+      railties (>= 6.1.0)
+    faker (3.8.0)
+>>>>>>> 2ae0386 (update files)
       i18n (>= 1.8.11, < 2)
     faraday (2.14.1)
       faraday-net_http (>= 2.0, < 3.5)
@@ -459,6 +726,7 @@ GEM
       logger
     faraday-net_http (3.4.2)
       net-http (~> 0.5)
+<<<<<<< HEAD
     ffi (1.17.3)
     ffi (1.17.3-aarch64-linux-gnu)
     ffi (1.17.3-aarch64-linux-musl)
@@ -468,11 +736,17 @@ GEM
     ffi (1.17.3-x86_64-darwin)
     ffi (1.17.3-x86_64-linux-gnu)
     ffi (1.17.3-x86_64-linux-musl)
+=======
+    ffi (1.17.4-x86_64-linux-gnu)
+>>>>>>> 2ae0386 (update files)
     fiber-storage (1.0.1)
     file_validators (3.0.0)
       activemodel (>= 3.2)
       mime-types (>= 1.0)
+<<<<<<< HEAD
     flamegraph (0.9.5)
+=======
+>>>>>>> 2ae0386 (update files)
     fog-core (2.6.0)
       builder
       excon (~> 1.0)
@@ -482,8 +756,13 @@ GEM
       fog-core (>= 1.27, < 3.0)
     formatador (1.2.3)
       reline
+<<<<<<< HEAD
     fugit (1.11.1)
       et-orbi (~> 1, >= 1.2.11)
+=======
+    fugit (1.12.1)
+      et-orbi (~> 1.4)
+>>>>>>> 2ae0386 (update files)
       raabro (~> 1.4)
     gemoji (3.0.1)
     geocoder (1.8.6)
@@ -492,6 +771,7 @@ GEM
     geom2d (0.4.1)
     globalid (1.3.0)
       activesupport (>= 6.1)
+<<<<<<< HEAD
     google-protobuf (4.34.0)
       bigdecimal
       rake (~> 13.3)
@@ -514,6 +794,12 @@ GEM
       bigdecimal
       rake (~> 13.3)
     graphql (2.4.17)
+=======
+    google-protobuf (4.34.1-x86_64-linux-gnu)
+      bigdecimal
+      rake (~> 13.3)
+    graphql (2.4.18)
+>>>>>>> 2ae0386 (update files)
       base64
       fiber-storage
       logger
@@ -545,18 +831,30 @@ GEM
     htmlentities (4.4.2)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
+<<<<<<< HEAD
     i18n-tasks (1.0.15)
+=======
+    i18n-tasks (1.1.2)
+>>>>>>> 2ae0386 (update files)
       activesupport (>= 4.0.2)
       ast (>= 2.1.0)
       erubi
-      highline (>= 2.0.0)
+      highline (>= 3.0.0)
       i18n
       parser (>= 3.2.2.1)
+<<<<<<< HEAD
+=======
+      prism
+>>>>>>> 2ae0386 (update files)
       rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.8, >= 1.8.1)
       terminal-table (>= 1.5.1)
+<<<<<<< HEAD
     icalendar (2.12.1)
+=======
+    icalendar (2.12.2)
+>>>>>>> 2ae0386 (update files)
       base64
       ice_cube (~> 0.16)
       logger
@@ -568,13 +866,21 @@ GEM
     invisible_captcha (0.13.0)
       rails (>= 3.2.0)
     io-console (0.8.2)
+<<<<<<< HEAD
     irb (1.17.0)
+=======
+    irb (1.18.0)
+>>>>>>> 2ae0386 (update files)
       pp (>= 0.6.0)
       prism (>= 1.3.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     jmespath (1.6.2)
+<<<<<<< HEAD
     json (2.18.1)
+=======
+    json (2.19.5)
+>>>>>>> 2ae0386 (update files)
     jwt (3.1.2)
       base64
     kaminari (1.2.2)
@@ -589,8 +895,13 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
+<<<<<<< HEAD
     language_server-protocol (3.17.0.4)
     launchy (3.1.1)
+=======
+    language_server-protocol (3.17.0.5)
+    launchy (2.5.2)
+>>>>>>> 2ae0386 (update files)
       addressable (~> 2.8)
       childprocess (~> 5.0)
       logger (~> 1.6)
@@ -602,11 +913,19 @@ GEM
       railties (>= 6.1)
       rexml
     lint_roller (1.1.0)
+<<<<<<< HEAD
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
     loofah (2.25.0)
+=======
+    listen (3.8.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.7.0)
+    loofah (2.25.1)
+>>>>>>> 2ae0386 (update files)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     mail (2.9.0)
@@ -616,6 +935,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.1.0)
+<<<<<<< HEAD
     matrix (0.4.2)
     memory_profiler (1.1.0)
     mime-types (3.7.0)
@@ -634,6 +954,22 @@ GEM
     net-http (0.9.1)
       uri (>= 0.11.1)
     net-imap (0.6.3)
+=======
+    matrix (0.4.3)
+    mime-types (3.7.0)
+      logger
+      mime-types-data (~> 3.2025, >= 3.2025.0507)
+    mime-types-data (3.2026.0414)
+    mini_magick (4.13.2)
+    mini_mime (1.1.5)
+    minitest (5.27.0)
+    msgpack (1.6.0)
+    multi_xml (0.9.0)
+      bigdecimal (>= 3.1, < 5)
+    net-http (0.9.1)
+      uri (>= 0.11.1)
+    net-imap (0.6.4)
+>>>>>>> 2ae0386 (update files)
       date
       net-protocol
     net-pop (0.1.2)
@@ -643,6 +979,7 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.5)
+<<<<<<< HEAD
     nokogiri (1.19.1)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
@@ -662,6 +999,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.1-x86_64-linux-musl)
       racc (~> 1.4)
+=======
+    nokogiri (1.19.3-x86_64-linux-gnu)
+      racc (~> 1.4)
+>>>>>>> 2ae0386 (update files)
     oauth (1.1.3)
       base64 (~> 0.1)
       oauth-tty (~> 1.0, >= 1.0.6)
@@ -709,12 +1050,20 @@ GEM
     paper_trail (16.0.0)
       activerecord (>= 6.1)
       request_store (~> 1.4)
+<<<<<<< HEAD
     parallel (1.27.0)
+=======
+    parallel (1.28.0)
+>>>>>>> 2ae0386 (update files)
     parallel_tests (4.10.1)
       parallel
     paranoia (3.0.1)
       activerecord (>= 6, < 8.1)
+<<<<<<< HEAD
     parser (3.3.8.0)
+=======
+    parser (3.3.11.1)
+>>>>>>> 2ae0386 (update files)
       ast (~> 2.4.1)
       racc
     pg (1.5.9)
@@ -724,7 +1073,11 @@ GEM
     polyglot (0.3.5)
     pp (0.6.3)
       prettyprint
+<<<<<<< HEAD
     premailer (1.28.0)
+=======
+    premailer (1.29.0)
+>>>>>>> 2ae0386 (update files)
       addressable
       css_parser (>= 1.19.0)
       htmlentities (>= 4.0.0)
@@ -737,18 +1090,30 @@ GEM
     psych (5.3.1)
       date
       stringio
+<<<<<<< HEAD
     public_suffix (7.0.2)
     puma (6.6.0)
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
     rack (2.2.22)
+=======
+    public_suffix (7.0.5)
+    puma (6.6.1)
+      nio4r (~> 2.0)
+    raabro (1.4.0)
+    racc (1.8.1)
+    rack (2.2.23)
+>>>>>>> 2ae0386 (update files)
     rack-attack (6.8.0)
       rack (>= 1.0, < 4)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
+<<<<<<< HEAD
     rack-mini-profiler (3.3.1)
       rack (>= 1.2.0)
+=======
+>>>>>>> 2ae0386 (update files)
     rack-protection (3.2.0)
       base64 (>= 0.1.0)
       rack (~> 2.2, >= 2.2.4)
@@ -761,6 +1126,7 @@ GEM
     rackup (1.0.1)
       rack (< 3)
       webrick
+<<<<<<< HEAD
     rails (7.2.3)
       actioncable (= 7.2.3)
       actionmailbox (= 7.2.3)
@@ -775,6 +1141,22 @@ GEM
       activesupport (= 7.2.3)
       bundler (>= 1.15.0)
       railties (= 7.2.3)
+=======
+    rails (7.2.3.1)
+      actioncable (= 7.2.3.1)
+      actionmailbox (= 7.2.3.1)
+      actionmailer (= 7.2.3.1)
+      actionpack (= 7.2.3.1)
+      actiontext (= 7.2.3.1)
+      actionview (= 7.2.3.1)
+      activejob (= 7.2.3.1)
+      activemodel (= 7.2.3.1)
+      activerecord (= 7.2.3.1)
+      activestorage (= 7.2.3.1)
+      activesupport (= 7.2.3.1)
+      bundler (>= 1.15.0)
+      railties (= 7.2.3.1)
+>>>>>>> 2ae0386 (update files)
     rails-controller-testing (1.0.5)
       actionpack (>= 5.0.1.rc1)
       actionview (>= 5.0.1.rc1)
@@ -789,6 +1171,7 @@ GEM
     rails-i18n (7.0.10)
       i18n (>= 0.7, < 2)
       railties (>= 6.0.0, < 8)
+<<<<<<< HEAD
     rails_semantic_logger (4.17.0)
       rack
       railties (>= 5.1)
@@ -796,6 +1179,15 @@ GEM
     railties (7.2.3)
       actionpack (= 7.2.3)
       activesupport (= 7.2.3)
+=======
+    rails_semantic_logger (4.20.0)
+      rack
+      railties (>= 5.1)
+      semantic_logger (~> 4.16)
+    railties (7.2.3.1)
+      actionpack (= 7.2.3.1)
+      activesupport (= 7.2.3.1)
+>>>>>>> 2ae0386 (update files)
       cgi
       irb (~> 1.13)
       rackup (>= 1.0.0)
@@ -804,7 +1196,11 @@ GEM
       tsort (>= 0.2)
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
+<<<<<<< HEAD
     rake (13.3.1)
+=======
+    rake (13.4.2)
+>>>>>>> 2ae0386 (update files)
     ransack (4.2.1)
       activerecord (>= 6.1.5)
       activesupport (>= 6.1.5)
@@ -818,9 +1214,15 @@ GEM
       tsort
     redcarpet (3.6.1)
     redis (4.8.1)
+<<<<<<< HEAD
     redis-client (0.24.0)
       connection_pool
     regexp_parser (2.10.0)
+=======
+    redis-client (0.28.0)
+      connection_pool
+    regexp_parser (2.12.0)
+>>>>>>> 2ae0386 (update files)
     reline (0.6.3)
       io-console (~> 0.5)
     request_store (1.7.0)
@@ -828,27 +1230,45 @@ GEM
     responders (3.2.0)
       actionpack (>= 7.0)
       railties (>= 7.0)
+<<<<<<< HEAD
     rexml (3.4.1)
+=======
+    rexml (3.2.5)
+>>>>>>> 2ae0386 (update files)
     rqrcode (2.2.0)
       chunky_png (~> 1.0)
       rqrcode_core (~> 1.0)
     rqrcode_core (1.2.0)
+<<<<<<< HEAD
     rspec (3.13.0)
+=======
+    rspec (3.13.2)
+>>>>>>> 2ae0386 (update files)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
       rspec-mocks (~> 3.13.0)
     rspec-cells (0.3.10)
       cells (>= 4.0.0, < 6.0.0)
       rspec-rails (>= 3.0.0)
+<<<<<<< HEAD
     rspec-core (3.13.3)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.4)
+=======
+    rspec-core (3.13.6)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.5)
+>>>>>>> 2ae0386 (update files)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-html-matchers (0.10.0)
       nokogiri (~> 1)
       rspec (>= 3.0.0.a)
+<<<<<<< HEAD
     rspec-mocks (3.13.4)
+=======
+    rspec-mocks (3.13.8)
+>>>>>>> 2ae0386 (update files)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-rails (6.1.5)
@@ -861,7 +1281,11 @@ GEM
       rspec-support (~> 3.13)
     rspec-retry (0.6.2)
       rspec-core (> 3.3)
+<<<<<<< HEAD
     rspec-support (3.13.3)
+=======
+    rspec-support (3.13.7)
+>>>>>>> 2ae0386 (update files)
     rspec_junit_formatter (0.6.0)
       rspec-core (>= 2, < 4, != 2.12.0)
     rubocop (1.78.0)
@@ -875,9 +1299,15 @@ GEM
       rubocop-ast (>= 1.45.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
+<<<<<<< HEAD
     rubocop-ast (1.47.1)
       parser (>= 3.3.7.2)
       prism (~> 1.4)
+=======
+    rubocop-ast (1.49.1)
+      parser (>= 3.3.7.2)
+      prism (~> 1.7)
+>>>>>>> 2ae0386 (update files)
     rubocop-capybara (2.22.1)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
@@ -888,6 +1318,7 @@ GEM
       faker (>= 2.12.0)
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1)
+<<<<<<< HEAD
     rubocop-graphql (1.5.6)
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1, < 2)
@@ -895,6 +1326,15 @@ GEM
       lint_roller (~> 1.1)
       rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.44.0, < 2.0)
+=======
+    rubocop-graphql (1.6.0)
+      lint_roller (~> 1.1)
+      rubocop (>= 1.72.1, < 2)
+    rubocop-performance (1.26.1)
+      lint_roller (~> 1.1)
+      rubocop (>= 1.75.0, < 2.0)
+      rubocop-ast (>= 1.47.1, < 2.0)
+>>>>>>> 2ae0386 (update files)
     rubocop-rails (2.32.0)
       activesupport (>= 4.2.0)
       lint_roller (~> 1.1)
@@ -919,6 +1359,7 @@ GEM
       nokogiri (>= 1.10.8)
       rubyzip (>= 1.3.0)
     rubyzip (2.3.2)
+<<<<<<< HEAD
     sass-embedded (1.97.3)
       google-protobuf (~> 4.31)
       rake (>= 13)
@@ -956,12 +1397,37 @@ GEM
     sentry-ruby (5.23.0)
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
+=======
+    sass-embedded (1.99.0-x86_64-linux-gnu)
+      google-protobuf (~> 4.31)
+    securerandom (0.4.1)
+    selenium-webdriver (4.43.0)
+      base64 (~> 0.2)
+      logger (~> 1.4)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 4.0)
+      websocket (~> 1.0)
+    semantic_logger (4.18.0)
+      concurrent-ruby (~> 1.0)
+    semantic_range (3.1.1)
+    sentry-rails (6.5.0)
+      railties (>= 5.2.0)
+      sentry-ruby (~> 6.5.0)
+    sentry-ruby (6.5.0)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      logger
+    sentry-sidekiq (6.5.0)
+      sentry-ruby (~> 6.5.0)
+      sidekiq (>= 5.0)
+>>>>>>> 2ae0386 (update files)
     shakapacker (8.3.0)
       activesupport (>= 5.2)
       package_json
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
       semantic_range (>= 2.3.0)
+<<<<<<< HEAD
     sidekiq (7.3.9)
       base64
       connection_pool (>= 2.3.0)
@@ -969,6 +1435,15 @@ GEM
       rack (>= 2.2.4)
       redis-client (>= 0.22.2)
     sidekiq-cron (2.2.0)
+=======
+    sidekiq (7.3.10)
+      base64
+      connection_pool (>= 2.3.0, < 3)
+      logger
+      rack (>= 2.2.4, < 3.3)
+      redis-client (>= 0.23.0, < 1)
+    sidekiq-cron (2.3.1)
+>>>>>>> 2ae0386 (update files)
       cronex (>= 0.13.0)
       fugit (~> 1.8, >= 1.11.1)
       globalid (>= 1.0.1)
@@ -980,12 +1455,17 @@ GEM
     simplecov-cobertura (2.1.0)
       rexml
       simplecov (~> 0.19)
+<<<<<<< HEAD
     simplecov-html (0.13.1)
+=======
+    simplecov-html (0.13.2)
+>>>>>>> 2ae0386 (update files)
     simplecov_json_formatter (0.1.4)
     smart_properties (1.17.0)
     snaky_hash (2.0.3)
       hashie (>= 0.1.0, < 6)
       version_gem (>= 1.1.8, < 3)
+<<<<<<< HEAD
     spring (4.3.0)
     spring-watcher-listen (2.1.0)
       listen (>= 2.7, < 4.0)
@@ -993,22 +1473,41 @@ GEM
     stackprof (0.2.27)
     stringio (3.2.0)
     strscan (3.1.7)
+=======
+    spring (4.5.0)
+    spring-watcher-listen (2.1.0)
+      listen (>= 2.7, < 4.0)
+      spring (>= 4)
+    stringio (3.2.0)
+    strscan (3.1.8)
+>>>>>>> 2ae0386 (update files)
     temple (0.10.4)
     terminal-table (4.0.0)
       unicode-display_width (>= 1.1.1, < 4)
     thor (1.5.0)
     tilt (2.7.0)
+<<<<<<< HEAD
     timeout (0.6.0)
+=======
+    timeout (0.6.1)
+>>>>>>> 2ae0386 (update files)
     trailblazer-option (0.1.2)
     tsort (0.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
     unicode (0.4.4.5)
+<<<<<<< HEAD
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
     uniform_notifier (1.17.0)
+=======
+    unicode-display_width (3.2.0)
+      unicode-emoji (~> 4.1)
+    unicode-emoji (4.2.0)
+    uniform_notifier (1.18.0)
+>>>>>>> 2ae0386 (update files)
     uri (1.1.1)
     useragent (0.16.11)
     valid_email2 (7.0.15)
@@ -1030,7 +1529,11 @@ GEM
       dry-configurable (>= 0.13, < 2)
       jwt (>= 2.1, < 4)
       warden (~> 1.2)
+<<<<<<< HEAD
     web-console (4.2.1)
+=======
+    web-console (4.2.0)
+>>>>>>> 2ae0386 (update files)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
@@ -1038,7 +1541,11 @@ GEM
     web-push (3.1.0)
       jwt (~> 3.0)
       openssl (>= 3.0)
+<<<<<<< HEAD
     webmock (3.25.1)
+=======
+    webmock (3.26.2)
+>>>>>>> 2ae0386 (update files)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -1075,6 +1582,7 @@ DEPENDENCIES
   bullet
   byebug (~> 11.0)
   decidim!
+<<<<<<< HEAD
   decidim-conferences!
   decidim-decidim_awesome!
   decidim-design!
@@ -1100,6 +1608,17 @@ DEPENDENCIES
 
 RUBY VERSION
    ruby 3.3.4p94
+=======
+  decidim-dev!
+  decidim-pokecode!
+  letter_opener_web
+  listen
+  puma (>= 6.3.1)
+  web-console
+
+RUBY VERSION
+   ruby 3.3.10p183
+>>>>>>> 2ae0386 (update files)
 
 BUNDLED WITH
    2.6.6

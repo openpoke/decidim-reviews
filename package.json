@@ -4,6 +4,10 @@
   "dependencies": {
     "@decidim/browserslist-config": "file:packages/browserslist-config",
     "@decidim/core": "file:packages/core",
+<<<<<<< HEAD
+=======
+    "@decidim/elections": "^0.27.2",
+>>>>>>> 2ae0386 (update files)
     "@decidim/webpacker": "file:packages/webpacker"
   },
   "version": "0.1.0",
@@ -12,7 +16,12 @@
     "@decidim/eslint-config": "file:packages/eslint-config",
     "@decidim/prettier-config": "file:packages/prettier-config",
     "@decidim/stylelint-config": "file:packages/stylelint-config",
+<<<<<<< HEAD
     "shakapacker": "^8.3.0"
+=======
+    "shakapacker": "^8.3.0",
+    "webpack-dev-server": "^4.11.1"
+>>>>>>> 2ae0386 (update files)
   },
   "browserslist": [
     "extends @decidim/browserslist-config"

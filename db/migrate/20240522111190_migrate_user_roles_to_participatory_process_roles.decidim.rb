@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20170713131308)
+<<<<<<< HEAD:db/migrate/20240522111190_migrate_user_roles_to_participatory_process_roles.decidim.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160585_migrate_user_roles_to_participatory_process_roles.decidim.rb
 class MigrateUserRolesToParticipatoryProcessRoles < ActiveRecord::Migration[5.1]
   class ParticipatoryProcess < ApplicationRecord
     self.table_name = :decidim_participatory_processes

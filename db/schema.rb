@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
+=======
+ActiveRecord::Schema[7.2].define(version: 2026_05_04_133558) do
+>>>>>>> 2ae0386 (update files)
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -50,7 +54,11 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.text "metadata"
     t.bigint "byte_size", null: false
     t.string "checksum"
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil, null: false
+=======
+    t.datetime "created_at", null: false
+>>>>>>> 2ae0386 (update files)
     t.string "service_name", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
@@ -65,8 +73,13 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.date "entry_date"
     t.jsonb "description"
     t.integer "decidim_accountability_result_id"
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 2ae0386 (update files)
     t.jsonb "title"
     t.index ["decidim_accountability_result_id"], name: "index_decidim_accountability_milestones_on_results_id"
     t.index ["entry_date"], name: "index_decidim_accountability_milestones_on_entry_date"
@@ -89,10 +102,17 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.float "weight", default: 1.0
     t.string "external_id"
     t.integer "comments_count", default: 0, null: false
+<<<<<<< HEAD
     t.text "address"
     t.float "latitude"
     t.float "longitude"
     t.datetime "deleted_at"
+=======
+    t.datetime "deleted_at"
+    t.text "address"
+    t.float "latitude"
+    t.float "longitude"
+>>>>>>> 2ae0386 (update files)
     t.index ["decidim_accountability_status_id"], name: "decidim_accountability_results_on_status_id"
     t.index ["decidim_component_id"], name: "index_decidim_accountability_results_on_decidim_component_id"
     t.index ["decidim_scope_id"], name: "index_decidim_accountability_results_on_decidim_scope_id"
@@ -148,8 +168,13 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.bigint "decidim_amendable_id"
     t.string "decidim_emendation_type"
     t.bigint "decidim_emendation_id"
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 2ae0386 (update files)
     t.integer "state", default: 0, null: false
     t.index ["decidim_amendable_id", "decidim_amendable_type"], name: "index_on_amendable"
     t.index ["decidim_emendation_id"], name: "index_decidim_amendments_on_decidim_emendation_id"
@@ -528,7 +553,11 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.integer "comments_count", default: 0, null: false
     t.string "decidim_participatory_space_type"
     t.integer "decidim_participatory_space_id"
+<<<<<<< HEAD
     t.datetime "deleted_at", precision: nil
+=======
+    t.datetime "deleted_at"
+>>>>>>> 2ae0386 (update files)
     t.integer "up_votes_count", default: 0, null: false
     t.integer "down_votes_count", default: 0, null: false
     t.index ["created_at"], name: "index_decidim_comments_comments_on_created_at"
@@ -794,8 +823,13 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.integer "condition_type", default: 0, null: false
     t.jsonb "condition_value"
     t.boolean "mandatory", default: false
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 2ae0386 (update files)
     t.index ["decidim_condition_question_id"], name: "decidim_forms_display_condition_condition_question"
     t.index ["decidim_question_id"], name: "decidim_forms_display_condition_question"
     t.index ["decidim_response_option_id"], name: "decidim_forms_display_condition_response_option"
@@ -865,8 +899,13 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.integer "decidim_user_id"
     t.integer "decidim_questionnaire_id"
     t.integer "decidim_question_id"
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 2ae0386 (update files)
     t.string "session_token", default: "", null: false
     t.string "ip_hash"
     t.index ["decidim_question_id"], name: "index_decidim_forms_responses_question_id"
@@ -908,6 +947,7 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.index ["decidim_user_id"], name: "index_decidim_impersonation_logs_on_decidim_user_id"
   end
 
+<<<<<<< HEAD
   create_table "decidim_initiatives", force: :cascade do |t|
     t.jsonb "title", null: false
     t.jsonb "description", null: false
@@ -1012,14 +1052,21 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.index ["hash_id"], name: "index_decidim_initiatives_votes_on_hash_id"
   end
 
+=======
+>>>>>>> 2ae0386 (update files)
   create_table "decidim_likes", force: :cascade do |t|
     t.string "resource_type"
     t.bigint "resource_id"
     t.string "decidim_author_type"
     t.bigint "decidim_author_id"
     t.integer "decidim_user_group_id", default: 0
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 2ae0386 (update files)
     t.index ["decidim_author_type", "decidim_author_id"], name: "idx_likes_authors"
     t.index ["decidim_user_group_id"], name: "index_decidim_likes_on_decidim_user_group_id"
     t.index ["resource_type", "resource_id", "decidim_author_type", "decidim_author_id", "decidim_user_group_id"], name: "idx_likes_rsrcs_and_authors", unique: true
@@ -1120,10 +1167,16 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.integer "registration_type", default: 0, null: false
     t.datetime "withdrawn_at", precision: nil
     t.datetime "deleted_at"
+<<<<<<< HEAD
     t.boolean "reminder_enabled", default: false
     t.integer "send_reminders_before_hours"
     t.jsonb "reminder_message_custom_content", default: {}, null: false
     t.boolean "waitlist_enabled", default: false, null: false
+=======
+    t.boolean "reminder_enabled", default: true, null: false
+    t.integer "send_reminders_before_hours"
+    t.jsonb "reminder_message_custom_content", default: {}, null: false
+>>>>>>> 2ae0386 (update files)
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_meetings_meetings_on_author"
     t.index ["decidim_author_id"], name: "index_decidim_meetings_meetings_on_decidim_author_id"
     t.index ["decidim_component_id"], name: "index_decidim_meetings_meetings_on_decidim_component_id"
@@ -1168,7 +1221,11 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.datetime "validated_at", precision: nil
     t.bigint "decidim_user_group_id"
     t.boolean "public_participation", default: false
+<<<<<<< HEAD
     t.string "status", default: "registered", null: false
+=======
+    t.string "status", default: "registered"
+>>>>>>> 2ae0386 (update files)
     t.index ["decidim_meeting_id"], name: "index_decidim_meetings_registrations_on_decidim_meeting_id"
     t.index ["decidim_user_group_id"], name: "index_decidim_meetings_registrations_on_decidim_user_group_id"
     t.index ["decidim_user_id", "decidim_meeting_id"], name: "decidim_meetings_registrations_user_meeting_unique", unique: true
@@ -1335,7 +1392,11 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.jsonb "omnipresent_banner_title"
     t.jsonb "omnipresent_banner_short_description"
     t.string "omnipresent_banner_url"
+<<<<<<< HEAD
     t.datetime "tos_version", precision: nil
+=======
+    t.datetime "tos_version"
+>>>>>>> 2ae0386 (update files)
     t.boolean "badges_enabled", default: false, null: false
     t.boolean "send_welcome_notification", default: false, null: false
     t.jsonb "welcome_notification_subject"
@@ -1366,8 +1427,13 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
   create_table "decidim_pages_pages", id: :serial, force: :cascade do |t|
     t.jsonb "body"
     t.integer "decidim_component_id"
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 2ae0386 (update files)
     t.datetime "deleted_at"
     t.index ["decidim_component_id"], name: "index_decidim_pages_pages_on_decidim_component_id"
     t.index ["deleted_at"], name: "index_decidim_pages_pages_on_deleted_at"
@@ -1378,8 +1444,13 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.jsonb "description", null: false
     t.string "hero_image"
     t.integer "decidim_organization_id"
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 2ae0386 (update files)
     t.string "group_url"
     t.jsonb "developer_group"
     t.jsonb "local_area"
@@ -1485,8 +1556,13 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.bigint "decidim_user_id"
     t.integer "privatable_to_id"
     t.string "privatable_to_type"
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 2ae0386 (update files)
     t.jsonb "role"
     t.boolean "published", default: false
     t.index ["decidim_user_id"], name: "index_decidim_spaces_users_on_private_user_id"
@@ -1547,8 +1623,13 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.bigint "decidim_proposal_id", null: false
     t.string "evaluator_role_type", null: false
     t.bigint "evaluator_role_id", null: false
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 2ae0386 (update files)
     t.index ["decidim_proposal_id"], name: "decidim_proposals_evaluation_assignment_proposal"
     t.index ["evaluator_role_type", "evaluator_role_id"], name: "decidim_proposals_evaluation_assignment_valuator_role"
   end
@@ -1566,8 +1647,13 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.bigint "decidim_proposal_id", null: false
     t.bigint "decidim_author_id", null: false
     t.text "body", null: false
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 2ae0386 (update files)
     t.bigint "parent_id"
     t.index ["created_at"], name: "index_decidim_proposals_proposal_notes_on_created_at"
     t.index ["decidim_author_id"], name: "decidim_proposals_proposal_note_author"
@@ -1603,7 +1689,11 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.integer "proposal_votes_count", default: 0, null: false
+<<<<<<< HEAD
     t.datetime "answered_at", precision: nil
+=======
+    t.datetime "answered_at"
+>>>>>>> 2ae0386 (update files)
     t.jsonb "answer"
     t.string "reference"
     t.text "address"
@@ -1750,9 +1840,15 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.bigint "token_for_id", null: false
     t.string "token", null: false
     t.integer "times_used", default: 0
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil
     t.datetime "last_used_at", precision: nil
     t.datetime "expires_at", precision: nil
+=======
+    t.datetime "created_at"
+    t.datetime "last_used_at"
+    t.datetime "expires_at"
+>>>>>>> 2ae0386 (update files)
     t.boolean "registered_only"
     t.index ["decidim_organization_id"], name: "index_decidim_share_tokens_on_decidim_organization_id"
     t.index ["decidim_user_id"], name: "index_decidim_share_tokens_on_decidim_user_id"
@@ -1830,8 +1926,14 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
 
   create_table "decidim_surveys_surveys", id: :serial, force: :cascade do |t|
     t.integer "decidim_component_id"
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+>>>>>>> 2ae0386 (update files)
     t.datetime "starts_at"
     t.datetime "ends_at"
     t.jsonb "announcement"
@@ -1839,7 +1941,10 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.boolean "allow_unregistered"
     t.boolean "clean_after_publish"
     t.datetime "published_at"
+<<<<<<< HEAD
     t.datetime "deleted_at"
+=======
+>>>>>>> 2ae0386 (update files)
     t.boolean "allow_editing_responses"
     t.index ["decidim_component_id"], name: "index_decidim_surveys_surveys_on_decidim_component_id"
     t.index ["deleted_at"], name: "index_decidim_surveys_surveys_on_deleted_at"
@@ -1911,6 +2016,7 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.index ["root_taxonomy_id"], name: "index_decidim_taxonomy_filters_on_root_taxonomy_id"
   end
 
+<<<<<<< HEAD
   create_table "decidim_templates_templates", force: :cascade do |t|
     t.integer "decidim_organization_id", null: false
     t.string "templatable_type"
@@ -1925,6 +2031,8 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.index ["templatable_type", "templatable_id"], name: "index_decidim_templates_templatable"
   end
 
+=======
+>>>>>>> 2ae0386 (update files)
   create_table "decidim_user_blocks", force: :cascade do |t|
     t.bigint "decidim_user_id"
     t.integer "blocking_user_id"
@@ -2026,9 +2134,15 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.string "previous_passwords", default: [], array: true
     t.datetime "officialized_at", precision: nil
     t.jsonb "officialized_as"
+<<<<<<< HEAD
     t.datetime "admin_terms_accepted_at", precision: nil
     t.boolean "email_on_assigned_proposals", default: true
     t.string "api_key"
+=======
+    t.datetime "admin_terms_accepted_at"
+    t.string "api_key"
+    t.boolean "email_on_assigned_proposals", default: true
+>>>>>>> 2ae0386 (update files)
     t.index ["confirmation_token"], name: "index_decidim_users_on_confirmation_token", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_users_on_decidim_organization_id"
     t.index ["email", "decidim_organization_id"], name: "index_decidim_users_on_email_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false) AND ((type)::text = 'Decidim::User'::text))"
@@ -2121,7 +2235,11 @@ ActiveRecord::Schema[7.2].define(version: 2026_03_02_135819) do
     t.string "event", null: false
     t.string "whodunnit"
     t.jsonb "object"
+<<<<<<< HEAD
     t.datetime "created_at", precision: nil
+=======
+    t.datetime "created_at"
+>>>>>>> 2ae0386 (update files)
     t.text "old_object_changes"
     t.jsonb "object_changes"
     t.index ["item_id", "item_type"], name: "index_versions_on_item_id_and_item_type"

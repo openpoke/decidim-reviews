@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_accountability (originally 20170928073905)
+<<<<<<< HEAD:db/migrate/20240522111642_migrate_old_results.decidim_accountability.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208161010_migrate_old_results.decidim_accountability.rb
 class MigrateOldResults < ActiveRecord::Migration[5.1]
   class OldResult < ApplicationRecord
     self.table_name = :decidim_results_results

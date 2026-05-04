@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_comments (originally 20200706123136)
+<<<<<<< HEAD:db/migrate/20240522111467_make_comments_handle_i18n.decidim_comments.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160847_make_comments_handle_i18n.decidim_comments.rb
 class MakeCommentsHandleI18n < ActiveRecord::Migration[5.2]
   class User < ApplicationRecord
     self.table_name = :decidim_users

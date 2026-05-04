@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20181016091601)
+<<<<<<< HEAD:db/migrate/20240522111255_make_authors_polymorphic.decidim.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160650_make_authors_polymorphic.decidim.rb
 class MakeAuthorsPolymorphic < ActiveRecord::Migration[5.2]
   class Coauthorship < ApplicationRecord
     self.table_name = :decidim_coauthorships

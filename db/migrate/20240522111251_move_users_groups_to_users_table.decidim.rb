@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20181001124950)
+<<<<<<< HEAD:db/migrate/20240522111251_move_users_groups_to_users_table.decidim.rb
 # This file has been modified by `decidim upgrade:migrations` task on 2025-10-09 08:35:35 UTC
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160646_move_users_groups_to_users_table.decidim.rb
 class MoveUsersGroupsToUsersTable < ActiveRecord::Migration[5.2]
   class Organization < ApplicationRecord
     self.table_name = "decidim_organizations"

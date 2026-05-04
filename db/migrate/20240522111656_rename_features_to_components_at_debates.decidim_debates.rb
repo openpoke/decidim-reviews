@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_debates (originally 20180305133556)
+<<<<<<< HEAD:db/migrate/20240522111656_rename_features_to_components_at_debates.decidim_debates.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208161024_rename_features_to_components_at_debates.decidim_debates.rb
 class RenameFeaturesToComponentsAtDebates < ActiveRecord::Migration[5.1]
   def change
     rename_column :decidim_debates_debates, :decidim_feature_id, :decidim_component_id

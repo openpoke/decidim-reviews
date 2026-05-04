@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20180810092428)
+<<<<<<< HEAD:db/migrate/20240522111249_move_organization_fields_to_hero_content_block.decidim.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160644_move_organization_fields_to_hero_content_block.decidim.rb
 class MoveOrganizationFieldsToHeroContentBlock < ActiveRecord::Migration[5.2]
   # This migration made use CarrierWave, which in future will be eliminated.
   # The organization homepage image was moved to the content block background

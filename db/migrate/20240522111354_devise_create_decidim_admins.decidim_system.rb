@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_system (originally 20160919105637)
+<<<<<<< HEAD:db/migrate/20240522111354_devise_create_decidim_admins.decidim_system.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160739_devise_create_decidim_admins.decidim_system.rb
 class DeviseCreateDecidimAdmins < ActiveRecord::Migration[5.0]
   def change
     create_table :decidim_system_admins do |t|

@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20180314085339)
+<<<<<<< HEAD:db/migrate/20240522111231_rename_maximum_votes_per_proposal_to_threshold_per_proposal.decidim.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160626_rename_maximum_votes_per_proposal_to_threshold_per_proposal.decidim.rb
 class RenameMaximumVotesPerProposalToThresholdPerProposal < ActiveRecord::Migration[5.1]
   def up
     execute <<~SQL.squish

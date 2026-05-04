@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_blogs (originally 20181017084519)
+<<<<<<< HEAD:db/migrate/20240522111688_make_blogposts_authors_polymorphics.decidim_blogs.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208161056_make_blogposts_authors_polymorphics.decidim_blogs.rb
 class MakeBlogpostsAuthorsPolymorphics < ActiveRecord::Migration[5.2]
   class Post < ApplicationRecord
     self.table_name = :decidim_blogs_posts

@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_pages (originally 20180305133658)
+<<<<<<< HEAD:db/migrate/20240522111454_rename_features_to_components_at_pages.decidim_pages.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160834_rename_features_to_components_at_pages.decidim_pages.rb
 class RenameFeaturesToComponentsAtPages < ActiveRecord::Migration[5.1]
   def change
     rename_column :decidim_pages_pages, :decidim_feature_id, :decidim_component_id

@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20170308091316)
+<<<<<<< HEAD:db/migrate/20240522111177_create_moderations.decidim.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160572_create_moderations.decidim.rb
 class CreateModerations < ActiveRecord::Migration[5.0]
   def change
     create_table :decidim_moderations do |t|

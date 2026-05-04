@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_meetings (originally 20210413050917)
+<<<<<<< HEAD:db/migrate/20240522111573_update_published_at_to_existing_meetings.decidim_meetings.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160943_update_published_at_to_existing_meetings.decidim_meetings.rb
 # By default all existing meetings were published when created
 # This migration prevents un-publishing all existing meetings
 class UpdatePublishedAtToExistingMeetings < ActiveRecord::Migration[5.2]

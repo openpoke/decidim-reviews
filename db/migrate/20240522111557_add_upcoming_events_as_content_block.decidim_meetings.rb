@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_meetings (originally 20180809134748)
+<<<<<<< HEAD:db/migrate/20240522111557_add_upcoming_events_as_content_block.decidim_meetings.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160927_add_upcoming_events_as_content_block.decidim_meetings.rb
 class AddUpcomingEventsAsContentBlock < ActiveRecord::Migration[5.2]
   class Organization < ApplicationRecord
     self.table_name = :decidim_organizations

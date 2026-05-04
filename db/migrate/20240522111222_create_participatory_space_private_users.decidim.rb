@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20180206183235)
+<<<<<<< HEAD:db/migrate/20240522111222_create_participatory_space_private_users.decidim.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160617_create_participatory_space_private_users.decidim.rb
 class CreateParticipatorySpacePrivateUsers < ActiveRecord::Migration[5.1]
   def change
     create_table :decidim_participatory_space_private_users do |t|

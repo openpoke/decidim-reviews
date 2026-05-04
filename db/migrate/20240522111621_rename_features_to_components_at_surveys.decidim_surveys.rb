@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_surveys (originally 20180305133837)
+<<<<<<< HEAD:db/migrate/20240522111621_rename_features_to_components_at_surveys.decidim_surveys.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160989_rename_features_to_components_at_surveys.decidim_surveys.rb
 class RenameFeaturesToComponentsAtSurveys < ActiveRecord::Migration[5.1]
   def change
     rename_column :decidim_surveys_surveys, :decidim_feature_id, :decidim_component_id

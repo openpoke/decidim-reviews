@@ -43,7 +43,12 @@ development:
 
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
+<<<<<<< HEAD
     https: false
+=======
+    server:
+      type: http
+>>>>>>> 2ae0386 (update files)
     host: localhost
     # Notice that we use a different port (to prevent blocking the default one) as
     # there will be at least two webpack servers running
@@ -62,6 +67,8 @@ development:
       #  port: 8080
     # Should we use gzip compression?
     compress: true
+    # Disable live reloading for faster development experience
+    live_reload: false
     # Note that apps that do not check the host are vulnerable to DNS rebinding attacks
     allowed_hosts: "all"
     pretty: true

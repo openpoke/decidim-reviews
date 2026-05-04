@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_proposals (originally 20181017084221)
+<<<<<<< HEAD:db/migrate/20240522111508_make_author_polymorhpic_for_proposal_endorsements.decidim_proposals.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160887_make_author_polymorhpic_for_proposal_endorsements.decidim_proposals.rb
 class MakeAuthorPolymorhpicForProposalEndorsements < ActiveRecord::Migration[5.2]
   class ProposalEndorsement < ApplicationRecord
     self.table_name = :decidim_proposals_proposal_endorsements

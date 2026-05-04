@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_meetings (originally 20200526110940)
+<<<<<<< HEAD:db/migrate/20240522111561_add_author_to_meetings.decidim_meetings.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160931_add_author_to_meetings.decidim_meetings.rb
 class AddAuthorToMeetings < ActiveRecord::Migration[5.2]
   class Meeting < ApplicationRecord
     self.table_name = :decidim_meetings_meetings

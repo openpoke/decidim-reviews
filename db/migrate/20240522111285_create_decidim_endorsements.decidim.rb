@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20191130151925)
+<<<<<<< HEAD:db/migrate/20240522111285_create_decidim_endorsements.decidim.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160680_create_decidim_endorsements.decidim.rb
 class CreateDecidimEndorsements < ActiveRecord::Migration[5.2]
   def change
     create_table :decidim_endorsements do |t|

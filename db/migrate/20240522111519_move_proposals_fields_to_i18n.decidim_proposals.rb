@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_proposals (originally 20200708091228)
+<<<<<<< HEAD:db/migrate/20240522111519_move_proposals_fields_to_i18n.decidim_proposals.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160898_move_proposals_fields_to_i18n.decidim_proposals.rb
 class MoveProposalsFieldsToI18n < ActiveRecord::Migration[5.2]
   class Proposal < ApplicationRecord
     include Decidim::HasComponent

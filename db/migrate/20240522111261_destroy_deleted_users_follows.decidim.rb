@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20181030090144)
+<<<<<<< HEAD:db/migrate/20240522111261_destroy_deleted_users_follows.decidim.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160656_destroy_deleted_users_follows.decidim.rb
 class DestroyDeletedUsersFollows < ActiveRecord::Migration[5.2]
   class Follow < ApplicationRecord
     self.table_name = "decidim_follows"

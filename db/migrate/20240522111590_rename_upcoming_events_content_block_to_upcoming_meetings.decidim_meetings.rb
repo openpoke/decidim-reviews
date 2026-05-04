@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_meetings (originally 20210928095036)
+<<<<<<< HEAD:db/migrate/20240522111590_rename_upcoming_events_content_block_to_upcoming_meetings.decidim_meetings.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160960_rename_upcoming_events_content_block_to_upcoming_meetings.decidim_meetings.rb
 class RenameUpcomingEventsContentBlockToUpcomingMeetings < ActiveRecord::Migration[6.0]
   class ContentBlock < ApplicationRecord
     self.table_name = :decidim_content_blocks

@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20190412131728)
+<<<<<<< HEAD:db/migrate/20240522111276_fix_user_names.decidim.rb
 # This file has been modified by `decidim upgrade:migrations` task on 2025-10-09 08:35:36 UTC
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160671_fix_user_names.decidim.rb
 class FixUserNames < ActiveRecord::Migration[5.2]
   class UserBaseEntity < ApplicationRecord
     include Decidim::Nicknamizable

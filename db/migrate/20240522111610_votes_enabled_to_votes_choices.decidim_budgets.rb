@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_budgets (originally 20200804175222)
+<<<<<<< HEAD:db/migrate/20240522111610_votes_enabled_to_votes_choices.decidim_budgets.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208160978_votes_enabled_to_votes_choices.decidim_budgets.rb
 class VotesEnabledToVotesChoices < ActiveRecord::Migration[5.2]
   class Component < ApplicationRecord
     self.table_name = :decidim_components

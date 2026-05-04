@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_debates (originally 20181016132850)
+<<<<<<< HEAD:db/migrate/20240522111658_add_organization_as_author_to_debates.decidim_debates.rb
+=======
+# This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:57 UTC
+>>>>>>> 2ae0386 (update files):db/migrate/20230208161026_add_organization_as_author_to_debates.decidim_debates.rb
 class AddOrganizationAsAuthorToDebates < ActiveRecord::Migration[5.2]
   class Debate < ApplicationRecord
     self.table_name = :decidim_debates_debates
