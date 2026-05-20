@@ -4,11 +4,11 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.31-stable" }
+DECIDIM_VERSION = { github: "openpoke/decidim", branch: "0.31-backports" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-decidim_awesome", { github: "decidim-ice/decidim-module-decidim_awesome", branch: "feature/add_new_cookie_policy" }
+# gem "decidim-decidim_awesome", { github: "decidim-ice/decidim-module-decidim_awesome", branch: "feature/add_new_cookie_policy" }
 gem "decidim-design", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
