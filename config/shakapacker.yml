@@ -43,12 +43,8 @@ development:
 
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
-<<<<<<< HEAD
-    https: false
-=======
     server:
       type: http
->>>>>>> 2ae0386 (update files)
     host: localhost
     # Notice that we use a different port (to prevent blocking the default one) as
     # there will be at least two webpack servers running

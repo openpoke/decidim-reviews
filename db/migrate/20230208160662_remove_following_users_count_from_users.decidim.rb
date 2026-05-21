@@ -2,7 +2,7 @@
 
 # This migration comes from decidim (originally 20181204110723)
 # This file has been modified by `decidim upgrade:migrations` task on 2026-05-04 13:34:56 UTC
-class RemoveFollowingUsersCountFromUsers < ActiveRecord::Migration[5.2]
+class RemoveFollowingUsersCountFromUsers20230208 < ActiveRecord::Migration[5.2]
   class UserBaseEntity < ApplicationRecord
     self.table_name = :decidim_users
     self.inheritance_column = nil # disable the default inheritance
