@@ -6,6 +6,8 @@
 <ul>
    <li><code><a href="/api/docs/object/comment">Comment</a></code></li>
    <li><code><a href="/api/docs/object/debate">Debate</a></code></li>
+   <li><code><a href="/api/docs/object/dummyresource">DummyResource</a></code></li>
+   <li><code><a href="/api/docs/object/initiative">Initiative</a></code></li>
    <li><code><a href="/api/docs/object/meeting">Meeting</a></code></li>
    <li><code><a href="/api/docs/object/post">Post</a></code></li>
    <li><code><a href="/api/docs/object/project">Project</a></code></li>
@@ -16,51 +18,9 @@
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The commentable's ID</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The commentable's class name. i.e. <code>Decidim::ParticipatoryProcess</code></p>
-  </div>
-</div>
-<div class="field-entry ">
   <span id="acceptsnewcomments" class="field-name anchored">acceptsNewComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
   <div class="description-wrapper">
    <p>Whether the object can have new comments or not</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="commentshavealignment" class="field-name anchored">commentsHaveAlignment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Whether the object comments have alignment or not</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="commentshavevotes" class="field-name anchored">commentsHaveVotes (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Whether the object comments have votes or not</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="totalcommentscount" class="field-name anchored">totalCommentsCount (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The number of comments in all levels this resource holds</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="hascomments" class="field-name anchored">hasComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Check if the commentable has comments</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="userallowedtocomment" class="field-name anchored">userAllowedToComment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Check if the current user can comment</p>
   </div>
 </div>
 <div class="field-entry ">
@@ -96,6 +56,48 @@
   </tr>
   </tbody>
 </table>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="commentshavealignment" class="field-name anchored">commentsHaveAlignment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether the object comments have alignment or not</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="commentshavevotes" class="field-name anchored">commentsHaveVotes (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Whether the object comments have votes or not</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="hascomments" class="field-name anchored">hasComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Check if the commentable has comments</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The commentable's ID</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="totalcommentscount" class="field-name anchored">totalCommentsCount (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The number of comments in all levels this resource holds</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The commentable's class name. i.e. <code>Decidim::ParticipatoryProcess</code></p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="userallowedtocomment" class="field-name anchored">userAllowedToComment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Check if the current user can comment</p>
   </div>
 </div></div>
 <div id="sidebar"><div id="search">
@@ -176,13 +178,6 @@
       <li>
         <a href="/api/docs/query/decidim/" class="sidebar-link">
           decidim
-        </a>
-      </li>
-      
-      
-      <li>
-        <a href="/api/docs/query/hashtags/" class="sidebar-link">
-          hashtags
         </a>
       </li>
       
@@ -302,6 +297,13 @@
       <li>
         <a href="/api/docs/mutation/commentable/" class="sidebar-link">
           commentable
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/api/docs/mutation/component/" class="sidebar-link">
+          component
         </a>
       </li>
       
@@ -524,15 +526,15 @@
       
         
       <li>
-        <a href="/api/docs/object/fingerprint/" class="sidebar-link">
-          Fingerprint
+        <a href="/api/docs/object/dummyresource/" class="sidebar-link">
+          DummyResource
         </a>
       </li>
       
         
       <li>
-        <a href="/api/docs/object/hashtagtype/" class="sidebar-link">
-          HashtagType
+        <a href="/api/docs/object/fingerprint/" class="sidebar-link">
+          Fingerprint
         </a>
       </li>
       
@@ -610,6 +612,13 @@
       <li>
         <a href="/api/docs/object/meetings/" class="sidebar-link">
           Meetings
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/milestone/" class="sidebar-link">
+          Milestone
         </a>
       </li>
       
@@ -755,8 +764,29 @@
       
         
       <li>
+        <a href="/api/docs/object/proposalmutation/" class="sidebar-link">
+          ProposalMutation
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/proposalstate/" class="sidebar-link">
+          ProposalState
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/proposals/" class="sidebar-link">
           Proposals
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/proposalsmutation/" class="sidebar-link">
+          ProposalsMutation
         </a>
       </li>
       
@@ -776,8 +806,22 @@
       
         
       <li>
+        <a href="/api/docs/object/questionmatrixrow/" class="sidebar-link">
+          QuestionMatrixRow
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/questionnaire/" class="sidebar-link">
           Questionnaire
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/reportingproposals/" class="sidebar-link">
+          ReportingProposals
         </a>
       </li>
       
@@ -904,13 +948,6 @@
       <li>
         <a href="/api/docs/object/taxonomy/" class="sidebar-link">
           Taxonomy
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/timelineentry/" class="sidebar-link">
-          TimelineEntry
         </a>
       </li>
       
@@ -1056,13 +1093,6 @@
       
         
         <li>
-          <a href="/api/docs/interface/endorsableinterface/" class="sidebar-link">
-            EndorsableInterface
-          </a>
-        </li>
-      
-        
-        <li>
           <a href="/api/docs/interface/fingerprintinterface/" class="sidebar-link">
             FingerprintInterface
           </a>
@@ -1079,6 +1109,13 @@
         <li>
           <a href="/api/docs/interface/initiativetypeinterface/" class="sidebar-link">
             InitiativeTypeInterface
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/api/docs/interface/likeableinterface/" class="sidebar-link">
+            LikeableInterface
           </a>
         </li>
       
@@ -1187,12 +1224,26 @@
     <p><a href="/api/docs/union">Unions</a></p>
     <ul class="menu-root">
       
+      
+      <li>
+        <a href="/api/docs/union/componentmutation/" class="sidebar-link">
+          ComponentMutation
+        </a>
+      </li>
+      
     </ul>
   </li>
 
   <li>
     <p><a href="/api/docs/input_object">Input Objects</a></p>
     <ul class="menu-root">
+      
+      
+      <li>
+        <a href="/api/docs/input_object/answerinput/" class="sidebar-link">
+          AnswerInput
+        </a>
+      </li>
       
       
       <li>
@@ -1254,6 +1305,13 @@
       <li>
         <a href="/api/docs/input_object/postsort/" class="sidebar-link">
           PostSort
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/api/docs/input_object/proposalattributes/" class="sidebar-link">
+          ProposalAttributes
         </a>
       </li>
       
