@@ -4,7 +4,8 @@
   "dependencies": {
     "@decidim/browserslist-config": "file:packages/browserslist-config",
     "@decidim/core": "file:packages/core",
-    "@decidim/webpacker": "file:packages/webpacker"
+    "@decidim/webpacker": "file:packages/webpacker",
+    "workbox-webpack-plugin": "^7.4.1"
   },
   "version": "0.1.0",
   "devDependencies": {
