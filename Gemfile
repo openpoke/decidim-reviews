@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "feature/create-suggestions-in-collaborative-texts" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.31-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-collaborative_texts", DECIDIM_VERSION
@@ -12,6 +12,9 @@ gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-design", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
+
+gem "decidim-reporting_proposals", github: "openpoke/decidim-module-reporting-proposals", branch: "upgrade-0.31"
+gem "decidim-pokecode", github: "openpoke/decidim-module-pokecode", branch: "main"
 
 gem "bootsnap", "~> 1.4"
 
