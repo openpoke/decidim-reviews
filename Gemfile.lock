@@ -200,6 +200,15 @@ GIT
       decidim-core (= 0.31.6)
 
 GIT
+  remote: https://github.com/openpoke/decidim-module-participatory-documents.git
+  revision: 5d8bde9fa25dfc806cd76b1f5f10a18e9ad92c55
+  branch: upgrade-0.31
+  specs:
+    decidim-participatory_documents (0.6.0)
+      decidim-admin (>= 0.31, < 0.32)
+      decidim-core (>= 0.31, < 0.32)
+
+GIT
   remote: https://github.com/openpoke/decidim-module-pokecode.git
   revision: 21ec907d351446f084994d2a640b40d8bc6ecdfa
   branch: main
@@ -1105,6 +1114,7 @@ DEPENDENCIES
   decidim-design!
   decidim-dev!
   decidim-initiatives!
+  decidim-participatory_documents!
   decidim-pokecode!
   decidim-reporting_proposals!
   decidim-templates!
