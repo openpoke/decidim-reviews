@@ -11,7 +11,7 @@ gem "decidim-action_delegator", { github: "openpoke/decidim-module-action_delega
 gem "decidim-chatbot", { github: "openpoke/decidim-module-chatbot", branch: "main" }
 gem "decidim-collaborative_texts", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-decidim_awesome", { github: "decidim-ice/decidim-module-decidim_awesome", branch: "feature/add_new_cookie_policy" }
+gem "decidim-decidim_awesome", { github: "decidim-ice/decidim-module-decidim_awesome", branch: "feature/create_follow_up_messages" }
 gem "decidim-design", DECIDIM_VERSION
 gem "decidim-elections", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION

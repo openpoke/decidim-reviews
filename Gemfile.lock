@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
-  revision: bafa1ebeb41803dab8a757ba3e0363557252d53f
-  branch: feature/add_new_cookie_policy
+  revision: fe45725e3eb7dc973f9cc7b2e4c77956e2441bba
+  branch: feature/create_follow_up_messages
   specs:
-    decidim-decidim_awesome (0.14.1)
+    decidim-decidim_awesome (0.14.4)
       active_hashcash (~> 0.4.0)
       decidim-admin (>= 0.31.0, < 0.32)
       decidim-core (>= 0.31.0, < 0.32)
@@ -1231,7 +1231,7 @@ CHECKSUMS
   decidim-conferences (0.31.2)
   decidim-core (0.31.2)
   decidim-debates (0.31.2)
-  decidim-decidim_awesome (0.14.1)
+  decidim-decidim_awesome (0.14.4)
   decidim-design (0.31.2)
   decidim-dev (0.31.2)
   decidim-elections (0.31.2)
