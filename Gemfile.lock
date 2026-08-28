@@ -1,4 +1,16 @@
 GIT
+  remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
+  revision: fe45725e3eb7dc973f9cc7b2e4c77956e2441bba
+  branch: feature/create_follow_up_messages
+  specs:
+    decidim-decidim_awesome (0.14.4)
+      active_hashcash (~> 0.4.0)
+      decidim-admin (>= 0.31.0, < 0.32)
+      decidim-core (>= 0.31.0, < 0.32)
+      deface (>= 1.5)
+      sassc (~> 2.3)
+
+GIT
   remote: https://github.com/decidim/decidim.git
   revision: f4a7ecf16630b9e3641c84eac4768b4bb272e061
   branch: release/0.31-stable
@@ -287,6 +299,8 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
+    active_hashcash (0.4.0)
+      rails (>= 5.2.0)
     active_link_to (1.0.5)
       actionpack
       addressable
@@ -972,6 +986,8 @@ GEM
       google-protobuf (~> 4.31)
     sass-embedded (1.101.0-x86_64-linux-musl)
       google-protobuf (~> 4.31)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     securerandom (0.4.1)
     selenium-webdriver (4.46.0)
       base64 (~> 0.2)
@@ -1112,6 +1128,7 @@ DEPENDENCIES
   decidim!
   decidim-collaborative_texts!
   decidim-conferences!
+  decidim-decidim_awesome!
   decidim-design!
   decidim-dev!
   decidim-initiatives!
