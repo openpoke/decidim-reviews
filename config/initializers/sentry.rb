@@ -5,6 +5,6 @@ if (sentry_dsn = ENV.fetch("SENTRY_DSN", nil))
     config.breadcrumbs_logger = [:active_support_logger, :http_logger]
     # Add data like request headers and IP for users, if applicable;
     # see https://docs.sentry.io/platforms/ruby/data-management/data-collected/ for more info
-    config.data_collection.send_default_pii = true
+    # config.send_default_pii = true
   end
 end
