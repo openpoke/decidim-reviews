@@ -24,8 +24,6 @@ COPY ./Gemfile /app/Gemfile
 COPY ./Gemfile.lock /app/Gemfile.lock
 
 RUN gem install bundler:$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | xargs) && \
-    bundle config set --deployment true && \
-    bundle config set --local without 'development test' && \
     bundle install -j4 --retry 3 && \
     npm install yarn -g && \
     # Remove unneeded gems
