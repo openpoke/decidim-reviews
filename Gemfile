@@ -12,9 +12,10 @@ gem "decidim", DECIDIM_VERSION
 # gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-pokecode", github: "openpoke/decidim-module-pokecode", branch: "main"
 
+# see https://github.com/decidim/decidim/issues/17746
 gem "bootsnap", "~> 1.3"
 gem "puma", ">= 6.3.1"
-
+gem "selma", "0.5.2"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
