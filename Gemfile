@@ -16,6 +16,7 @@ gem "decidim-pokecode", github: "openpoke/decidim-module-pokecode", branch: "mai
 gem "bootsnap", "~> 1.3"
 gem "puma", ">= 6.3.1"
 gem "selma", "0.5.2"
+gem "letter_opener_web"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
@@ -25,7 +26,6 @@ group :development, :test do
 end
 
 group :development do
-  gem "letter_opener_web"
   gem "listen"
   gem "web-console"
 end
